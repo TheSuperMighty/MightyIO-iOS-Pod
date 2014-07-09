@@ -1,0 +1,10 @@
+target 'MightyIO-iOS-Pod', :exclusive => true do
+  pod "MightyIO-iOS-Pod", :path => "../"
+end
+
+target 'Tests', :exclusive => true do
+  pod "MightyIO-iOS-Pod", :path => "../"
+
+  pod 'Kiwi'
+  pod 'FBSnapshotTestCase'
+end
