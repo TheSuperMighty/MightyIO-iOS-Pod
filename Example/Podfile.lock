@@ -1,0 +1,20 @@
+PODS:
+  - FBSnapshotTestCase (1.1)
+  - Kiwi (2.3.0)
+  - MightyIO-iOS-Pod (0.1.0)
+
+DEPENDENCIES:
+  - FBSnapshotTestCase
+  - Kiwi
+  - MightyIO-iOS-Pod (from `../`)
+
+EXTERNAL SOURCES:
+  MightyIO-iOS-Pod:
+    :path: ../
+
+SPEC CHECKSUMS:
+  FBSnapshotTestCase: 9053afee1d66b4c7c313fcb0ae582a5e47bea9d0
+  Kiwi: 54bece5b35564d9b8e03c608d926f1a22fcfc589
+  MightyIO-iOS-Pod: ebf27c351d5b4279effd60e232368a555cbefefd
+
+COCOAPODS: 0.33.1
