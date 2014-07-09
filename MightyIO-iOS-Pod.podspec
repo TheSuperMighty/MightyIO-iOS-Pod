@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "MightyIO-iOS-Pod"
-  s.version          = "0.1.0"
+  s.version          = "0.1.1"
   s.summary          = "The MightyIO SDK, by SuperMighty"
   s.homepage         = "https://github.com/TheSuperMighty/MightyIO-iOS-Pod"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '7.0'
   s.requires_arc = true
 
-  s.source_files = 'Pod/Classes/*'
+  s.source_files = 'Pod/Classes/**/*.{h,m}'
   #s.resources = 'Pod/Assets/*.png'
 
   s.public_header_files = 'Pod/Classes/**/*.h'
