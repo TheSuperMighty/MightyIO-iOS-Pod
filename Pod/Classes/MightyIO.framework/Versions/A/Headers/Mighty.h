@@ -12,7 +12,7 @@
 #import <Parse-iOS-SDK/Parse.h>
 #import <Social/Social.h>
 
-@interface SuperMightySDK : NSObject <SKProductsRequestDelegate> {
+@interface Mighty : NSObject <SKProductsRequestDelegate> {
     SKProductsRequest* _productsRequest;
 }
 
@@ -30,9 +30,9 @@
 // Init Functions
 - (id)init;
 
-+ (SuperMightySDK*)sharedInstance;
++ (Mighty*)sharedInstance;
 
-+ (SuperMightySDK*)initWithUsername:(NSString*)username andPassword:(NSString*)password;
++ (Mighty*)initWithUsername:(NSString*)username andPassword:(NSString*)password;
 
 // Product Getters
 - (void)getProductListWithBlock:(void (^)(NSArray*, NSError*))block;

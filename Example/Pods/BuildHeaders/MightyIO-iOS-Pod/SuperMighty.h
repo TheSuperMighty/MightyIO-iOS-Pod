@@ -1,1 +1,1 @@
-../../../../Pod/Classes/Pods-MightyIO-iOS-MightyIO-iOS.framework/Versions/A/Headers/SuperMighty.h
+../../../../Pod/Classes/MightyIO.framework/Versions/A/Headers/SuperMighty.h
