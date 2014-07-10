@@ -10,8 +10,7 @@
 #import <UIKit/UIKit.h>
 #import <StoreKit/StoreKit.h>
 #import <Parse-iOS-SDK/Parse.h>
-
-void _initWithUsernameAndPassword(const char* username, const char* password);
+#import <Social/Social.h>
 
 @interface SuperMightySDK : NSObject <SKProductsRequestDelegate> {
     SKProductsRequest* _productsRequest;
@@ -25,6 +24,8 @@ void _initWithUsernameAndPassword(const char* username, const char* password);
 @property (strong, nonatomic) PFObject* game;
 @property SKPaymentTransaction* lastTransaction;
 @property (strong, nonatomic) PFObject* currentItem;
+@property (strong, nonatomic) NSString* landingPageUrl;
+@property (strong, nonatomic) NSString* dynamicShareText;
 
 // Init Functions
 - (id)init;
@@ -41,7 +42,16 @@ void _initWithUsernameAndPassword(const char* username, const char* password);
 
 - (void)processTransaction:(SKPaymentTransaction*)transaction;
 
+- (void)processTransaction:(SKPaymentTransaction*)transaction withBlock:(void (^)(void))block;
+
+// Social Functions
+- (void)openFacebookShareModalFromViewController:(UIViewController*)viewController withShareText:(NSString*)shareText;
+
+- (void)openFacebookShareModalFromViewController:(UIViewController*)viewController;
+
 // Dev Helpers
 - (void)logMessage:(NSString*)message;
+
+- (void)getSettingsWithBlock:(void (^)(NSArray*, NSError*))block;
 
 @end

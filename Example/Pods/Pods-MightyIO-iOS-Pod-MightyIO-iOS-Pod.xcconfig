@@ -1,0 +1,1 @@
+PODS_MIGHTYIO_IOS_POD_MIGHTYIO_IOS_POD_OTHER_LDFLAGS = -framework MapKit -framework Social -framework StoreKit -framework UIKit
