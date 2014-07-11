@@ -7,13 +7,13 @@
 //
 
 #import "smAppDelegate.h"
-#import <MightyIO-iOS-Pod/SuperMightySDK.h>
+#import <MightyIO-iOS-Pod/Mighty.h>
 
 @implementation smAppDelegate
 
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
-   
+    [Mighty initWithUsername:@"username" andPassword:@"password"];
     // Override point for customization after application launch.
     return YES;
 }

@@ -6,4 +6,4 @@
 //
 //
 #import <Foundation/Foundation.h>
-#import <Pods-MightyIO-iOS-MightyIO-iOS/SuperMightySDK.h>
+#import <MightyIO/Mighty.h>
