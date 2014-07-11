@@ -1,1 +1,2 @@
-PODS_MIGHTYIO_IOS_POD_MIGHTYIO_IOS_POD_OTHER_LDFLAGS = -framework MapKit -framework Social -framework StoreKit -framework UIKit
+PODS_MIGHTYIO_IOS_POD_MIGHTYIO_IOS_POD_FRAMEWORK_SEARCH_PATHS = "$(PODS_ROOT)/../../Pod/Classes"
+PODS_MIGHTYIO_IOS_POD_MIGHTYIO_IOS_POD_OTHER_LDFLAGS = -framework MapKit -framework MightyIO -framework Social -framework StoreKit -framework UIKit

@@ -21,10 +21,9 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '7.0'
   s.requires_arc = true
 
-  s.source_files = 'Pod/Classes/**/*.{h,m}'
-  #s.resources = 'Pod/Assets/*.png'
-
-  s.public_header_files = 'Pod/Classes/**/*.h'
+  s.preserve_paths = 'Pod/Classes/MightyIO.framework',
+  s.public_header_files = 'Pod/Classes/MightyIO.framework/**/*.h'
+  s.vendored_frameworks = 'Pod/Classes/MightyIO.framework'
   s.frameworks = 'UIKit', 'MapKit','Social', 'StoreKit'
   s.dependency 'Parse-iOS-SDK', '~> 1.2'
 end

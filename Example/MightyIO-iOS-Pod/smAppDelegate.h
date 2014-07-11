@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <MightyIO-iOS-Pod/Mighty.h>
 
 @interface smAppDelegate : UIResponder <UIApplicationDelegate>
 

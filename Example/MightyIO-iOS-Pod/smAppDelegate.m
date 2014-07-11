@@ -7,6 +7,7 @@
 //
 
 #import "smAppDelegate.h"
+#import <MightyIO-iOS-Pod/Mighty.h>
 
 @implementation smAppDelegate
 
