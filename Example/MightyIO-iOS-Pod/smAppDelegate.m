@@ -13,7 +13,7 @@
 
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
-    [Mighty initWithUsername:@"username" andPassword:@"password"];
+    [Mighty initWithUsername:@"testapp@supermighty.com" andPassword:@"7fEZXZev"];
     // Override point for customization after application launch.
     return YES;
 }
