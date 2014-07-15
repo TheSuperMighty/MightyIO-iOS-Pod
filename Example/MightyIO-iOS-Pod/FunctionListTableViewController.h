@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <StoreKit/StoreKit.h>
 
-@interface FunctionListTableViewController : UITableViewController
+@interface FunctionListTableViewController : UITableViewController <SKProductsRequestDelegate, SKPaymentTransactionObserver>
 
 @property (strong, nonatomic) NSArray* products;
+@property (strong, nonatomic) SKProductsRequest* productsRequest;
 
 @end

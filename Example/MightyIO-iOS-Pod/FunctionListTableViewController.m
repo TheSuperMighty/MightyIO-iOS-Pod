@@ -7,7 +7,7 @@
 //
 
 #import "FunctionListTableViewController.h"
-#import "smIAPHelper.h"
+//#import "smIAPHelper.h"
 #import <MightyIO/Mighty.h>
 
 @interface FunctionListTableViewController ()
@@ -17,49 +17,62 @@
 @implementation FunctionListTableViewController
 
 @synthesize products = _products;
+@synthesize productsRequest = _productsRequest;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
-    // Call itunes connect via IAPHelper
-    // Returns: A list of In App Purchases from itunes connect
-    [[smIAPHelper sharedInstance] requestProductsWithCompletionHandler:^(BOOL success, NSArray* products) {
-        if (success) {
-            _products = products;
-            NSLog(@"Products from app store %@", _products);
+    [self getProductsFromiTunes];
+}
+
+- (void)getProductsFromiTunes
+{
+    NSSet* productIdentifiers = [NSSet setWithObjects:
+                                           @"com.supermighty.MightyIOiOS.magicboots",
+                                           @"com.supermighty.MightyIOiOS.coinpurse",
+                                           nil];
+    _productsRequest = [[SKProductsRequest alloc] initWithProductIdentifiers:productIdentifiers];
+    _productsRequest.delegate = self;
+    [_productsRequest start];
+}
+
+- (void)productsRequest:(SKProductsRequest*)request didReceiveResponse:(SKProductsResponse*)response
+{
+    _products = response.products;
+}
+
+- (void)buyProduct:(SKProduct*)product
+{
+
+    NSLog(@"Buying %@...", product.productIdentifier);
+
+    SKPayment* payment = [SKPayment paymentWithProduct:product];
+    [[SKPaymentQueue defaultQueue] addPayment:payment];
+}
+
+- (void)paymentQueue:(SKPaymentQueue*)queue updatedTransactions:(NSArray*)transactions
+{
+    for (SKPaymentTransaction* transaction in transactions) {
+        switch (transaction.transactionState) {
+        case SKPaymentTransactionStatePurchased:
+            NSLog(@"Purchase success");
+            break;
+        case SKPaymentTransactionStateFailed:
+            NSLog(@"Purchase failed");
+            break;
+        case SKPaymentTransactionStateRestored:
+            NSLog(@"Purchase restored");
+        default:
+            break;
         }
-    }];
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(productPurchased:) name:IAPHelperProductPurchasedNotification object:nil];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
-- (void)productPurchased:(NSNotification*)notification
-{
-
-    NSString* productIdentifier = notification.object;
-    [_products enumerateObjectsUsingBlock:^(SKProduct* product, NSUInteger idx, BOOL* stop) {
-        if ([product.productIdentifier isEqualToString:productIdentifier]) {
-            [self.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:idx inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
-            *stop = YES;
-        }
-    }];
+    };
 }
 
 #pragma mark - Table view data source
 
 - (void)tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath
 {
-    //    UITableViewCell* cell = [tableView cellForRowAtIndexPath:indexPath];
-    //    NSString* functionName = cell.textLabel.text;
 
     switch (indexPath.row) {
 
@@ -77,7 +90,9 @@
 
     // Process a single transation
     case 1:
-        NSLog(@"TEST1");
+        // Purcahse the first item returned from the itunes
+        [self buyProduct:[_products objectAtIndex:0]];
+
         break;
 
     default:
