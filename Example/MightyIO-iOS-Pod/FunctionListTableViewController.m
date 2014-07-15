@@ -7,7 +7,6 @@
 //
 
 #import "FunctionListTableViewController.h"
-//#import "smIAPHelper.h"
 #import <MightyIO/Mighty.h>
 
 @interface FunctionListTableViewController ()

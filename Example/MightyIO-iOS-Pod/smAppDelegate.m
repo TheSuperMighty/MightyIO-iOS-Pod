@@ -8,14 +8,11 @@
 
 #import "smAppDelegate.h"
 #import <MightyIO-iOS-Pod/Mighty.h>
-#import "smIAPHelper.h"
 
 @implementation smAppDelegate
 
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
-
-    [smIAPHelper sharedInstance];
 
     [Mighty initWithUsername:@"test@supermighty.com" andPassword:@"scrapple"];
 
