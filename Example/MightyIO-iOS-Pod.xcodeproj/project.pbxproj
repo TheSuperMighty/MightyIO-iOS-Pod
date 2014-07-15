@@ -25,6 +25,9 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		6E6431F2687649AD9CFF6830 /* libPods-MightyIO-iOS-Pod.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F250133F78904F0D85654D1C /* libPods-MightyIO-iOS-Pod.a */; };
 		F5E1966B19744D60001BFAEB /* FunctionListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E1966A19744D60001BFAEB /* FunctionListTableViewController.m */; };
+		F5E1966E19759D10001BFAEB /* IAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E1966D19759D10001BFAEB /* IAPHelper.m */; };
+		F5E1967019759E71001BFAEB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5E1966F19759E71001BFAEB /* StoreKit.framework */; };
+		F5E196741975A315001BFAEB /* smIAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E196731975A315001BFAEB /* smIAPHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +68,11 @@
 		F250133F78904F0D85654D1C /* libPods-MightyIO-iOS-Pod.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MightyIO-iOS-Pod.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5E1966919744D60001BFAEB /* FunctionListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunctionListTableViewController.h; sourceTree = "<group>"; };
 		F5E1966A19744D60001BFAEB /* FunctionListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunctionListTableViewController.m; sourceTree = "<group>"; };
+		F5E1966C19759D10001BFAEB /* IAPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAPHelper.h; sourceTree = "<group>"; };
+		F5E1966D19759D10001BFAEB /* IAPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAPHelper.m; sourceTree = "<group>"; };
+		F5E1966F19759E71001BFAEB /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		F5E196721975A315001BFAEB /* smIAPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = smIAPHelper.h; sourceTree = "<group>"; };
+		F5E196731975A315001BFAEB /* smIAPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = smIAPHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5E1967019759E71001BFAEB /* StoreKit.framework in Frameworks */,
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
@@ -118,6 +127,7 @@
 		6003F58C195388D20070C39A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F5E1966F19759E71001BFAEB /* StoreKit.framework */,
 				6003F58D195388D20070C39A /* Foundation.framework */,
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
@@ -131,6 +141,7 @@
 		6003F593195388D20070C39A /* MightyIO-iOS-Pod */ = {
 			isa = PBXGroup;
 			children = (
+				F5E196711975A2CC001BFAEB /* IAP */,
 				6003F59C195388D20070C39A /* smAppDelegate.h */,
 				6003F59D195388D20070C39A /* smAppDelegate.m */,
 				6003F59F195388D20070C39A /* Main_iPhone.storyboard */,
@@ -180,6 +191,17 @@
 			children = (
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		F5E196711975A2CC001BFAEB /* IAP */ = {
+			isa = PBXGroup;
+			children = (
+				F5E1966C19759D10001BFAEB /* IAPHelper.h */,
+				F5E1966D19759D10001BFAEB /* IAPHelper.m */,
+				F5E196721975A315001BFAEB /* smIAPHelper.h */,
+				F5E196731975A315001BFAEB /* smIAPHelper.m */,
+			);
+			name = IAP;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,8 +372,10 @@
 			files = (
 				6003F59E195388D20070C39A /* smAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* smViewController.m in Sources */,
+				F5E196741975A315001BFAEB /* smIAPHelper.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				F5E1966B19744D60001BFAEB /* FunctionListTableViewController.m in Sources */,
+				F5E1966E19759D10001BFAEB /* IAPHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

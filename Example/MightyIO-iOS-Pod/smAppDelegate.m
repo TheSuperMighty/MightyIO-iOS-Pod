@@ -8,17 +8,17 @@
 
 #import "smAppDelegate.h"
 #import <MightyIO-iOS-Pod/Mighty.h>
+#import "smIAPHelper.h"
 
 @implementation smAppDelegate
 
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
 
-    [Mighty initWithUsername:@"test@supermighty.com" andPassword:@"scrapple"];
-    NSLog(@"BUNDLE %@", [[NSBundle mainBundle] bundleIdentifier]);
+    [smIAPHelper sharedInstance];
 
-    //IF RESULTS AREN'T UPDATING CALL THIS
-    //[PFQuery clearAllCachedResults];
+    [Mighty initWithUsername:@"test@supermighty.com" andPassword:@"scrapple"];
+
     return YES;
 }
 

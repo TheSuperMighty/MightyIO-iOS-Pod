@@ -10,4 +10,6 @@
 
 @interface FunctionListTableViewController : UITableViewController
 
+@property (strong, nonatomic) NSArray* products;
+
 @end
