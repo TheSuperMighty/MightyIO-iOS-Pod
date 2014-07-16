@@ -13,5 +13,6 @@
 
 @property (strong, nonatomic) NSArray* products;
 @property (strong, nonatomic) SKProductsRequest* productsRequest;
+@property (strong, nonatomic) NSMutableSet* purchasedProductIdentifiers;
 
 @end
