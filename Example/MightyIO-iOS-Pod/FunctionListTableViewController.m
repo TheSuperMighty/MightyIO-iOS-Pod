@@ -139,7 +139,6 @@
 {
 
     switch (indexPath.row) {
-
     // Get list of Mighty Items from themighty.io
     case 0:
 
@@ -147,9 +146,15 @@
         // otherwise you can access the products by calling [Mighty sharedInstance].mightyItems
         [[Mighty sharedInstance] getProductListWithBlock:^(NSArray* objects, NSError* error) {
             if (!error) {
-                NSLog(@"Mighty Items %@", objects);
+                NSMutableString* mightyItemsList = [NSMutableString string];
+                for (NSDictionary* item in objects) {
+                    [mightyItemsList appendString:[NSString stringWithFormat:@"%@ \n", [item objectForKey:@"productId"]]];
+                };
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Mighty Items List" message:mightyItemsList delegate:nil cancelButtonTitle:@"cancel" otherButtonTitles: nil];
+                [alert show];
             }
         }];
+
         break;
 
     // Process a single transation
