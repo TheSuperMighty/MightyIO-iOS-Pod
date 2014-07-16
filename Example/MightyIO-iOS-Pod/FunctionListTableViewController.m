@@ -108,10 +108,20 @@
 - (void)completeTransaction:(SKPaymentTransaction*)transaction
 {
     NSLog(@"completeTransaction...");
+    NSLog(@"Product Identifier %@", transaction.payment.productIdentifier);
     [self provideContentForProductIdentifier:transaction.payment.productIdentifier];
 
-    //Call SuperMighty to process the transaction
-    [[Mighty sharedInstance] processTransaction:transaction];
+    //If purchased coinpurse2 test processTransaction
+    if ([transaction.payment.productIdentifier isEqualToString:@"com.supermighty.MightyIOiOS.coinpurse2"]) {
+        [[Mighty sharedInstance] processTransaction:transaction];
+
+        //If purchased coinpurse2 test processTransactionWithBlock
+    } else if ([transaction.payment.productIdentifier isEqualToString:@"com.supermighty.MightyIOiOS.magicboots"]) {
+        [[Mighty sharedInstance] processTransaction:transaction withBlock:^{
+            UIAlertView *blockCompleteAlert = [[UIAlertView alloc] initWithTitle:@"Processed" message:@"SuperMighty has processed your transaction." delegate:self cancelButtonTitle:@"Close" otherButtonTitles: nil];
+            [blockCompleteAlert show];
+        }];
+    }
     [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
 }
 
@@ -123,7 +133,7 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
-#pragma mark - Table view data source
+#pragma mark - Call Mighty Methods
 
 - (void)tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath
 {
@@ -145,18 +155,38 @@
     // Process a single transation
     case 1:
         // Purcahse the first item returned from the itunes
-        // Transaction is processed by SuperMighty in - (void)completeTransaction:(SKPaymentTransaction*)transaction;
-        // completeTransaction is called by - (void)paymentQueue:(SKPaymentQueue*)queue updatedTransactions:(NSArray*)transactions;
+        // Transaction is processed by SuperMighty using:
+        // - (void)completeTransaction:(SKPaymentTransaction*)transaction;
+        // Note: see - (void)completeTransaction:(SKPaymentTransaction*)transaction; for implementation
         [self buyProduct:[_products objectAtIndex:0]];
 
         break;
 
-    // Process a single transation
+    // Process a single transation with block
     case 2:
-        // Purcahse the first item returned from the itunes
-        // Array of transactions is processed by SuperMighty in - (void)processTransactions:(NSArray*)transactions;
-        // This is not typically used because in most cases it should be verified that a purcha
-        [self buyProduct:[_products objectAtIndex:0]];
+        // Purchase the second item returned from itunes
+        // Transaction is processed by SuperMighty using:
+        // - (void)processTransaction:(SKPaymentTransaction*)transaction withBlock:(void (^)(void))block;
+        // This can be used to fire an action such as sharing once SuperMighty has recorded the purchase
+        // Note: see - (void)completeTransaction:(SKPaymentTransaction*)transaction; for implementation
+        [self buyProduct:[_products objectAtIndex:1]];
+
+        break;
+
+    // Open Facebook Share Modal With Text
+    case 3:
+        // Opens a modal Facebook share in a specified ViewController with a default share text.
+        // This can be called in the closure of:
+        // - (void)processTransaction:(SKPaymentTransaction*)transaction withBlock:(void (^)(void))block;
+        [[Mighty sharedInstance] openFacebookShareModalFromViewController:self withShareText:@"I just made a Mighty Purchase"];
+
+        break;
+    // Open Facebook Share Modal With Text
+    case 4:
+        // Opens a modal Facebook share in a specified ViewController. The default share text will be pulled from the API.
+        // This can be called in the closure of:
+        // - (void)processTransaction:(SKPaymentTransaction*)transaction withBlock:(void (^)(void))block;
+        [[Mighty sharedInstance] openFacebookShareModalFromViewController:self];
 
         break;
 
