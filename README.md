@@ -85,21 +85,6 @@ An class method logs into the Mighty. On log in this method will get your game, 
 ---
 
 ###Transactional Functions
-**- (void)processTransactions:(NSArray*)transactions;**
-An instance method that will process an NSArray of SKPaymentTransactions and record any purchase of a Mighty Item to the SuperMighty API.  Use this method was intended for use inside the SKPaymentTransactionObserver delegate function: ``-(void)paymentQueue:(SKPaymentQueue *)queue updatedTransactions:(NSArray *)transactions;``
-
-**params:**
-
-(NSArray*)transactions - An array of SKPaymentTransactions.
-
-**example:**
-```objective-c
-    -(void)paymentQueue:(SKPaymentQueue *)queue updatedTransactions:(NSArray *)transactions{
-        [[Mighty sharedInstance] processTransactions:transactions];
-    }
-```
-
----
 
 **- (void)processTransaction:(SKPaymentTransaction*)transaction;**
 Similar to ``- (void)processTransactions:(NSArray*)transactions;`` this method will process a single SKPaymentTransaction.
