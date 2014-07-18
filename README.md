@@ -5,6 +5,7 @@ MightyIO - iOS
 [![Version](https://img.shields.io/cocoapods/v/MightyIO-iOS-Pod.svg?style=flat)](http://cocoadocs.org/docsets/MightyIO-iOS-Pod)
 [![License](https://img.shields.io/cocoapods/l/MightyIO-iOS-Pod.svg?style=flat)](http://cocoadocs.org/docsets/MightyIO-iOS-Pod)
 [![Platform](https://img.shields.io/cocoapods/p/MightyIO-iOS-Pod.svg?style=flat)](http://cocoadocs.org/docsets/MightyIO-iOS-Pod)
+ 
 
 The Mighty will provide you with the methods you need to easily interface with the SuperMighty API.  It contains methods to log in, get mighty items, record purchases of mighty items, and prompt a user to share the purchase of a mighty item.
 
@@ -28,7 +29,7 @@ Installation
 4. In your AppDelegate in the didFinishLaunchingWithOptions method instantiate the Mighty:
     
     ```objective-c
-    - (BOOL)application:(UIApplication*)application     didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
+    - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
     {
         [Mighty initWithUsername:@"username" andPassword:@"password"];
         // Override point for customization after application launch.
@@ -46,6 +47,7 @@ The Mighty contains several public methods that will allow you to:
 * List your mighty items
 * Process a Mighty Transaction
 * Prompt a user to share a Mighty purchase
+
 ###Init Functions
 **+ (Mighty*)sharedInstance;**
 An class method that returns a shared instance of the Mighty.
@@ -62,7 +64,7 @@ An class method that returns a shared instance of the Mighty.
 ```
 ---
 
-**+ (Mighty*)initWithUsername:(NSString*)username andPassword:(NSString*)password;**
+**+ (Mighty*)initWithUsername:(NSString*)username andPassword:(NSString*)password;**  
 An class method logs into the Mighty. On log in this method will get your game, its share url and text, and its associated items. 
 
 **params:**
@@ -83,21 +85,6 @@ An class method logs into the Mighty. On log in this method will get your game, 
 ---
 
 ###Transactional Functions
-**- (void)processTransactions:(NSArray*)transactions;**
-An instance method that will process an NSArray of SKPaymentTransactions and record any purchase of a Mighty Item to the SuperMighty API.  Use this method was intended for use inside the SKPaymentTransactionObserver delegate function: ``-(void)paymentQueue:(SKPaymentQueue *)queue updatedTransactions:(NSArray *)transactions;``
-
-**params:**
-
-(NSArray*)transactions - An array of SKPaymentTransactions.
-
-**example:**
-```objective-c
-    -(void)paymentQueue:(SKPaymentQueue *)queue updatedTransactions:(NSArray *)transactions{
-        [[Mighty sharedInstance] processTransactions:transactions];
-    }
-```
-
----
 
 **- (void)processTransaction:(SKPaymentTransaction*)transaction;**
 Similar to ``- (void)processTransactions:(NSArray*)transactions;`` this method will process a single SKPaymentTransaction.
@@ -180,3 +167,4 @@ Opens a modal Facebook share in a specified ViewController.  The default share t
 ```
 
 ---
+
