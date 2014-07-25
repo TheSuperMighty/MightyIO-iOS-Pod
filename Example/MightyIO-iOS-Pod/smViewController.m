@@ -7,6 +7,7 @@
 //
 
 #import "smViewController.h"
+#import <MightyIO-iOS-Pod/Mighty.h>
 
 @interface smViewController ()
 
@@ -17,6 +18,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSLog(@"View Did Load");
+    [[Mighty sharedInstance] makeRibbonWithCenter:CGPointMake(0, 200) inViewController:self];
+
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -26,4 +30,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)startSupermighty:(id)sender
+{
+    //[[Mighty sharedInstance] startSuperMightyInViewController:self];
+}
 @end

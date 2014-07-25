@@ -9,10 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <StoreKit/StoreKit.h>
-#import <Parse-iOS-SDK/Parse.h>
+#import "Parse.h"
 #import <Social/Social.h>
+#import <Security/Security.h>
 
-@interface Mighty : NSObject <SKProductsRequestDelegate> {
+@interface Mighty : NSObject <SKProductsRequestDelegate, SKPaymentTransactionObserver> {
     SKProductsRequest* _productsRequest;
 }
 
@@ -22,10 +23,14 @@
 @property (strong, nonatomic) NSString* password;
 @property (strong, nonatomic) NSArray* mightyItems;
 @property (strong, nonatomic) PFObject* game;
-@property SKPaymentTransaction* lastTransaction;
+@property (strong, nonatomic) PFObject* cause;
+@property (strong, nonatomic) PFObject* gameSettings;
+@property (strong, nonatomic) PFObject* item;
 @property (strong, nonatomic) PFObject* currentItem;
+@property SKPaymentTransaction* lastTransaction;
 @property (strong, nonatomic) NSString* landingPageUrl;
 @property (strong, nonatomic) NSString* dynamicShareText;
+@property (strong, nonatomic) UIViewController* presentingViewController;
 
 // Init Functions
 - (id)init;
@@ -38,7 +43,7 @@
 - (void)getProductListWithBlock:(void (^)(NSArray*, NSError*))block;
 
 // Transactional Functions
-- (void)processTransactions:(NSArray*)transactions;
+- (void)purchaseMightyItem:(PFObject*)item;
 
 - (void)processTransaction:(SKPaymentTransaction*)transaction;
 
@@ -53,5 +58,10 @@
 - (void)logMessage:(NSString*)message;
 
 - (void)getSettingsWithBlock:(void (^)(NSArray*, NSError*))block;
+
+- (void)makeRibbonWithCenter:(CGPoint)center inViewController:(UIViewController*)viewController;
+
+// Manually start SuperMighty
+- (void)startSuperMightyInViewController:(UIViewController*)viewController;
 
 @end
