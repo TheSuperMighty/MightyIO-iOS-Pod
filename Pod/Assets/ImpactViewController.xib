@@ -14,18 +14,36 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="impact.png" translatesAutoresizingMaskIntoConstraints="NO" id="q71-F6-X39">
+                <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="impact.png" translatesAutoresizingMaskIntoConstraints="NO" id="q71-F6-X39">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfE-aG-Bvc">
-                    <rect key="frame" x="13" y="11" width="46" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfE-aG-Bvc">
+                    <rect key="frame" x="20" y="12" width="34" height="28"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal">
+                    <state key="normal" image="btn-back.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="popMighty:" destination="-1" eventType="touchUpInside" id="Byj-6M-kDv"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="impact-hdr.png" translatesAutoresizingMaskIntoConstraints="NO" id="iqD-TE-tu6">
+                    <rect key="frame" x="19" y="48" width="280" height="103"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="impact-img.png" translatesAutoresizingMaskIntoConstraints="NO" id="pbL-3b-hsb">
+                    <rect key="frame" x="19" y="185" width="280" height="249"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R0S-ZC-xjh">
+                    <rect key="frame" x="11" y="484" width="296" height="60"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="impact-btn-give.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="giveWater:" destination="-1" eventType="touchUpInside" id="qsH-lS-4wA"/>
                     </connections>
                 </button>
             </subviews>
@@ -35,6 +53,10 @@
         </view>
     </objects>
     <resources>
+        <image name="btn-back.png" width="55" height="47"/>
+        <image name="impact-btn-give.png" width="662" height="135"/>
+        <image name="impact-hdr.png" width="1220" height="458"/>
+        <image name="impact-img.png" width="612" height="565"/>
         <image name="impact.png" width="1508" height="2696"/>
     </resources>
 </document>

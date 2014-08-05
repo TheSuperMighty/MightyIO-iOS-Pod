@@ -13,10 +13,19 @@
 #import <Social/Social.h>
 #import <Security/Security.h>
 
-@interface Mighty : NSObject <SKProductsRequestDelegate, SKPaymentTransactionObserver> {
+@class Mighty;
+@protocol MightyDelegate <NSObject>
+@optional
+
+- (void)didRecordSuccessfulTransaction:(SKPaymentTransaction*)transaction;
+
+@end
+
+@interface Mighty : NSObject <SKProductsRequestDelegate> {
+    __weak id<MightyDelegate> mightyDelegate;
     SKProductsRequest* _productsRequest;
 }
-
+@property (nonatomic, weak) id<MightyDelegate> mightyDelegate;
 @property BOOL debug;
 @property BOOL authenticating;
 @property (strong, nonatomic) NSString* username;
@@ -24,16 +33,16 @@
 @property (strong, nonatomic) NSArray* mightyItems;
 @property (strong, nonatomic) PFObject* game;
 @property (strong, nonatomic) PFObject* cause;
-@property (strong, nonatomic) PFObject* gameSettings;
 @property (strong, nonatomic) PFObject* item;
 @property (strong, nonatomic) PFObject* currentItem;
 @property SKPaymentTransaction* lastTransaction;
 @property (strong, nonatomic) NSString* landingPageUrl;
+@property (strong, nonatomic) NSURL* itemImageUrl;
 @property (strong, nonatomic) NSString* dynamicShareText;
 @property (strong, nonatomic) UIViewController* presentingViewController;
 
 // Init Functions
-- (id)init;
+- (id)initWithDelegate:(id<MightyDelegate>)delegateObject;
 
 + (Mighty*)sharedInstance;
 
@@ -50,14 +59,13 @@
 - (void)processTransaction:(SKPaymentTransaction*)transaction withBlock:(void (^)(void))block;
 
 // Social Functions
+
 - (void)openFacebookShareModalFromViewController:(UIViewController*)viewController withShareText:(NSString*)shareText;
 
 - (void)openFacebookShareModalFromViewController:(UIViewController*)viewController;
 
 // Dev Helpers
 - (void)logMessage:(NSString*)message;
-
-- (void)getSettingsWithBlock:(void (^)(NSArray*, NSError*))block;
 
 - (void)makeRibbonWithCenter:(CGPoint)center inViewController:(UIViewController*)viewController;
 
