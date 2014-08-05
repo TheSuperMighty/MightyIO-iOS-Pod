@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface smViewController : UIViewController
+- (IBAction)startSupermighty:(id)sender;
 
 @end

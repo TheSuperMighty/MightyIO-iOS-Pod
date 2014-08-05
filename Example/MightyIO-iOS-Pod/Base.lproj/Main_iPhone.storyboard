@@ -1,9 +1,50 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="XZ9-9f-Uhz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="941-L5-9HT">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
+        <!--Sm View Controller-->
+        <scene sceneID="Lxe-Tq-lgD">
+            <objects>
+                <viewController id="Mza-nL-Ob7" customClass="smViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KRy-CJ-tog"/>
+                        <viewControllerLayoutGuide type="bottom" id="SxZ-JW-ruf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ia9-n2-tJw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8qU-3W-WX4">
+                                <rect key="frame" x="105" y="269" width="110" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="See function list">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="aDM-wv-rYH" kind="push" id="fYo-bo-VeR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jsw-nL-zSM">
+                                <rect key="frame" x="105" y="293" width="125" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Start SuperMighty">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startSupermighty:" destination="Mza-nL-Ob7" eventType="touchUpInside" id="n59-0H-cTE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ia8-d0-abG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lHz-MK-R2H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1805" y="-25"/>
+        </scene>
         <!--Function List Table View Controller - Function List-->
         <scene sceneID="07g-MI-apO">
             <objects>
@@ -147,25 +188,25 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NZT-CH-WQL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1683" y="-30"/>
+            <point key="canvasLocation" x="2305" y="-25"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="gPW-4w-Ncp">
+        <scene sceneID="pxN-oa-o57">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XZ9-9f-Uhz" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="941-L5-9HT" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yG6-3s-3fo">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FxE-lz-9ZP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="aDM-wv-rYH" kind="relationship" relationship="rootViewController" id="aYx-cn-LYx"/>
+                        <segue destination="Mza-nL-Ob7" kind="relationship" relationship="rootViewController" id="GSr-pg-2ms"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dTO-vI-GmF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PDs-sY-tFK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1157" y="-30"/>
+            <point key="canvasLocation" x="1279" y="-25"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
