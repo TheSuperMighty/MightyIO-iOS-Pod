@@ -54,6 +54,8 @@
 
 - (void)productsRequest:(SKProductsRequest*)request didReceiveResponse:(SKProductsResponse*)response
 {
+    NSLog(@"RUN");
+    NSLog(@"Products %@", response.products);
     _products = response.products;
 }
 
