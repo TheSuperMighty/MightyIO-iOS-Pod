@@ -185,7 +185,7 @@
         // Opens a modal Facebook share in a specified ViewController with a default share text.
         // This can be called in the closure of:
         // - (void)processTransaction:(SKPaymentTransaction*)transaction withBlock:(void (^)(void))block;
-        [[Mighty sharedInstance] openFacebookShareModalFromViewController:self withShareText:@"I just made a Mighty Purchase"];
+        //[[Mighty sharedInstance] openFacebookShareModalFromViewController:self withShareText:@"I just made a Mighty Purchase"];
 
         break;
     // Open Facebook Share Modal With Text
@@ -193,7 +193,7 @@
         // Opens a modal Facebook share in a specified ViewController. The default share text will be pulled from the API.
         // This can be called in the closure of:
         // - (void)processTransaction:(SKPaymentTransaction*)transaction withBlock:(void (^)(void))block;
-        [[Mighty sharedInstance] openFacebookShareModalFromViewController:self];
+        //[[Mighty sharedInstance] openFacebookShareModalFromViewController:self];
 
         break;
 
