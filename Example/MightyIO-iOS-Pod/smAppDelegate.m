@@ -14,7 +14,7 @@
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
 
-    [Mighty initWithUsername:@"test@supermighty.com" andPassword:@"mighty123"];
+    [Mighty initWithUsername:@"aaron@supermighty.com" andPassword:@"mighty123"];
 
     return YES;
 }

@@ -19,7 +19,7 @@
 {
     [super viewDidLoad];
     NSLog(@"View Did Load");
-    [[Mighty sharedInstance] makeRibbonWithCenter:CGPointMake(260, 95) inViewController:self];
+    [[Mighty sharedInstance] makeRibbonWithCenter:CGPointMake(260, 40) inViewController:self];
 
     // Do any additional setup after loading the view, typically from a nib.
 }
