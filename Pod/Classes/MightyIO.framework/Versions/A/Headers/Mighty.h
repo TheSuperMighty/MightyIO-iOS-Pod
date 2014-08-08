@@ -32,13 +32,11 @@
 @property (strong, nonatomic) NSString* password;
 @property (strong, nonatomic) NSArray* mightyItems;
 @property (strong, nonatomic) PFObject* game;
-@property (strong, nonatomic) PFObject* cause;
-@property (strong, nonatomic) PFObject* item;
-@property (strong, nonatomic) PFObject* currentItem;
+//@property (strong, nonatomic) PFObject* cause;
+//@property (strong, nonatomic) PFObject* item;
+//@property (strong, nonatomic) PFObject* currentItem;
 @property SKPaymentTransaction* lastTransaction;
-@property (strong, nonatomic) NSString* landingPageUrl;
-@property (strong, nonatomic) NSURL* itemImageUrl;
-@property (strong, nonatomic) NSString* dynamicShareText;
+//@property (strong, nonatomic) NSURL* itemImageUrl;
 @property (strong, nonatomic) UIViewController* presentingViewController;
 
 // Init Functions
@@ -60,9 +58,9 @@
 
 // Social Functions
 
-- (void)openFacebookShareModalFromViewController:(UIViewController*)viewController withShareText:(NSString*)shareText;
-
-- (void)openFacebookShareModalFromViewController:(UIViewController*)viewController;
+//- (void)openFacebookShareModalFromViewController:(UIViewController*)viewController withShareText:(NSString*)shareText;
+//
+//- (void)openFacebookShareModalFromViewController:(UIViewController*)viewController;
 
 // Dev Helpers
 - (void)logMessage:(NSString*)message;
