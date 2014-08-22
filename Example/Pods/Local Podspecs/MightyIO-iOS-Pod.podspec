@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "MightyIO-iOS-Pod"
-  s.version          = "0.2.0"
+  s.version          = "0.3.0"
   s.summary          = "The MightyIO SDK, by SuperMighty"
   s.homepage         = "https://github.com/TheSuperMighty/MightyIO-iOS-Pod"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
@@ -20,10 +20,10 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, '7.0'
   s.requires_arc = true
-  s.resources = 'Pod/Assets/*.{png,xib}'
+  s.resources = 'Pod/Assets/*.{png,xib,ttf}'
   s.preserve_paths = 'Pod/Classes/MightyIO.framework',
   s.public_header_files = 'Pod/Classes/MightyIO.framework/**/*.h'
   s.vendored_frameworks = 'Pod/Classes/MightyIO.framework'
-  s.frameworks = 'UIKit', 'MapKit','Social', 'StoreKit'
+  s.frameworks = 'UIKit', 'MapKit','Social', 'StoreKit', 'CoreText'
   s.dependency 'Parse-iOS-SDK', '~> 1.2'
 end

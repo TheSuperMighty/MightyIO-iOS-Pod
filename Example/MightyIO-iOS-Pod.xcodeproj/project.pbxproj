@@ -24,8 +24,8 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		6E6431F2687649AD9CFF6830 /* libPods-MightyIO-iOS-Pod.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F250133F78904F0D85654D1C /* libPods-MightyIO-iOS-Pod.a */; };
-		F5E1966B19744D60001BFAEB /* FunctionListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E1966A19744D60001BFAEB /* FunctionListTableViewController.m */; };
 		F5E1967019759E71001BFAEB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5E1966F19759E71001BFAEB /* StoreKit.framework */; };
+		F5EE52A119A7D9CB0080D716 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5EE52A019A7D9CB0080D716 /* CoreText.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,9 +64,8 @@
 		B561EEE26AA34D4FA37A9988 /* Pods-MightyIO-iOS-Pod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MightyIO-iOS-Pod.xcconfig"; path = "Pods/Pods-MightyIO-iOS-Pod.xcconfig"; sourceTree = "<group>"; };
 		D764801C64A348269FB3F07B /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F250133F78904F0D85654D1C /* libPods-MightyIO-iOS-Pod.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MightyIO-iOS-Pod.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F5E1966919744D60001BFAEB /* FunctionListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunctionListTableViewController.h; sourceTree = "<group>"; };
-		F5E1966A19744D60001BFAEB /* FunctionListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunctionListTableViewController.m; sourceTree = "<group>"; };
 		F5E1966F19759E71001BFAEB /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		F5EE52A019A7D9CB0080D716 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5EE52A119A7D9CB0080D716 /* CoreText.framework in Frameworks */,
 				F5E1967019759E71001BFAEB /* StoreKit.framework in Frameworks */,
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
@@ -121,6 +121,7 @@
 		6003F58C195388D20070C39A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F5EE52A019A7D9CB0080D716 /* CoreText.framework */,
 				F5E1966F19759E71001BFAEB /* StoreKit.framework */,
 				6003F58D195388D20070C39A /* Foundation.framework */,
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
@@ -139,8 +140,6 @@
 				6003F59D195388D20070C39A /* smAppDelegate.m */,
 				6003F59F195388D20070C39A /* Main_iPhone.storyboard */,
 				6003F5A2195388D20070C39A /* Main_iPad.storyboard */,
-				F5E1966919744D60001BFAEB /* FunctionListTableViewController.h */,
-				F5E1966A19744D60001BFAEB /* FunctionListTableViewController.m */,
 				6003F5A5195388D20070C39A /* smViewController.h */,
 				6003F5A6195388D20070C39A /* smViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
@@ -355,7 +354,6 @@
 				6003F59E195388D20070C39A /* smAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* smViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
-				F5E1966B19744D60001BFAEB /* FunctionListTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
