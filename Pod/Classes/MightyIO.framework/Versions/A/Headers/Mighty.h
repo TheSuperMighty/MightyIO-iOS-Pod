@@ -27,17 +27,22 @@
 }
 
 @property (nonatomic, weak) id<MightyDelegate> mightyDelegate;
-@property BOOL debug;
-@property BOOL authenticating;
 @property (strong, nonatomic) NSString* username;
 @property (strong, nonatomic) NSString* password;
 @property (strong, nonatomic) NSArray* mightyItems;
 @property (strong, nonatomic) PFObject* game;
+@property (strong, nonatomic) PFObject* currentItem;
 @property SKPaymentTransaction* lastTransaction;
 @property (strong, nonatomic) UIViewController* presentingViewController;
-@property BOOL fullyLoaded;
 @property (strong, nonatomic) UIButton* smRibbon;
 @property (strong, nonatomic) NSNumber* testing;
+@property (strong, nonatomic) NSNumber* tweeted;
+@property (strong, nonatomic) NSNumber* shared;
+
+@property BOOL debug;
+@property BOOL authenticating;
+@property BOOL fullyLoaded;
+@property BOOL isCampaignActive;
 
 // Init Functions
 
@@ -60,13 +65,6 @@
  @return The singleton @c Mighty object that can be used throughout the app
  */
 + (Mighty*)initWithUsername:(NSString*)username andPassword:(NSString*)password;
-
-// Product Getters
-/**
- Loads the product list for the current game bundle from MightyIO
- @return void
- */
-- (void)getProductListWithBlock:(void (^)(NSArray*, NSError*))block;
 
 /**
  Checks the Campaign Status of an Item when App becomes active
