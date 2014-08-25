@@ -13,9 +13,12 @@ The Mighty will provide you with the methods you need to easily interface with t
 1. Add 'MightyIO' to your Podfile
 2. Run Pod install (Refer to CocoaPod’s [Getting Started Guide](http://cocoapods.org/#getstarted) for detailed instructions.)
 3. Import Mighty ``#import <MightyIO-iOS-Pod/Mighty.h>``
-4. Add ``[Mighty initWithUsername:@"supermighty" andPassword:@"scrapple"];`` to - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions;
-5. Add ``[[Mighty sharedInstance] processTransactions:transactions];`` to -(void)paymentQueue:(SKPaymentQueue *)queue updatedTransactions:(NSArray *)transactions;
-6. To share a transaction in the closure of - (void)processTransaction:(SKPaymentTransaction*)transaction withBlock:(void (^)(void))block; call ``[[Mighty sharedInstance] openFacebookShareModalFromViewController:myRootViewController];``
+4. Add ``[Mighty initWithUsername:@"username" andPassword:@"password"];`` to - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions;
+5. Place the Super Mighty Ribbon on your desired screen using the code ``[[Mighty sharedInstance] makeRibbonWithCenter:CGPointMake(260, 45) inViewController:self];``
+6. Add the Mighty Delegate to your view controller: ``@interface HomeViewController : UIViewController <MightyDelegate>``
+7. In your ViewController add ``[Mighty sharedInstance].mightyDelegate = self;`` to -(void)viewDidLoad;
+8. Add the SuperMighty callback function to your ViewController ``- (void)didRecordSuccessfulTransaction:(SKPaymentTransaction*)transaction;``
+9. Inside the didRecordSuccessfulTransaction function place the code to unlock your item.
 
 
 Installation
