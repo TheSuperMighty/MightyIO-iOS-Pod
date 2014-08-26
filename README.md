@@ -96,3 +96,11 @@ A method that will place the SuperMighty Ribbon on a specified ribbon.  Ribbon w
     }
 ```
 
+###Mighty Delegate Functions
+The Mighty Delegate provides the methods required for your game to react to a purchase made through SuperMighty.  Typically this would involve unlocking them item or feature that the user has just payed for. 
+
+To implement this:
+1. Add the Mighty Delegate to your class:
+``@interface HomeViewController : UIViewController <MightyDelegate>``
+2. In your implementation add the method ``- (void)didRecordSuccessfulTransaction:(SKPaymentTransaction*)transaction;``
+3. Inside the didRecordSuccessfulTransaction method place your code to unlock your items.  Unlocking items dynamically is the best way to do this so that you can add new campaigns without resubmitting your app.
