@@ -7,15 +7,18 @@ MightyIO - iOS
 [![Platform](https://img.shields.io/cocoapods/p/MightyIO-iOS-Pod.svg?style=flat)](http://cocoadocs.org/docsets/MightyIO-iOS-Pod)
  
 
-The Mighty will provide you with the methods you need to easily interface with the SuperMighty API.  It contains methods to log in, get mighty items, record purchases of mighty items, and prompt a user to share the purchase of a mighty item.
+The MightyIO will provide you with the methods you need to easily interface with the SuperMighty API.  It contains methods to log in, place the SuperMighty Ribbon, and unlock items/features when a SuperMighty purchase is complete.
 
 ## Quick Start Guide
-1. Add 'MightyIO' to your Podfile
+1. Add 'MightyIO-iOS-Pod' to your Podfile 
 2. Run Pod install (Refer to CocoaPod’s [Getting Started Guide](http://cocoapods.org/#getstarted) for detailed instructions.)
-3. Import Mighty ``#import <MightyIO-iOS-Pod/Mighty.h>``
-4. Add ``[Mighty initWithUsername:@"supermighty" andPassword:@"scrapple"];`` to - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions;
-5. Add ``[[Mighty sharedInstance] processTransactions:transactions];`` to -(void)paymentQueue:(SKPaymentQueue *)queue updatedTransactions:(NSArray *)transactions;
-6. To share a transaction in the closure of - (void)processTransaction:(SKPaymentTransaction*)transaction withBlock:(void (^)(void))block; call ``[[Mighty sharedInstance] openFacebookShareModalFromViewController:myRootViewController];``
+3. Import Mighty.h in your AppDelegate ``#import <MightyIO-iOS-Pod/Mighty.h>``
+4. Add ``[Mighty initWithUsername:@"username" andPassword:@"password"];`` to - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions;
+5. Place the Super Mighty Ribbon on your desired screen using the code ``[[Mighty sharedInstance] makeRibbonWithCenter:CGPointMake(260, 45) inViewController:self];``
+6. Add the Mighty Delegate to your view controller: ``@interface HomeViewController : UIViewController <MightyDelegate>``
+7. In your ViewController add ``[Mighty sharedInstance].mightyDelegate = self;`` to -(void)viewDidLoad;
+8. Add the SuperMighty callback function to your ViewController ``- (void)didRecordSuccessfulTransaction:(SKPaymentTransaction*)transaction;``
+9. Inside the didRecordSuccessfulTransaction function place the code to unlock your item.
 
 
 Installation
@@ -24,8 +27,8 @@ Installation
 2. Import the Mighty to your project: `#import <MightyIO-iOS-Pod/Mighty.h>`
 3. Before instantiating Mighty you must first register at http://themighty.io
 * Create an account.
-* Add a game (the name of your game must match your bundleIdentifier).
-* Add items to your game
+* Add a game
+* Add an item to your game and set it to be the test item.
 4. In your AppDelegate in the didFinishLaunchingWithOptions method instantiate the Mighty:
     
     ```objective-c
@@ -38,6 +41,8 @@ Installation
     ```
 
 5. To verify that Mighty is running run your app and a series of messages should log to the console indicating successful log in and retrieval of you Mighty Items for that game.
+6. Place ribbon using the method ``[[Mighty sharedInstance] makeRibbonWithCenter:CGPointMake(260, 45) inViewController:self];``
+7. Start testing.
 
 Methods
 -----
@@ -55,15 +60,7 @@ An class method that returns a shared instance of the Mighty.
 **returns:**
 
 * (Mighty*)sharedInstance - a shared instance of Mighty
-
-**example:**
-```objective-c 
-    [[Mighty sharedInstance] getProductListWithBlock:^(NSArray *products, NSError *error) {
-        NSLog(@"PRODUCTS %@", products);
-    }];
-```
----
-
+___
 **+ (Mighty*)initWithUsername:(NSString*)username andPassword:(NSString*)password;**  
 An class method logs into the Mighty. On log in this method will get your game, its share url and text, and its associated items. 
 
@@ -81,90 +78,29 @@ An class method logs into the Mighty. On log in this method will get your game, 
         return YES;
     }
 ```
+___
 
----
-
-###Transactional Functions
-
-**- (void)processTransaction:(SKPaymentTransaction*)transaction;**
-Similar to ``- (void)processTransactions:(NSArray*)transactions;`` this method will process a single SKPaymentTransaction.
+**- (void)makeRibbonWithCenter:(CGPoint)center inViewController:(UIViewController*)viewController;**
+A method that will place the SuperMighty Ribbon on a specified ribbon.  Ribbon will only appear when a valid game and item has been created in your SuperMighty Account.  This method will also handle showing/hiding the ribbon based on campaign active states  when deployed to the app store.  While item is in development ribbon should always display when a valid item/game exists.
 
 **params:**
 
-* (SKPaymentTransaction*)transaction - A processed transaction from the app store.
+* (CGPoint)center - The center point for placing the ribbon in the view.
+* (UIViewController*)viewController - The ViewController presenting the ribbon.
 
 **example:**
 ```objective-c
-    -(void)paymentQueue:(SKPaymentQueue *)queue updatedTransactions:(NSArray *)transactions{
-        for (SKPaymentTransaction* transaction in transactions)
-            [[Mighty sharedInstance] processTransaction:transaction];
+    - (void)viewDidLoad
+    {
+        [[Mighty sharedInstance] makeRibbonWithCenter:CGPointMake(260, 45) inViewController:self];
     }
 ```
 
----
+###Mighty Delegate Functions
+The Mighty Delegate provides the methods required for your game to react to a purchase made through SuperMighty.  Typically this would involve unlocking them item or feature that the user has just payed for. 
 
-**- (void)processTransaction:(SKPaymentTransaction*)transaction withBlock:(void (^)(void))block;**
-Similar to ``- (void)processTransactions:(SKPaymentTransaction*)transaction;`` this method will process a single SKPaymentTransaction and return a block when it completes.
-
-**params:**
-
-* (SKPaymentTransaction*)transaction - A processed transaction from the app store.
-
-**example:**
-```objective-c
-    -(void)paymentQueue:(SKPaymentQueue *)queue updatedTransactions:(NSArray *)transactions{
-        for (SKPaymentTransaction* transaction in transactions){
-            [[Mighty sharedInstance] processTransaction:transaction withBlock:^{
-            
-                UIAlertView *SuperMightySuccess = [[UIAlertView alloc] initWithTitle:@"Success" message:@"Super Mighty Processed" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles: @"Share To Facebook", nil];
-                [SuperMightySuccess show];
-            
-        }];
-        }
-    }
-```
-
----
-
-###Social Functions
-
-**- (void)openFacebookShareModalFromViewController:(UIViewController*)viewController withShareText:(NSString*)shareText;**
-
-Opens a modal Facebook share in a specified ViewController with a default share text.
-
-**params:**
-
-* (UIViewController*)viewController - The ViewController that will present the sharing modal.
-* (NSString*)shareText - The default share text. **If this parameter is empty the share text will pull from the SuperMighty API.**
-
-**example:**
-```objective-c
-    // Get Root View Controller
-    UIViewController* myRootViewController = self.window.rootViewController;
-    
-    // Present sharing modal on myRootViewController
-    [[Mighty sharedInstance] openFacebookShareModalFromViewController:myRootViewController withShareText:@"Share Text"];
-```
-
----
-
-**- (void)openFacebookShareModalFromViewController:(UIViewController*)viewController;**
-
-Opens a modal Facebook share in a specified ViewController.  The default share text will be pulled from the API.
-
-**params:**
-
-* (UIViewController*)viewController - The ViewController that will present the sharing modal.
-
-
-**example:**
-```objective-c
-    // Get Root View Controller
-    UIViewController* myRootViewController = self.window.rootViewController;
-    
-    // Present sharing modal on myRootViewController
-    [[Mighty sharedInstance] openFacebookShareModalFromViewController:myRootViewController withShareText:@"Share Text"];
-```
-
----
-
+To implement this:
+1. Add the Mighty Delegate to your class:
+``@interface HomeViewController : UIViewController <MightyDelegate>``
+2. In your implementation add the method ``- (void)didRecordSuccessfulTransaction:(SKPaymentTransaction*)transaction;``
+3. Inside the didRecordSuccessfulTransaction method place your code to unlock your items.  Unlocking items dynamically is the best way to do this so that you can add new campaigns without resubmitting your app.
