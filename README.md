@@ -61,6 +61,7 @@ An class method that returns a shared instance of the Mighty.
 
 * (Mighty*)sharedInstance - a shared instance of Mighty
 ___
+
 **+ (Mighty*)initWithUsername:(NSString*)username andPassword:(NSString*)password;**  
 An class method logs into the Mighty. On log in this method will get your game, its share url and text, and its associated items. 
 
