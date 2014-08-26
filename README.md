@@ -59,14 +59,6 @@ An class method that returns a shared instance of the Mighty.
 
 * (Mighty*)sharedInstance - a shared instance of Mighty
 
-**example:**
-```objective-c 
-    [[Mighty sharedInstance] getProductListWithBlock:^(NSArray *products, NSError *error) {
-        NSLog(@"PRODUCTS %@", products);
-    }];
-```
----
-
 **+ (Mighty*)initWithUsername:(NSString*)username andPassword:(NSString*)password;**  
 An class method logs into the Mighty. On log in this method will get your game, its share url and text, and its associated items. 
 
@@ -82,48 +74,6 @@ An class method logs into the Mighty. On log in this method will get your game, 
         [Mighty initWithUsername:@"username" andPassword:@"password"];
         // Override point for customization after application launch.
         return YES;
-    }
-```
-
----
-
-###Transactional Functions
-
-**- (void)processTransaction:(SKPaymentTransaction*)transaction;**
-Similar to ``- (void)processTransactions:(NSArray*)transactions;`` this method will process a single SKPaymentTransaction.
-
-**params:**
-
-* (SKPaymentTransaction*)transaction - A processed transaction from the app store.
-
-**example:**
-```objective-c
-    -(void)paymentQueue:(SKPaymentQueue *)queue updatedTransactions:(NSArray *)transactions{
-        for (SKPaymentTransaction* transaction in transactions)
-            [[Mighty sharedInstance] processTransaction:transaction];
-    }
-```
-
----
-
-**- (void)processTransaction:(SKPaymentTransaction*)transaction withBlock:(void (^)(void))block;**
-Similar to ``- (void)processTransactions:(SKPaymentTransaction*)transaction;`` this method will process a single SKPaymentTransaction and return a block when it completes.
-
-**params:**
-
-* (SKPaymentTransaction*)transaction - A processed transaction from the app store.
-
-**example:**
-```objective-c
-    -(void)paymentQueue:(SKPaymentQueue *)queue updatedTransactions:(NSArray *)transactions{
-        for (SKPaymentTransaction* transaction in transactions){
-            [[Mighty sharedInstance] processTransaction:transaction withBlock:^{
-            
-                UIAlertView *SuperMightySuccess = [[UIAlertView alloc] initWithTitle:@"Success" message:@"Super Mighty Processed" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles: @"Share To Facebook", nil];
-                [SuperMightySuccess show];
-            
-        }];
-        }
     }
 ```
 
