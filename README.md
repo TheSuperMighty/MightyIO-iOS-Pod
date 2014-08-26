@@ -27,8 +27,8 @@ Installation
 2. Import the Mighty to your project: `#import <MightyIO-iOS-Pod/Mighty.h>`
 3. Before instantiating Mighty you must first register at http://themighty.io
 * Create an account.
-* Add a game (the name of your game must match your bundleIdentifier).
-* Add items to your game
+* Add a game
+* Add an item to your game and set it to be the test item.
 4. In your AppDelegate in the didFinishLaunchingWithOptions method instantiate the Mighty:
     
     ```objective-c
@@ -41,6 +41,8 @@ Installation
     ```
 
 5. To verify that Mighty is running run your app and a series of messages should log to the console indicating successful log in and retrieval of you Mighty Items for that game.
+6. Place ribbon using the method ``[[Mighty sharedInstance] makeRibbonWithCenter:CGPointMake(260, 45) inViewController:self];``
+7. Start testing.
 
 Methods
 -----
@@ -58,7 +60,7 @@ An class method that returns a shared instance of the Mighty.
 **returns:**
 
 * (Mighty*)sharedInstance - a shared instance of Mighty
-
+___
 **+ (Mighty*)initWithUsername:(NSString*)username andPassword:(NSString*)password;**  
 An class method logs into the Mighty. On log in this method will get your game, its share url and text, and its associated items. 
 
@@ -76,48 +78,21 @@ An class method logs into the Mighty. On log in this method will get your game, 
         return YES;
     }
 ```
+___
 
----
-
-###Social Functions
-
-**- (void)openFacebookShareModalFromViewController:(UIViewController*)viewController withShareText:(NSString*)shareText;**
-
-Opens a modal Facebook share in a specified ViewController with a default share text.
+**- (void)makeRibbonWithCenter:(CGPoint)center inViewController:(UIViewController*)viewController;**
+A method that will place the SuperMighty Ribbon on a specified ribbon.  Ribbon will only appear when a valid game and item has been created in your SuperMighty Account.  This method will also handle showing/hiding the ribbon based on campaign active states  when deployed to the app store.  While item is in development ribbon should always display when a valid item/game exists.
 
 **params:**
 
-* (UIViewController*)viewController - The ViewController that will present the sharing modal.
-* (NSString*)shareText - The default share text. **If this parameter is empty the share text will pull from the SuperMighty API.**
+* (CGPoint)center - The center point for placing the ribbon in the view.
+* (UIViewController*)viewController - The ViewController presenting the ribbon.
 
 **example:**
 ```objective-c
-    // Get Root View Controller
-    UIViewController* myRootViewController = self.window.rootViewController;
-    
-    // Present sharing modal on myRootViewController
-    [[Mighty sharedInstance] openFacebookShareModalFromViewController:myRootViewController withShareText:@"Share Text"];
+    - (void)viewDidLoad
+    {
+        [[Mighty sharedInstance] makeRibbonWithCenter:CGPointMake(260, 45) inViewController:self];
+    }
 ```
-
----
-
-**- (void)openFacebookShareModalFromViewController:(UIViewController*)viewController;**
-
-Opens a modal Facebook share in a specified ViewController.  The default share text will be pulled from the API.
-
-**params:**
-
-* (UIViewController*)viewController - The ViewController that will present the sharing modal.
-
-
-**example:**
-```objective-c
-    // Get Root View Controller
-    UIViewController* myRootViewController = self.window.rootViewController;
-    
-    // Present sharing modal on myRootViewController
-    [[Mighty sharedInstance] openFacebookShareModalFromViewController:myRootViewController withShareText:@"Share Text"];
-```
-
----
 
