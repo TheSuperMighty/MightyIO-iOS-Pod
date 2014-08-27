@@ -7,10 +7,10 @@ MightyIO - iOS
 [![Platform](https://img.shields.io/cocoapods/p/MightyIO-iOS-Pod.svg?style=flat)](http://cocoadocs.org/docsets/MightyIO-iOS-Pod)
  
 
-The MightyIO will provide you with the methods you need to easily interface with the SuperMighty API.  It contains methods to log in, place the SuperMighty Ribbon, and unlock items/features when a SuperMighty purchase is complete.
+The MightyIO-iOS-Pod will provide you with the methods you need to easily interface with the SuperMighty API.  It contains methods to log in, place the SuperMighty Ribbon, and unlock items/features when a SuperMighty purchase is complete.
 
 ## Quick Start Guide
-1. Add 'MightyIO-iOS-Pod' to your Podfile 
+1. Add 'MightyIO-iOS-Pod' to your Podfile http://cocoapods.org/?q=mighty
 2. Run Pod install (Refer to CocoaPod’s [Getting Started Guide](http://cocoapods.org/#getstarted) for detailed instructions.)
 3. Import Mighty.h in your AppDelegate ``#import <MightyIO-iOS-Pod/Mighty.h>``
 4. Add ``[Mighty initWithUsername:@"username" andPassword:@"password"];`` to - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions;
