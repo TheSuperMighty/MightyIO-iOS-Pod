@@ -6,13 +6,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GiveViewController">
             <connections>
-                <outlet property="btnFacebook" destination="CcV-SJ-DTl" id="Tvg-eu-ucd"/>
-                <outlet property="btnTwitter" destination="9id-yc-XQ8" id="TSX-yG-Lr3"/>
-                <outlet property="checkBoxTw" destination="TPH-18-PUv" id="nEF-rC-zjX"/>
-                <outlet property="checkboxFB" destination="RQ7-6T-gUA" id="eq7-J2-Mr7"/>
-                <outlet property="iconFB" destination="E8i-1n-Wbs" id="ABg-qy-scE"/>
-                <outlet property="iconTw" destination="BDY-Hg-YkE" id="RjG-J6-6Mi"/>
-                <outlet property="itemPrice" destination="be7-6z-t6p" id="KNN-qT-aDv"/>
+                <outlet property="btnFacebook" destination="MwC-n8-EVx" id="s5q-2W-rk9"/>
+                <outlet property="btnPurchase" destination="NKq-U5-L5g" id="bGP-cP-Eey"/>
+                <outlet property="btnTwitter" destination="eYa-4I-sje" id="Fpg-qL-ghE"/>
+                <outlet property="checkBoxTw" destination="dMU-tl-QlX" id="Lpl-Sr-5he"/>
+                <outlet property="checkboxFB" destination="5g5-fl-NGR" id="ccT-It-QGT"/>
+                <outlet property="developerInfoView" destination="Yh8-D3-mmM" id="AZu-Jt-bWq"/>
+                <outlet property="iconFB" destination="0s2-Dd-U5Q" id="cpT-Qt-ddn"/>
+                <outlet property="iconTw" destination="Nli-ei-L1F" id="rsa-hB-lRE"/>
+                <outlet property="labelPurchase" destination="Nar-mn-foO" id="FG3-co-k1V"/>
                 <outlet property="view" destination="iN0-l3-epB" id="L9z-iB-Qdn"/>
             </connections>
         </placeholder>
@@ -21,96 +23,29 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="98I-EP-vws">
-                    <rect key="frame" x="0.0" y="219" width="320" height="184"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CcV-SJ-DTl" userLabel="Button - facebook">
-                            <rect key="frame" x="-1" y="86" width="322" height="48"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="SHARE THE GOOD">
-                                <color key="titleColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="shareOnFacebook:" destination="-1" eventType="touchUpInside" id="lzZ-kk-nvh"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9id-yc-XQ8" userLabel="Button - twitter">
-                            <rect key="frame" x="-1" y="133" width="322" height="51"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="SHARE THE GOOD">
-                                <color key="titleColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="shareOnTwitter:" destination="-1" eventType="touchUpInside" id="Iq6-tv-wzG"/>
-                            </connections>
-                        </button>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img-check.png" translatesAutoresizingMaskIntoConstraints="NO" id="TPH-18-PUv">
-                            <rect key="frame" x="270" y="94" width="30" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </imageView>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-fb.png" translatesAutoresizingMaskIntoConstraints="NO" id="E8i-1n-Wbs">
-                            <rect key="frame" x="20" y="94" width="30" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </imageView>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-tw.png" translatesAutoresizingMaskIntoConstraints="NO" id="BDY-Hg-YkE">
-                            <rect key="frame" x="20" y="144" width="30" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </imageView>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img-check.png" translatesAutoresizingMaskIntoConstraints="NO" id="RQ7-6T-gUA">
-                            <rect key="frame" x="270" y="144" width="30" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </imageView>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img-child.png" translatesAutoresizingMaskIntoConstraints="NO" id="uWw-au-GE7">
-                            <rect key="frame" x="20" y="7" width="80" height="73"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </imageView>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1 OUT OF EVERY 5 CHILDREN IN THE U.S. IS FOOD INSECURE." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="179" translatesAutoresizingMaskIntoConstraints="NO" id="GQj-wY-ZfF">
-                            <rect key="frame" x="121" y="13" width="179" height="61"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
-                    <color key="backgroundColor" red="0.1137254902" green="0.1137254902" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
-                </view>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img-plate.png" translatesAutoresizingMaskIntoConstraints="NO" id="bQu-ex-Wq1">
-                    <rect key="frame" x="112" y="86" width="96" height="96"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MEALS TO A HUNGRY CHILD" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="211" translatesAutoresizingMaskIntoConstraints="NO" id="ifl-7H-zpZ">
-                    <rect key="frame" x="55" y="43" width="211" height="50"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <color key="textColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VBZ-rw-XGH">
-                    <rect key="frame" x="20" y="16" width="36" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y52-4K-wOb">
+                    <rect key="frame" x="20" y="11" width="36" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" image="btn-back.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V4l-yY-Tjc">
-                    <rect key="frame" x="0.0" y="403" width="320" height="77"/>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xvr-0D-7ov">
+                    <rect key="frame" x="0.0" y="414" width="320" height="90"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GPg-9F-zdg">
-                            <rect key="frame" x="0.0" y="-12" width="320" height="89"/>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NKq-U5-L5g">
+                            <rect key="frame" x="0.0" y="-21" width="320" height="93"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="GIVE MEALS">
+                            <state key="normal" title="PURCHASE">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
-                                <action selector="giveWater:" destination="-1" eventType="touchUpInside" id="iwM-9D-h6i"/>
+                                <action selector="giveWater:" destination="-1" eventType="touchUpInside" id="bGc-ag-ufn"/>
                             </connections>
                         </button>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MEALS TO A HUNGERY CHILD" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="211" translatesAutoresizingMaskIntoConstraints="NO" id="cUI-KY-Cem">
-                            <rect key="frame" x="55" y="36" width="211" height="35"/>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MEALS TO A HUNGRY CHILD" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="211" translatesAutoresizingMaskIntoConstraints="NO" id="Nar-mn-foO">
+                            <rect key="frame" x="55" y="25" width="211" height="35"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <color key="textColor" red="0.56470588239999997" green="0.0" blue="0.019607843140000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -119,10 +54,68 @@
                     </subviews>
                     <color key="backgroundColor" red="1" green="0.1137254902" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5.99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="be7-6z-t6p" userLabel="Price - 5.99">
-                    <rect key="frame" x="124" y="180" width="73" height="32"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img-plate.png" translatesAutoresizingMaskIntoConstraints="NO" id="Rce-zO-nKe">
+                    <rect key="frame" x="116" y="95" width="89" height="89"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                </imageView>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ME1-V0-wN9">
+                    <rect key="frame" x="0.0" y="315" width="320" height="100"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MwC-n8-EVx" userLabel="Button - facebook">
+                            <rect key="frame" x="-1" y="-1" width="322" height="51"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="SHARE THE CAUSE">
+                                <color key="titleColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="shareOnFacebook:" destination="-1" eventType="touchUpInside" id="1Gb-bI-9Wf"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eYa-4I-sje" userLabel="Button - twitter">
+                            <rect key="frame" x="-1" y="49" width="322" height="51"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="SHARE THE CAUSE">
+                                <color key="titleColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="shareOnTwitter:" destination="-1" eventType="touchUpInside" id="7Fv-9s-oBi"/>
+                            </connections>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img-check.png" translatesAutoresizingMaskIntoConstraints="NO" id="5g5-fl-NGR">
+                            <rect key="frame" x="270" y="11" width="30" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-fb.png" translatesAutoresizingMaskIntoConstraints="NO" id="0s2-Dd-U5Q">
+                            <rect key="frame" x="20" y="11" width="30" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-tw.png" translatesAutoresizingMaskIntoConstraints="NO" id="Nli-ei-L1F">
+                            <rect key="frame" x="20" y="61" width="30" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img-check.png" translatesAutoresizingMaskIntoConstraints="NO" id="dMU-tl-QlX">
+                            <rect key="frame" x="270" y="61" width="30" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.1137254902" green="0.1137254902" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yh8-D3-mmM">
+                    <rect key="frame" x="20" y="192" width="280" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <string key="text">HAS AGREED TO BE MIGHTY. A PORTION OF YOUR PURCHASE WILL GO TO THE MIGHTY FOUNDATION TO HELP FIGHT CHILDHOOD HUNGER. CLICK HERE TO LEARN MORE ABOUT THE MIGHTY FOUNDATION.</string>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                    <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                </textView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="YOU ARE HELPING FIGHT CHILDHOOD HUNGER" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="265" translatesAutoresizingMaskIntoConstraints="NO" id="eXJ-WW-Lql">
+                    <rect key="frame" x="28" y="43" width="265" height="60"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -137,7 +130,6 @@
         <image name="icon-fb.png" width="30" height="30"/>
         <image name="icon-tw.png" width="30" height="30"/>
         <image name="img-check.png" width="30" height="30"/>
-        <image name="img-child.png" width="100" height="92"/>
         <image name="img-plate.png" width="130" height="130"/>
     </resources>
 </document>

@@ -18,6 +18,7 @@
 @optional
 
 - (void)didRecordSuccessfulTransaction:(SKPaymentTransaction*)transaction;
+- (void)mightyTransactionFailedWithError:(NSError*)error;
 
 @end
 
@@ -32,7 +33,7 @@
 @property (strong, nonatomic) NSArray* mightyItems;
 @property (strong, nonatomic) PFObject* game;
 @property (strong, nonatomic) PFObject* currentItem;
-@property SKPaymentTransaction* lastTransaction;
+@property (strong, nonatomic) SKPaymentTransaction* lastTransaction;
 @property (strong, nonatomic) UIViewController* presentingViewController;
 @property (strong, nonatomic) UIButton* smRibbon;
 @property (strong, nonatomic) NSNumber* testing;
@@ -43,6 +44,7 @@
 @property BOOL authenticating;
 @property BOOL fullyLoaded;
 @property BOOL isCampaignActive;
+@property BOOL simulator;
 
 // Init Functions
 
