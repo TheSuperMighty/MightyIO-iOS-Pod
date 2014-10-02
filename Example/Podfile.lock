@@ -1,14 +1,11 @@
 PODS:
   - Bolts (1.1.2)
-  - Facebook-iOS-SDK (3.17.0):
-    - Bolts
-  - FBSnapshotTestCase (1.1)
+  - FBSnapshotTestCase (1.2)
   - Kiwi (2.3.0)
-  - MightyIO-iOS-Pod (0.4.0):
+  - MightyIO-iOS-Pod (0.5.0):
     - Parse-iOS-SDK (~> 1.2)
-  - Parse-iOS-SDK (1.2.21):
-    - Bolts
-    - Facebook-iOS-SDK (~> 3.7)
+  - Parse-iOS-SDK (1.3.0):
+    - Bolts (~> 1.1.2)
 
 DEPENDENCIES:
   - FBSnapshotTestCase
@@ -21,10 +18,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Bolts: 2635e8698a630774689441047f3465d78c48d485
-  Facebook-iOS-SDK: f20274d809f112ba540842e2b6cbe50128d51b7b
-  FBSnapshotTestCase: 9053afee1d66b4c7c313fcb0ae582a5e47bea9d0
+  FBSnapshotTestCase: 4159bdf235fdae25aa7d813f1452a4f05ad4f9cd
   Kiwi: 54bece5b35564d9b8e03c608d926f1a22fcfc589
-  MightyIO-iOS-Pod: a9da396bc3cfd869a300b17eed48d449f09042a5
-  Parse-iOS-SDK: 3781eeb56fa6b30d4feee97ee0d22595c07d6c70
+  MightyIO-iOS-Pod: 10131555110e8a45389ad244c2cabcd9ab58b2e5
+  Parse-iOS-SDK: fb847b9d3e9444a27f78a81e9496de1cacefd1da
 
 COCOAPODS: 0.33.1

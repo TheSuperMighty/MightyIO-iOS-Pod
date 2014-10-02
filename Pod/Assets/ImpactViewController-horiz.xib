@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1808" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ImpactViewController">
+            <connections>
+                <outlet property="contentView" destination="C8b-5k-JJl" id="nVe-SH-2bR"/>
+                <outlet property="scrollView" destination="4SL-gJ-2ef" id="rDW-Xi-b5O"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4SL-gJ-2ef">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C8b-5k-JJl" userLabel="contentView">
+                            <rect key="frame" x="0.0" y="0.0" width="480" height="946"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="impact-high-school.png" translatesAutoresizingMaskIntoConstraints="NO" id="dDd-Y1-tU5">
+                                    <rect key="frame" x="20" y="484" width="194" height="191"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="191" id="5et-tv-7eV"/>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="194" id="gb0-Gw-8tN"/>
+                                    </constraints>
+                                </imageView>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="impact-childhood-hunger.png" translatesAutoresizingMaskIntoConstraints="NO" id="M2k-UO-vfB">
+                                    <rect key="frame" x="239" y="692" width="224" height="143"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="129" id="arJ-aN-iAI"/>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="221" id="hLy-9H-QmA"/>
+                                    </constraints>
+                                </imageView>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="impact-united-states.png" translatesAutoresizingMaskIntoConstraints="NO" id="vEq-d0-xBh">
+                                    <rect key="frame" x="0.0" y="80" width="257" height="225"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="257" id="Bt2-gc-FLr"/>
+                                        <constraint firstAttribute="height" constant="225" id="luN-xt-uTQ"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THIS MORNING IN THE U.S., 16 MILLION CHILDREN WOKE UP IN A HOME THAT IS FOOD INSECURE." lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flK-wa-Ysm">
+                                    <rect key="frame" x="265" y="152" width="198" height="81"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="81" id="aiC-d8-E5l"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" red="0.38039215686274508" green="0.38039215686274508" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="CHILDHOOD HUNGER AFFECTS NEARLY ONE IN EVERY FIVE CHILDREN IN THE U.S." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTY-jd-vyz">
+                                    <rect key="frame" x="20" y="327" width="206" height="80"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="80" id="hCI-Ea-sPN"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" red="0.3803921569" green="0.3803921569" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" image="impact-children.png" translatesAutoresizingMaskIntoConstraints="NO" id="Kk9-Rm-3C1">
+                                    <rect key="frame" x="242" y="317" width="218" height="134"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="218" id="0Fw-s4-ENl"/>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="JZV-2h-Fdf"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="HELP CHANGE THESE NUMBERS TODAY WITH YOUR PURCHASE OF A MIGHTYITEM." lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yMS-b7-1Mo">
+                                    <rect key="frame" x="20" y="730" width="191" height="67"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" red="0.3803921569" green="0.3803921569" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="CHILDREN WHO EAT BREAKFAST ARE 20% MORE LIKELY TO GRADUATE HIGH SCHOOL." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZr-6i-RVZ">
+                                    <rect key="frame" x="254" y="547" width="206" height="67"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" red="0.3803921569" green="0.3803921569" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.14117647058823529" green="0.14117647058823529" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstItem="yMS-b7-1Mo" firstAttribute="leading" secondItem="C8b-5k-JJl" secondAttribute="leading" constant="20" id="0hw-mj-xtJ"/>
+                                <constraint firstAttribute="trailing" secondItem="M2k-UO-vfB" secondAttribute="trailing" constant="17" id="7Jl-g9-m18"/>
+                                <constraint firstAttribute="trailing" secondItem="pZr-6i-RVZ" secondAttribute="trailing" constant="20" id="8Yy-Vd-inF"/>
+                                <constraint firstItem="vEq-d0-xBh" firstAttribute="leading" secondItem="C8b-5k-JJl" secondAttribute="leading" id="8Zw-wa-4eb"/>
+                                <constraint firstItem="pZr-6i-RVZ" firstAttribute="centerY" secondItem="dDd-Y1-tU5" secondAttribute="centerY" constant="0.5" id="9Rz-Pi-igt"/>
+                                <constraint firstItem="Kk9-Rm-3C1" firstAttribute="leading" secondItem="CTY-jd-vyz" secondAttribute="trailing" constant="16" id="GEW-cM-EEf"/>
+                                <constraint firstItem="Kk9-Rm-3C1" firstAttribute="top" secondItem="vEq-d0-xBh" secondAttribute="bottom" constant="12" id="GmP-c9-hIH"/>
+                                <constraint firstItem="vEq-d0-xBh" firstAttribute="centerY" secondItem="flK-wa-Ysm" secondAttribute="centerY" id="JMB-YH-1dg"/>
+                                <constraint firstAttribute="height" constant="946" id="Leu-UJ-OAv"/>
+                                <constraint firstAttribute="trailing" secondItem="flK-wa-Ysm" secondAttribute="trailing" constant="17" id="ONJ-a1-hNb"/>
+                                <constraint firstItem="M2k-UO-vfB" firstAttribute="leading" secondItem="yMS-b7-1Mo" secondAttribute="trailing" constant="28" id="Q0T-hJ-xDl"/>
+                                <constraint firstItem="CTY-jd-vyz" firstAttribute="top" secondItem="vEq-d0-xBh" secondAttribute="bottom" constant="22" id="Q7S-HO-rXi"/>
+                                <constraint firstItem="flK-wa-Ysm" firstAttribute="leading" secondItem="vEq-d0-xBh" secondAttribute="trailing" constant="8" symbolic="YES" id="eLf-Wv-DH2"/>
+                                <constraint firstItem="CTY-jd-vyz" firstAttribute="leading" secondItem="C8b-5k-JJl" secondAttribute="leading" constant="20" id="eTX-O5-1XL"/>
+                                <constraint firstItem="M2k-UO-vfB" firstAttribute="top" secondItem="dDd-Y1-tU5" secondAttribute="bottom" constant="17" id="gwg-eP-XDu"/>
+                                <constraint firstItem="vEq-d0-xBh" firstAttribute="top" secondItem="C8b-5k-JJl" secondAttribute="top" constant="80" id="kTj-cy-WXh"/>
+                                <constraint firstItem="vEq-d0-xBh" firstAttribute="leading" secondItem="C8b-5k-JJl" secondAttribute="leading" id="pNW-re-9Tr"/>
+                                <constraint firstItem="pZr-6i-RVZ" firstAttribute="leading" secondItem="dDd-Y1-tU5" secondAttribute="trailing" constant="40" id="r0o-9w-oZr"/>
+                                <constraint firstItem="yMS-b7-1Mo" firstAttribute="centerY" secondItem="M2k-UO-vfB" secondAttribute="centerY" id="sf4-Vc-AoN"/>
+                                <constraint firstAttribute="trailing" secondItem="Kk9-Rm-3C1" secondAttribute="trailing" constant="20" symbolic="YES" id="wCb-RU-vmg"/>
+                                <constraint firstItem="dDd-Y1-tU5" firstAttribute="top" secondItem="Kk9-Rm-3C1" secondAttribute="bottom" constant="33" id="zRs-Wt-hDP"/>
+                                <constraint firstItem="dDd-Y1-tU5" firstAttribute="leading" secondItem="C8b-5k-JJl" secondAttribute="leading" constant="20" id="zc7-3r-LuO"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="C8b-5k-JJl" firstAttribute="centerX" secondItem="4SL-gJ-2ef" secondAttribute="centerX" id="3nC-r7-TxP"/>
+                        <constraint firstItem="C8b-5k-JJl" firstAttribute="leading" secondItem="4SL-gJ-2ef" secondAttribute="leading" id="8K6-Dd-Tkb"/>
+                        <constraint firstAttribute="trailing" secondItem="C8b-5k-JJl" secondAttribute="trailing" id="D1h-Lt-hRs"/>
+                        <constraint firstAttribute="bottom" secondItem="C8b-5k-JJl" secondAttribute="bottom" id="HOU-C3-xkS"/>
+                        <constraint firstItem="C8b-5k-JJl" firstAttribute="top" secondItem="4SL-gJ-2ef" secondAttribute="top" id="uAk-jh-jPN"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="htT-y6-Me9"/>
+                    </connections>
+                </scrollView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5E6-ej-Oad">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="57"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oq9-XR-hEv">
+                            <rect key="frame" x="8" y="9" width="42" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="WCy-F8-jAc"/>
+                                <constraint firstAttribute="width" constant="42" id="lCE-Sg-Ia4"/>
+                            </constraints>
+                            <state key="normal" image="btn-back.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="popMighty:" destination="-1" eventType="touchUpInside" id="dnM-IQ-DRF"/>
+                            </connections>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hdr-mi.png" translatesAutoresizingMaskIntoConstraints="NO" id="N9O-U0-Q3s">
+                            <rect key="frame" x="423" y="19" width="49" height="14"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.1137254902" green="0.1137254902" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="57" id="M2U-Pc-3uP"/>
+                        <constraint firstItem="oq9-XR-hEv" firstAttribute="leading" secondItem="5E6-ej-Oad" secondAttribute="leading" constant="8" id="Mpw-fJ-a2p"/>
+                        <constraint firstItem="N9O-U0-Q3s" firstAttribute="centerY" secondItem="oq9-XR-hEv" secondAttribute="centerY" id="Vjg-Cq-cb9"/>
+                        <constraint firstItem="N9O-U0-Q3s" firstAttribute="top" secondItem="5E6-ej-Oad" secondAttribute="top" constant="19" id="bRs-HA-39g"/>
+                        <constraint firstAttribute="trailing" secondItem="N9O-U0-Q3s" secondAttribute="trailing" constant="8" id="iP3-ID-F8h"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.2274509804" green="0.2274509804" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="4SL-gJ-2ef" secondAttribute="bottom" id="4NT-j3-MlA"/>
+                <constraint firstAttribute="bottom" secondItem="4SL-gJ-2ef" secondAttribute="bottom" id="BV2-SH-T1d"/>
+                <constraint firstItem="5E6-ej-Oad" firstAttribute="top" secondItem="4SL-gJ-2ef" secondAttribute="top" id="Dke-YS-PLx"/>
+                <constraint firstItem="5E6-ej-Oad" firstAttribute="leading" secondItem="4SL-gJ-2ef" secondAttribute="leading" id="GdU-q1-wcW"/>
+                <constraint firstItem="5E6-ej-Oad" firstAttribute="trailing" secondItem="4SL-gJ-2ef" secondAttribute="trailing" id="M6W-2q-x5u"/>
+                <constraint firstItem="4SL-gJ-2ef" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="N2W-bR-sd1"/>
+                <constraint firstItem="4SL-gJ-2ef" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="fPU-6f-67P"/>
+                <constraint firstAttribute="trailing" secondItem="4SL-gJ-2ef" secondAttribute="trailing" id="jN5-ja-IGB"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-171" y="742.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn-back.png" width="21" height="19"/>
+        <image name="hdr-mi.png" width="49" height="14"/>
+        <image name="impact-childhood-hunger.png" width="224" height="143"/>
+        <image name="impact-children.png" width="283" height="134"/>
+        <image name="impact-high-school.png" width="194" height="191"/>
+        <image name="impact-united-states.png" width="320" height="278"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
