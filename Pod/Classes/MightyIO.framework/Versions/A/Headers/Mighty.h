@@ -33,6 +33,7 @@
 @property (strong, nonatomic) NSArray* mightyItems;
 @property (strong, nonatomic) PFObject* game;
 @property (strong, nonatomic) PFObject* currentItem;
+@property (strong, nonatomic) PFObject* completedPurchase;
 @property (strong, nonatomic) SKPaymentTransaction* lastTransaction;
 @property (strong, nonatomic) UIViewController* presentingViewController;
 @property (strong, nonatomic) UIButton* smRibbon;
@@ -45,6 +46,11 @@
 @property BOOL fullyLoaded;
 @property BOOL isCampaignActive;
 @property BOOL simulator;
+
+@property float itemsBought;
+@property float mealsPerItem;
+@property float mealsGiven;
+@property float developerContrib;
 
 // Init Functions
 
@@ -107,10 +113,22 @@
 - (void)makeRibbonWithCenter:(CGPoint)center inViewController:(UIViewController*)viewController;
 
 /**
+ Helper function to link Button outlet in presenting controller to SM ribbon
+ @return void
+ */
+-(void)makeRibbonWithIBOutlet:(UIButton*)button inViewController:(UIViewController*)viewController;
+
+/**
  Helper function to launch SuperMighty from custom event
  @return void
  */
 - (void)startSuperMightyInViewController:(UIViewController*)viewController;
+
+/**
+ Helper function to calculate and set the overall good done by the item
+ @return void
+ */
+- (void)calculateTotalGoodForItem:(PFObject*)item;
 
 - (void)loadOverViewInWindow:(UIWindow*)window;
 
