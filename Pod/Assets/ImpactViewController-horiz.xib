@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <objects>
@@ -21,7 +20,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C8b-5k-JJl" userLabel="contentView">
-                            <rect key="frame" x="0.0" y="0.0" width="480" height="946"/>
+                            <rect key="frame" x="0.0" y="0.0" width="480" height="933"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="impact-high-school.png" translatesAutoresizingMaskIntoConstraints="NO" id="dDd-Y1-tU5">
                                     <rect key="frame" x="20" y="484" width="194" height="191"/>
@@ -81,6 +80,20 @@
                                     <color key="textColor" red="0.3803921569" green="0.3803921569" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="799-GR-fN6" userLabel="Give Water Button">
+                                    <rect key="frame" x="20" y="864" width="440" height="49"/>
+                                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                    <state key="normal" title="GIVE &amp; UNLOCK">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="highlighted">
+                                        <color key="titleColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="pushToGive:" destination="-1" eventType="touchUpInside" id="G5M-hU-FK6"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" red="0.14117647058823529" green="0.14117647058823529" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
@@ -89,13 +102,17 @@
                                 <constraint firstAttribute="trailing" secondItem="pZr-6i-RVZ" secondAttribute="trailing" constant="20" id="8Yy-Vd-inF"/>
                                 <constraint firstItem="vEq-d0-xBh" firstAttribute="leading" secondItem="C8b-5k-JJl" secondAttribute="leading" id="8Zw-wa-4eb"/>
                                 <constraint firstItem="pZr-6i-RVZ" firstAttribute="centerY" secondItem="dDd-Y1-tU5" secondAttribute="centerY" constant="0.5" id="9Rz-Pi-igt"/>
+                                <constraint firstItem="799-GR-fN6" firstAttribute="top" secondItem="M2k-UO-vfB" secondAttribute="bottom" constant="29" id="CJh-sh-Vl6"/>
                                 <constraint firstItem="Kk9-Rm-3C1" firstAttribute="leading" secondItem="CTY-jd-vyz" secondAttribute="trailing" constant="16" id="GEW-cM-EEf"/>
                                 <constraint firstItem="Kk9-Rm-3C1" firstAttribute="top" secondItem="vEq-d0-xBh" secondAttribute="bottom" constant="12" id="GmP-c9-hIH"/>
                                 <constraint firstItem="vEq-d0-xBh" firstAttribute="centerY" secondItem="flK-wa-Ysm" secondAttribute="centerY" id="JMB-YH-1dg"/>
-                                <constraint firstAttribute="height" constant="946" id="Leu-UJ-OAv"/>
+                                <constraint firstAttribute="trailing" secondItem="799-GR-fN6" secondAttribute="trailing" constant="20" symbolic="YES" id="Kz5-q9-rhU"/>
+                                <constraint firstAttribute="height" constant="933" id="Leu-UJ-OAv"/>
                                 <constraint firstAttribute="trailing" secondItem="flK-wa-Ysm" secondAttribute="trailing" constant="17" id="ONJ-a1-hNb"/>
                                 <constraint firstItem="M2k-UO-vfB" firstAttribute="leading" secondItem="yMS-b7-1Mo" secondAttribute="trailing" constant="28" id="Q0T-hJ-xDl"/>
                                 <constraint firstItem="CTY-jd-vyz" firstAttribute="top" secondItem="vEq-d0-xBh" secondAttribute="bottom" constant="22" id="Q7S-HO-rXi"/>
+                                <constraint firstAttribute="bottom" secondItem="799-GR-fN6" secondAttribute="bottom" constant="20" symbolic="YES" id="R9e-P2-5AA"/>
+                                <constraint firstItem="799-GR-fN6" firstAttribute="leading" secondItem="C8b-5k-JJl" secondAttribute="leading" constant="20" symbolic="YES" id="YFe-zv-keY"/>
                                 <constraint firstItem="flK-wa-Ysm" firstAttribute="leading" secondItem="vEq-d0-xBh" secondAttribute="trailing" constant="8" symbolic="YES" id="eLf-Wv-DH2"/>
                                 <constraint firstItem="CTY-jd-vyz" firstAttribute="leading" secondItem="C8b-5k-JJl" secondAttribute="leading" constant="20" id="eTX-O5-1XL"/>
                                 <constraint firstItem="M2k-UO-vfB" firstAttribute="top" secondItem="dDd-Y1-tU5" secondAttribute="bottom" constant="17" id="gwg-eP-XDu"/>
@@ -113,7 +130,7 @@
                         <constraint firstItem="C8b-5k-JJl" firstAttribute="centerX" secondItem="4SL-gJ-2ef" secondAttribute="centerX" id="3nC-r7-TxP"/>
                         <constraint firstItem="C8b-5k-JJl" firstAttribute="leading" secondItem="4SL-gJ-2ef" secondAttribute="leading" id="8K6-Dd-Tkb"/>
                         <constraint firstAttribute="trailing" secondItem="C8b-5k-JJl" secondAttribute="trailing" id="D1h-Lt-hRs"/>
-                        <constraint firstAttribute="bottom" secondItem="C8b-5k-JJl" secondAttribute="bottom" id="HOU-C3-xkS"/>
+                        <constraint firstAttribute="bottom" secondItem="C8b-5k-JJl" secondAttribute="bottom" constant="-613" id="HOU-C3-xkS"/>
                         <constraint firstItem="C8b-5k-JJl" firstAttribute="top" secondItem="4SL-gJ-2ef" secondAttribute="top" id="uAk-jh-jPN"/>
                     </constraints>
                     <connections>
@@ -164,7 +181,7 @@
             <nil key="simulatedStatusBarMetrics"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-171" y="742.5"/>
+            <point key="canvasLocation" x="-251" y="742"/>
         </view>
     </objects>
     <resources>

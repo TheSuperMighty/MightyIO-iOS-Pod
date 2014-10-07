@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <objects>
@@ -21,17 +22,24 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Peq-V7-yJt">
-                    <rect key="frame" x="0.0" y="0.0" width="568" height="52"/>
+                    <rect key="frame" x="0.0" y="0.0" width="568" height="50"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hdr-mi.png" translatesAutoresizingMaskIntoConstraints="NO" id="cDi-3U-6C3">
-                            <rect key="frame" x="499" y="19" width="49" height="14"/>
-                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNX-DB-7vs">
+                            <rect key="frame" x="502" y="8" width="46" height="34"/>
+                            <state key="normal" title="NEXT">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="sharePurchase:" destination="-1" eventType="touchUpInside" id="Bc2-D9-MHe"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="0.14117647059999999" green="0.14117647059999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstItem="cDi-3U-6C3" firstAttribute="centerY" secondItem="Peq-V7-yJt" secondAttribute="centerY" id="QUg-az-hSQ"/>
-                        <constraint firstAttribute="trailing" secondItem="cDi-3U-6C3" secondAttribute="trailing" constant="20" symbolic="YES" id="etD-lW-oqe"/>
-                        <constraint firstItem="cDi-3U-6C3" firstAttribute="top" secondItem="Peq-V7-yJt" secondAttribute="top" constant="19" id="vQo-YX-RO7"/>
+                        <constraint firstAttribute="bottom" secondItem="dNX-DB-7vs" secondAttribute="bottom" constant="8" id="8fW-iE-WKD"/>
+                        <constraint firstAttribute="height" constant="50" id="O7H-bE-Bjq"/>
+                        <constraint firstAttribute="trailing" secondItem="dNX-DB-7vs" secondAttribute="trailing" constant="20" symbolic="YES" id="mOM-o5-NfW"/>
+                        <constraint firstItem="dNX-DB-7vs" firstAttribute="top" secondItem="Peq-V7-yJt" secondAttribute="top" constant="8" id="rbV-Ze-7Ju"/>
                     </constraints>
                 </view>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOU JUST MADE AMAZING POSSIBLE!" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" preferredMaxLayoutWidth="233" translatesAutoresizingMaskIntoConstraints="NO" id="u0D-b5-LT6">
@@ -58,19 +66,9 @@
                     <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-share.png" translatesAutoresizingMaskIntoConstraints="NO" id="kBH-V7-nbH">
-                    <rect key="frame" x="251" y="222" width="66" height="35"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="35" id="T1o-IB-84Y"/>
-                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="41" id="osA-gG-4pa"/>
-                    </constraints>
-                </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Mb-kI-zpg" userLabel="Button - facebook">
-                    <rect key="frame" x="20" y="216" width="230" height="48"/>
+                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Mb-kI-zpg" userLabel="Button - facebook">
+                    <rect key="frame" x="20" y="223" width="250" height="50"/>
                     <color key="backgroundColor" red="0.38039215686274508" green="0.38039215686274508" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="3o6-PX-Ays"/>
-                    </constraints>
                     <state key="normal" title="SHARE">
                         <color key="titleColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -86,11 +84,8 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUp-HA-e67" userLabel="Button - twitter">
-                    <rect key="frame" x="319" y="216" width="229" height="48"/>
+                    <rect key="frame" x="298" y="223" width="250" height="50"/>
                     <color key="backgroundColor" red="0.38039215686274508" green="0.38039215686274508" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="ICf-LS-AHl"/>
-                    </constraints>
                     <state key="normal" title="SHARE">
                         <color key="titleColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -103,88 +98,71 @@
                     </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-check.png" translatesAutoresizingMaskIntoConstraints="NO" id="6xF-bp-7gy">
-                    <rect key="frame" x="207" y="225" width="30" height="30"/>
+                    <rect key="frame" x="229" y="233" width="30" height="30"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="30" id="YVW-uZ-KCY"/>
+                        <constraint firstAttribute="height" constant="30" id="v5q-VV-Clc"/>
                     </constraints>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-fb.png" translatesAutoresizingMaskIntoConstraints="NO" id="QOI-H8-kEq">
-                    <rect key="frame" x="33" y="225" width="30" height="30"/>
+                    <rect key="frame" x="33" y="232" width="30" height="30"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-tw.png" translatesAutoresizingMaskIntoConstraints="NO" id="l68-kR-Oo4">
-                    <rect key="frame" x="331" y="225" width="30" height="30"/>
+                    <rect key="frame" x="311" y="232" width="30" height="30"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3H-Pb-83m">
-                    <rect key="frame" x="2" y="265" width="564" height="55"/>
-                    <color key="backgroundColor" red="0.11372549019607843" green="0.11372549019607843" blue="0.11372549019607843" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" title="NEXT">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="sharePurchase:" destination="-1" eventType="touchUpInside" id="B3r-Dq-bHT"/>
-                    </connections>
-                </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-check.png" translatesAutoresizingMaskIntoConstraints="NO" id="mxX-BQ-khr">
-                    <rect key="frame" x="505" y="225" width="30" height="30"/>
+                    <rect key="frame" x="505" y="232" width="30" height="30"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="30" id="oJy-jg-7W9"/>
+                        <constraint firstAttribute="height" constant="30" id="2Cl-He-fkM"/>
+                        <constraint firstAttribute="width" constant="30" id="mIf-Zg-3CP"/>
                     </constraints>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="0.11372549019607843" green="0.11372549019607843" blue="0.11372549019607843" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="h3H-Pb-83m" firstAttribute="top" secondItem="kBH-V7-nbH" secondAttribute="bottom" constant="8" symbolic="YES" id="3fI-8w-zpR"/>
-                <constraint firstItem="4Mb-kI-zpg" firstAttribute="top" secondItem="eUp-HA-e67" secondAttribute="top" id="8cv-mi-zgU"/>
-                <constraint firstItem="eUp-HA-e67" firstAttribute="centerY" secondItem="mxX-BQ-khr" secondAttribute="centerY" id="AEM-tc-Rpy"/>
-                <constraint firstItem="QOI-H8-kEq" firstAttribute="top" secondItem="ut3-uX-78a" secondAttribute="bottom" constant="31" id="B0a-PP-uMn"/>
-                <constraint firstItem="eUp-HA-e67" firstAttribute="leading" secondItem="kBH-V7-nbH" secondAttribute="trailing" constant="2" id="Ctv-PM-0zu"/>
-                <constraint firstAttribute="bottom" secondItem="h3H-Pb-83m" secondAttribute="bottom" id="ENx-L4-P0y"/>
-                <constraint firstItem="l68-kR-Oo4" firstAttribute="leading" secondItem="eUp-HA-e67" secondAttribute="leading" constant="12" id="F0O-s5-ZGt"/>
-                <constraint firstItem="4Mb-kI-zpg" firstAttribute="top" secondItem="ut3-uX-78a" secondAttribute="bottom" constant="22" id="GnZ-6d-kGa"/>
+                <constraint firstItem="4Mb-kI-zpg" firstAttribute="top" secondItem="eUp-HA-e67" secondAttribute="top" id="27T-E3-TOf"/>
+                <constraint firstAttribute="bottom" secondItem="4Mb-kI-zpg" secondAttribute="bottom" constant="47" id="3rk-DY-fKi"/>
+                <constraint firstItem="eUp-HA-e67" firstAttribute="leading" secondItem="6xF-bp-7gy" secondAttribute="trailing" constant="39" id="8zZ-Tn-RRC"/>
+                <constraint firstItem="mxX-BQ-khr" firstAttribute="top" secondItem="QhU-1y-yg6" secondAttribute="bottom" constant="46" id="A4g-0T-jsq"/>
                 <constraint firstItem="ut3-uX-78a" firstAttribute="trailing" secondItem="u0D-b5-LT6" secondAttribute="trailing" id="KNL-Ce-dwe"/>
                 <constraint firstItem="Peq-V7-yJt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="LXF-a0-hjY"/>
                 <constraint firstItem="ut3-uX-78a" firstAttribute="leading" secondItem="u0D-b5-LT6" secondAttribute="leading" id="Lkr-15-7tw"/>
-                <constraint firstItem="h3H-Pb-83m" firstAttribute="top" secondItem="4Mb-kI-zpg" secondAttribute="bottom" constant="1" id="Muf-Cq-SyN"/>
-                <constraint firstItem="eUp-HA-e67" firstAttribute="trailing" secondItem="h3H-Pb-83m" secondAttribute="trailing" constant="-18" id="N18-bs-wH5"/>
                 <constraint firstAttribute="trailing" secondItem="QhU-1y-yg6" secondAttribute="trailing" constant="33" id="Nz2-t6-qvr"/>
-                <constraint firstItem="ut3-uX-78a" firstAttribute="top" secondItem="Peq-V7-yJt" secondAttribute="bottom" constant="73" id="Nzv-XC-qOW"/>
-                <constraint firstItem="h3H-Pb-83m" firstAttribute="top" secondItem="mxX-BQ-khr" secondAttribute="bottom" constant="10" id="OSe-ij-ikA"/>
-                <constraint firstItem="Sdq-4q-2WQ" firstAttribute="top" secondItem="Peq-V7-yJt" secondAttribute="bottom" constant="36" id="QbA-je-IWO"/>
-                <constraint firstItem="Peq-V7-yJt" firstAttribute="centerX" secondItem="kBH-V7-nbH" secondAttribute="centerX" id="SHF-l8-adl"/>
-                <constraint firstItem="QOI-H8-kEq" firstAttribute="top" secondItem="6xF-bp-7gy" secondAttribute="top" id="SrX-6R-zAr"/>
-                <constraint firstItem="4Mb-kI-zpg" firstAttribute="top" secondItem="u0D-b5-LT6" secondAttribute="bottom" constant="67" id="XxX-Yq-bex"/>
+                <constraint firstItem="ut3-uX-78a" firstAttribute="top" secondItem="Peq-V7-yJt" secondAttribute="bottom" constant="75" id="Nzv-XC-qOW"/>
+                <constraint firstItem="Sdq-4q-2WQ" firstAttribute="top" secondItem="Peq-V7-yJt" secondAttribute="bottom" constant="38" id="QbA-je-IWO"/>
+                <constraint firstItem="4Mb-kI-zpg" firstAttribute="top" secondItem="ut3-uX-78a" secondAttribute="bottom" constant="29" id="RP3-a8-NIN"/>
+                <constraint firstItem="6xF-bp-7gy" firstAttribute="centerY" secondItem="eUp-HA-e67" secondAttribute="centerY" id="Vgp-ww-4WU"/>
+                <constraint firstItem="eUp-HA-e67" firstAttribute="leading" secondItem="4Mb-kI-zpg" secondAttribute="trailing" constant="28" id="XPA-kp-nst"/>
                 <constraint firstAttribute="trailing" secondItem="Sdq-4q-2WQ" secondAttribute="trailing" constant="42" id="YhR-Oq-iPZ"/>
-                <constraint firstItem="h3H-Pb-83m" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="2" id="Yms-TW-fGp"/>
-                <constraint firstItem="4Mb-kI-zpg" firstAttribute="leading" secondItem="Peq-V7-yJt" secondAttribute="leading" constant="20" id="bKP-1Z-2Ge"/>
-                <constraint firstItem="QOI-H8-kEq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="33" id="bZo-3l-dpC"/>
-                <constraint firstItem="eUp-HA-e67" firstAttribute="bottom" secondItem="4Mb-kI-zpg" secondAttribute="bottom" id="geD-nL-AYX"/>
-                <constraint firstItem="eUp-HA-e67" firstAttribute="top" secondItem="QhU-1y-yg6" secondAttribute="bottom" constant="30" id="gqi-A8-wCQ"/>
-                <constraint firstItem="Peq-V7-yJt" firstAttribute="trailing" secondItem="eUp-HA-e67" secondAttribute="trailing" constant="20" id="hbI-ZB-AZF"/>
+                <constraint firstItem="l68-kR-Oo4" firstAttribute="leading" secondItem="4Mb-kI-zpg" secondAttribute="trailing" constant="41" id="Zne-bb-16u"/>
+                <constraint firstAttribute="trailing" secondItem="eUp-HA-e67" secondAttribute="trailing" constant="20" id="c32-oc-4id"/>
+                <constraint firstItem="6xF-bp-7gy" firstAttribute="centerY" secondItem="4Mb-kI-zpg" secondAttribute="centerY" id="eB8-YT-Ppk"/>
+                <constraint firstItem="4Mb-kI-zpg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="et9-in-Sar"/>
                 <constraint firstItem="QhU-1y-yg6" firstAttribute="leading" secondItem="Sdq-4q-2WQ" secondAttribute="leading" id="hf5-gT-0pa"/>
-                <constraint firstItem="6xF-bp-7gy" firstAttribute="bottom" secondItem="l68-kR-Oo4" secondAttribute="bottom" id="iNs-f2-rfc"/>
-                <constraint firstItem="kBH-V7-nbH" firstAttribute="leading" secondItem="4Mb-kI-zpg" secondAttribute="trailing" constant="1" id="l4X-p7-CGK"/>
+                <constraint firstAttribute="bottom" secondItem="mxX-BQ-khr" secondAttribute="bottom" constant="58" id="j0Y-Pf-zP2"/>
                 <constraint firstItem="u0D-b5-LT6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="33" id="mTu-1d-i3b"/>
                 <constraint firstItem="Sdq-4q-2WQ" firstAttribute="leading" secondItem="ut3-uX-78a" secondAttribute="trailing" constant="63" id="muc-S6-ftT"/>
-                <constraint firstItem="QhU-1y-yg6" firstAttribute="top" secondItem="Peq-V7-yJt" secondAttribute="bottom" constant="95" id="qfQ-mF-3bd"/>
-                <constraint firstItem="6xF-bp-7gy" firstAttribute="top" secondItem="l68-kR-Oo4" secondAttribute="top" id="szi-fh-WxT"/>
+                <constraint firstItem="QhU-1y-yg6" firstAttribute="top" secondItem="Peq-V7-yJt" secondAttribute="bottom" constant="97" id="qfQ-mF-3bd"/>
+                <constraint firstItem="4Mb-kI-zpg" firstAttribute="width" secondItem="eUp-HA-e67" secondAttribute="width" id="sEB-hh-OvL"/>
+                <constraint firstItem="mxX-BQ-khr" firstAttribute="top" secondItem="QOI-H8-kEq" secondAttribute="top" id="t5F-1N-Ks7"/>
                 <constraint firstItem="Peq-V7-yJt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="tKf-np-Rsp"/>
-                <constraint firstAttribute="trailing" secondItem="mxX-BQ-khr" secondAttribute="trailing" constant="33" id="uxH-XZ-RV7"/>
-                <constraint firstItem="u0D-b5-LT6" firstAttribute="top" secondItem="Peq-V7-yJt" secondAttribute="bottom" constant="22" id="vhK-di-sKx"/>
-                <constraint firstItem="h3H-Pb-83m" firstAttribute="top" secondItem="QOI-H8-kEq" secondAttribute="bottom" constant="10" id="vlg-qX-Rl5"/>
+                <constraint firstItem="6xF-bp-7gy" firstAttribute="top" secondItem="ut3-uX-78a" secondAttribute="bottom" constant="39" id="uPs-k4-Shd"/>
+                <constraint firstItem="u0D-b5-LT6" firstAttribute="top" secondItem="Peq-V7-yJt" secondAttribute="bottom" constant="24" id="vhK-di-sKx"/>
+                <constraint firstItem="mxX-BQ-khr" firstAttribute="trailing" secondItem="QhU-1y-yg6" secondAttribute="trailing" id="w7S-70-hxQ"/>
                 <constraint firstAttribute="trailing" secondItem="Peq-V7-yJt" secondAttribute="trailing" id="wqQ-eb-0hX"/>
                 <constraint firstItem="Sdq-4q-2WQ" firstAttribute="bottom" secondItem="u0D-b5-LT6" secondAttribute="bottom" id="wtg-gP-8JS"/>
-                <constraint firstItem="4Mb-kI-zpg" firstAttribute="trailing" secondItem="6xF-bp-7gy" secondAttribute="trailing" constant="13" id="yPo-4R-TAY"/>
+                <constraint firstItem="mxX-BQ-khr" firstAttribute="top" secondItem="l68-kR-Oo4" secondAttribute="top" id="xJF-Ph-sM9"/>
+                <constraint firstItem="QOI-H8-kEq" firstAttribute="leading" secondItem="ut3-uX-78a" secondAttribute="leading" id="xdY-Hb-Ag1"/>
             </constraints>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+            <point key="canvasLocation" x="128" y="154"/>
         </view>
     </objects>
     <resources>
-        <image name="hdr-mi.png" width="49" height="14"/>
         <image name="hdr-share-screen.png" width="197" height="61"/>
         <image name="icon-fb.png" width="30" height="30"/>
         <image name="icon-tw.png" width="30" height="30"/>
         <image name="img-check.png" width="24" height="24"/>
-        <image name="img-share.png" width="66" height="57"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

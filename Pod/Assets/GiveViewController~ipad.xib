@@ -8,7 +8,6 @@
             <connections>
                 <outlet property="developerContributionLabel" destination="ecs-Lg-1Xw" id="LZL-Y6-a0J"/>
                 <outlet property="developerInfoView" destination="hON-dz-4Cz" id="HWm-CC-uLU"/>
-                <outlet property="giveHdrLabel" destination="wFQ-sR-uiX" id="g3Y-xR-ZGL"/>
                 <outlet property="itemPrice" destination="LNN-FW-JLL" id="geZ-Fi-90Q"/>
                 <outlet property="itemThumbnail" destination="XH9-Pn-rAo" id="2aX-u9-aUX"/>
                 <outlet property="mealsLabel" destination="lwO-Fv-JWM" id="00k-d6-RUk"/>
@@ -24,7 +23,7 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img-plate.png" translatesAutoresizingMaskIntoConstraints="NO" id="XH9-Pn-rAo">
                     <rect key="frame" x="253" y="321" width="259" height="176"/>
                 </imageView>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HELP GHOST CRAB GAMES GIVE MEALS TO FIGHT CHILDHOOD HUNGER." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="497" translatesAutoresizingMaskIntoConstraints="NO" id="wFQ-sR-uiX">
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GIVE MEALS TO FIGHT CHILDHOOD HUNGER." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="497" translatesAutoresizingMaskIntoConstraints="NO" id="wFQ-sR-uiX">
                     <rect key="frame" x="136" y="130" width="497" height="166"/>
                     <fontDescription key="fontDescription" type="system" pointSize="36"/>
                     <color key="textColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>

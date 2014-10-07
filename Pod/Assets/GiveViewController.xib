@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <objects>
@@ -9,7 +8,6 @@
             <connections>
                 <outlet property="developerContributionLabel" destination="ecs-Lg-1Xw" id="LZL-Y6-a0J"/>
                 <outlet property="developerInfoView" destination="hON-dz-4Cz" id="HWm-CC-uLU"/>
-                <outlet property="giveHdrLabel" destination="wFQ-sR-uiX" id="CNt-O8-n2f"/>
                 <outlet property="itemPrice" destination="LNN-FW-JLL" id="geZ-Fi-90Q"/>
                 <outlet property="itemThumbnail" destination="XH9-Pn-rAo" id="2aX-u9-aUX"/>
                 <outlet property="mealsLabel" destination="lwO-Fv-JWM" id="00k-d6-RUk"/>
@@ -23,19 +21,19 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-plate.png" translatesAutoresizingMaskIntoConstraints="NO" id="XH9-Pn-rAo">
-                    <rect key="frame" x="96" y="162" width="129" height="88"/>
+                    <rect key="frame" x="95" y="140" width="129" height="88"/>
                     <constraints>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="dRo-la-8vq"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HELP GHOST CRAB GAMES GIVE MEALS TO FIGHT CHILDHOOD HUNGER." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="255" translatesAutoresizingMaskIntoConstraints="NO" id="wFQ-sR-uiX">
-                    <rect key="frame" x="39" y="71" width="242" height="65"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GIVE MEALS TO FIGHT CHILDHOOD HUNGER." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="255" translatesAutoresizingMaskIntoConstraints="NO" id="wFQ-sR-uiX">
+                    <rect key="frame" x="61" y="71" width="197" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <color key="textColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRj-7Q-Zdc">
-                    <rect key="frame" x="134" y="188" width="55" height="36"/>
+                    <rect key="frame" x="134" y="166" width="55" height="36"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="55" id="cla-aH-3gm"/>
                     </constraints>
@@ -44,7 +42,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MEALS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lwO-Fv-JWM">
-                    <rect key="frame" x="118" y="252" width="86" height="41"/>
+                    <rect key="frame" x="118" y="230" width="86" height="41"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="41" id="EQL-CX-OOG"/>
                     </constraints>
@@ -53,7 +51,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$3.99" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNN-FW-JLL">
-                    <rect key="frame" x="70" y="306" width="82" height="24"/>
+                    <rect key="frame" x="70" y="284" width="82" height="24"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="82" id="LJj-0u-N67"/>
                         <constraint firstAttribute="height" constant="24" id="aeT-Fa-W99"/>
@@ -63,13 +61,13 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="($0.42)*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecs-Lg-1Xw">
-                    <rect key="frame" x="169" y="306" width="67" height="24"/>
+                    <rect key="frame" x="169" y="284" width="67" height="24"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MRG-XP-xd6" userLabel="Divide 1">
-                    <rect key="frame" x="160" y="307" width="1" height="21"/>
+                    <rect key="frame" x="160" y="285" width="1" height="21"/>
                     <color key="backgroundColor" red="0.3803921569" green="0.3803921569" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="1" id="yGz-vo-txH"/>
@@ -100,7 +98,7 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOd-oI-py2">
-                    <rect key="frame" x="20" y="372" width="280" height="68"/>
+                    <rect key="frame" x="20" y="358" width="280" height="68"/>
                     <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="68" id="8B0-NQ-mYL"/>
@@ -116,11 +114,18 @@
                         <action selector="buyMightyItem:" destination="-1" eventType="touchUpInside" id="ZJO-Sp-uIX"/>
                     </connections>
                 </button>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hON-dz-4Cz">
-                    <rect key="frame" x="20" y="448" width="280" height="105"/>
-                    <string key="text">HAS AGREED TO BE MIGHTY. A PORTION OF YOUR PURCHASE WILL GO TO THE MIGHTY FOUNDATION TO HELP FIGHT CHILDHOOD HUNGER. CLICK HERE TO LEARN MORE ABOUT THE MIGHTY FOUNDATION.</string>
-                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hON-dz-4Cz">
+                    <rect key="frame" x="20" y="440" width="280" height="120"/>
+                    <attributedString key="attributedText">
+                        <fragment>
+                            <string key="content">HAS AGREED TO BE MIGHTY. A PORTION OF YOUR PURCHASE WILL GO TO THE MIGHTY FOUNDATION TO HELP FIGHT CHILDHOOD HUNGER. CLICK HERE TO LEARN MORE ABOUT THE MIGHTY FOUNDATION.</string>
+                            <attributes>
+                                <color key="NSColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="1" paragraphSpacing="1" paragraphSpacingBefore="1"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
                     <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                     <dataDetectorType key="dataDetectorTypes" link="YES"/>
                 </textView>
@@ -129,7 +134,7 @@
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="hOd-oI-py2" secondAttribute="trailing" constant="20" symbolic="YES" id="3iS-ee-Iyw"/>
                 <constraint firstItem="qRj-7Q-Zdc" firstAttribute="centerX" secondItem="lwO-Fv-JWM" secondAttribute="centerX" constant="1" id="4L3-gM-bQK"/>
-                <constraint firstAttribute="bottom" secondItem="hON-dz-4Cz" secondAttribute="bottom" constant="15" id="4dC-LC-nuB"/>
+                <constraint firstAttribute="bottom" secondItem="hON-dz-4Cz" secondAttribute="bottom" constant="8" id="4dC-LC-nuB"/>
                 <constraint firstItem="MRG-XP-xd6" firstAttribute="centerY" secondItem="LNN-FW-JLL" secondAttribute="centerY" id="7Fp-bw-bqA"/>
                 <constraint firstItem="qRj-7Q-Zdc" firstAttribute="bottom" secondItem="XH9-Pn-rAo" secondAttribute="bottom" constant="-26" id="8dc-2I-FW1"/>
                 <constraint firstAttribute="centerX" secondItem="MRG-XP-xd6" secondAttribute="centerX" constant="-0.5" id="AyM-1W-c76"/>
@@ -151,9 +156,9 @@
                 <constraint firstItem="XH9-Pn-rAo" firstAttribute="centerX" secondItem="wFQ-sR-uiX" secondAttribute="centerX" id="nkM-yT-piU"/>
                 <constraint firstItem="19w-D2-Utl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="oUL-B9-d9s"/>
                 <constraint firstItem="wFQ-sR-uiX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="71" id="p6S-TJ-aSh"/>
-                <constraint firstItem="hON-dz-4Cz" firstAttribute="top" secondItem="hOd-oI-py2" secondAttribute="bottom" constant="8" id="pBV-Yk-qsU"/>
+                <constraint firstItem="hON-dz-4Cz" firstAttribute="top" secondItem="hOd-oI-py2" secondAttribute="bottom" constant="14" id="pBV-Yk-qsU"/>
                 <constraint firstAttribute="trailing" secondItem="19w-D2-Utl" secondAttribute="trailing" id="tDt-fe-Zuf"/>
-                <constraint firstItem="hOd-oI-py2" firstAttribute="top" secondItem="MRG-XP-xd6" secondAttribute="bottom" priority="750" constant="44" id="xBK-QN-xbB"/>
+                <constraint firstItem="hOd-oI-py2" firstAttribute="top" secondItem="MRG-XP-xd6" secondAttribute="bottom" priority="750" constant="52" id="xBK-QN-xbB"/>
                 <constraint firstItem="XH9-Pn-rAo" firstAttribute="top" secondItem="wFQ-sR-uiX" secondAttribute="bottom" constant="26" id="xRv-5l-mQR"/>
                 <constraint firstItem="lwO-Fv-JWM" firstAttribute="top" secondItem="XH9-Pn-rAo" secondAttribute="bottom" constant="2" id="zyv-DB-v6X"/>
             </constraints>
