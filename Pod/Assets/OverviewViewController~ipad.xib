@@ -42,7 +42,7 @@
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qx0-BN-Fp0" userLabel="Item View">
                     <rect key="frame" x="0.0" y="406" width="768" height="379"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img-plate-light.png" translatesAutoresizingMaskIntoConstraints="NO" id="qid-cu-cdU">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img-plate-light~ipad.png" translatesAutoresizingMaskIntoConstraints="NO" id="qid-cu-cdU">
                             <rect key="frame" x="92" y="181" width="178" height="120"/>
                         </imageView>
                         <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vKX-gb-Ae3">
@@ -143,9 +143,6 @@
                             <color key="textColor" red="1" green="0.1137254902" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hdr-mighy-item.png" translatesAutoresizingMaskIntoConstraints="NO" id="JMS-gY-5Vv">
-                            <rect key="frame" x="196" y="37" width="376" height="90"/>
-                        </imageView>
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jey-Da-oFz" userLabel="Divide 1">
                             <rect key="frame" x="0.0" y="151" width="769" height="3"/>
                             <color key="backgroundColor" red="0.14117647058823529" green="0.14117647058823529" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
@@ -159,6 +156,12 @@
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="IMPACT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCP-V8-E1t">
                             <rect key="frame" x="123" y="178" width="128" height="32"/>
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LET'S FIGHT HUNGER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9l-c4-tQH">
+                            <rect key="frame" x="159" y="33" width="450" height="77"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="39"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -203,9 +206,8 @@
     </objects>
     <resources>
         <image name="btn-close.png" width="30" height="30"/>
-        <image name="hdr-mighy-item.png" width="208" height="50"/>
         <image name="img-lock.png" width="15" height="19"/>
-        <image name="img-plate-light.png" width="71" height="49"/>
+        <image name="img-plate-light~ipad.png" width="192" height="130"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
