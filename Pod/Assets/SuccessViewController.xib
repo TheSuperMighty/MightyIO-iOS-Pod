@@ -43,11 +43,17 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4cd-nr-L3w">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mrS-Ny-xVT">
-                            <rect key="frame" x="0.0" y="-9" width="68" height="68"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hdr-mi.png" translatesAutoresizingMaskIntoConstraints="NO" id="HQx-kH-hgi">
+                            <rect key="frame" x="8" y="15" width="49" height="19"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="68" id="uwQ-sa-mEu"/>
-                                <constraint firstAttribute="height" constant="68" id="wj8-7n-ME4"/>
+                                <constraint firstAttribute="height" constant="19" id="VQ4-VZ-P3M"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mrS-Ny-xVT">
+                            <rect key="frame" x="270" y="0.0" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="Qb8-hg-Jtm"/>
+                                <constraint firstAttribute="width" constant="50" id="XmR-9n-Jsm"/>
                             </constraints>
                             <state key="normal" image="btn-close.png">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -56,26 +62,15 @@
                                 <action selector="closeMighty:" destination="-1" eventType="touchUpInside" id="nne-eo-5qi"/>
                             </connections>
                         </button>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hdr-mi.png" translatesAutoresizingMaskIntoConstraints="NO" id="HQx-kH-hgi">
-                            <rect key="frame" x="257" y="15" width="49" height="19"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="19" id="VQ4-VZ-P3M"/>
-                            </constraints>
-                        </imageView>
                     </subviews>
                     <color key="backgroundColor" red="0.10980392160000001" green="0.10980392160000001" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstItem="mrS-Ny-xVT" firstAttribute="top" secondItem="4cd-nr-L3w" secondAttribute="top" constant="-9" id="2TY-Cy-740"/>
-                        <constraint firstItem="HQx-kH-hgi" firstAttribute="centerY" secondItem="4cd-nr-L3w" secondAttribute="centerY" constant="-0.5" id="G69-tq-gsF"/>
-                        <constraint firstItem="mrS-Ny-xVT" firstAttribute="leading" secondItem="4cd-nr-L3w" secondAttribute="leading" id="H7c-cq-nm6"/>
+                        <constraint firstItem="mrS-Ny-xVT" firstAttribute="top" secondItem="4cd-nr-L3w" secondAttribute="top" id="8Qe-Xj-os1"/>
+                        <constraint firstAttribute="bottom" secondItem="mrS-Ny-xVT" secondAttribute="bottom" id="HGn-Ev-eHk"/>
                         <constraint firstAttribute="height" constant="50" id="MXH-Jr-t54"/>
-                        <constraint firstItem="mrS-Ny-xVT" firstAttribute="top" secondItem="4cd-nr-L3w" secondAttribute="top" constant="-9" id="Ntq-uo-HpF"/>
-                        <constraint firstAttribute="bottom" secondItem="mrS-Ny-xVT" secondAttribute="bottom" constant="-9" id="W8b-fY-n9I"/>
-                        <constraint firstItem="mrS-Ny-xVT" firstAttribute="leading" secondItem="4cd-nr-L3w" secondAttribute="leading" id="bVQ-bv-B3W"/>
-                        <constraint firstItem="mrS-Ny-xVT" firstAttribute="top" secondItem="4cd-nr-L3w" secondAttribute="top" constant="-9" id="heW-ZY-9xA"/>
-                        <constraint firstItem="mrS-Ny-xVT" firstAttribute="leading" secondItem="4cd-nr-L3w" secondAttribute="leading" id="lNX-ul-V9Y"/>
-                        <constraint firstItem="mrS-Ny-xVT" firstAttribute="leading" secondItem="4cd-nr-L3w" secondAttribute="leading" id="ukI-NJ-6jz"/>
-                        <constraint firstAttribute="trailing" secondItem="HQx-kH-hgi" secondAttribute="trailing" constant="14" id="wyO-uG-Dht"/>
+                        <constraint firstItem="HQx-kH-hgi" firstAttribute="leading" secondItem="4cd-nr-L3w" secondAttribute="leading" constant="8" id="PMX-ol-XMr"/>
+                        <constraint firstAttribute="trailing" secondItem="mrS-Ny-xVT" secondAttribute="trailing" id="ugE-y1-J5O"/>
+                        <constraint firstItem="HQx-kH-hgi" firstAttribute="top" secondItem="4cd-nr-L3w" secondAttribute="top" constant="15" id="wOM-ZR-iOj"/>
                     </constraints>
                 </view>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOU HAVE UNLOCKED THE MOSTER TRUCK!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" preferredMaxLayoutWidth="216" translatesAutoresizingMaskIntoConstraints="NO" id="LkZ-7W-2E5">
@@ -114,7 +109,7 @@
                 <constraint firstItem="6PU-0j-meK" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="xso-of-iCB"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
-            <point key="canvasLocation" x="172" y="154"/>
+            <point key="canvasLocation" x="31" y="99"/>
         </view>
     </objects>
     <resources>
