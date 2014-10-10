@@ -25,5 +25,5 @@ Pod::Spec.new do |s|
   s.public_header_files = 'Pod/Classes/MightyIO.framework/**/*.h'
   s.vendored_frameworks = 'Pod/Classes/MightyIO.framework'
   s.frameworks = 'UIKit', 'MapKit','Social', 'StoreKit', 'CoreText'
-  s.dependency 'Parse-iOS-SDK', '~> 1.2'
+  s.dependency 'Parse', '~> 1.4'
 end

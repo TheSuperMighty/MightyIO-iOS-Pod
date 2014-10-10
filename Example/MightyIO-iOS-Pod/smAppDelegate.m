@@ -9,6 +9,7 @@
 #import "smAppDelegate.h"
 #import <MightyIO-iOS-Pod/Mighty.h>
 
+
 @implementation smAppDelegate
 
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions

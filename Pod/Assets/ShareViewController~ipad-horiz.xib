@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <objects>
@@ -24,8 +25,21 @@
                     <rect key="frame" x="0.0" y="0.0" width="1024" height="80"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hdr-mi.png" translatesAutoresizingMaskIntoConstraints="NO" id="cDi-3U-6C3">
-                            <rect key="frame" x="905" y="19" width="99" height="41"/>
+                            <rect key="frame" x="26" y="19" width="99" height="41"/>
                         </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3H-Pb-83m">
+                            <rect key="frame" x="864" y="10" width="135" height="60"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                            <state key="normal" title="NEXT">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="sharePurchase:" destination="-1" eventType="touchUpInside" id="B3r-Dq-bHT"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="0.14117647059999999" green="0.14117647059999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
@@ -35,7 +49,7 @@
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hdr-share-screen.png" translatesAutoresizingMaskIntoConstraints="NO" id="Sdq-4q-2WQ">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hdr-share-screen~ipad.png" translatesAutoresizingMaskIntoConstraints="NO" id="Sdq-4q-2WQ">
                     <rect key="frame" x="569" y="192" width="394" height="121"/>
                 </imageView>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="YOU JUST GAVE 1 MEALS TO FIGHT CHILDHOOD HUNGER" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="411" translatesAutoresizingMaskIntoConstraints="NO" id="ut3-uX-78a">
@@ -50,11 +64,11 @@
                     <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img-share.png" translatesAutoresizingMaskIntoConstraints="NO" id="kBH-V7-nbH">
-                    <rect key="frame" x="471" y="584" width="82" height="70"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img-share~ipad.png" translatesAutoresizingMaskIntoConstraints="NO" id="kBH-V7-nbH">
+                    <rect key="frame" x="471" y="612" width="82" height="70"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Mb-kI-zpg" userLabel="Button - facebook">
-                    <rect key="frame" x="40" y="569" width="400" height="99"/>
+                    <rect key="frame" x="40" y="597" width="400" height="99"/>
                     <color key="backgroundColor" red="0.38039215686274508" green="0.38039215686274508" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                     <state key="normal" title="SHARE">
@@ -72,7 +86,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUp-HA-e67" userLabel="Button - twitter">
-                    <rect key="frame" x="580" y="569" width="400" height="99"/>
+                    <rect key="frame" x="580" y="597" width="400" height="99"/>
                     <color key="backgroundColor" red="0.38039215686274508" green="0.38039215686274508" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                     <state key="normal" title="SHARE">
@@ -86,45 +100,32 @@
                         <action selector="shareOnTwitter:" destination="-1" eventType="touchUpInside" id="G1Z-kq-Xeg"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img-check.png" translatesAutoresizingMaskIntoConstraints="NO" id="6xF-bp-7gy">
-                    <rect key="frame" x="363" y="589" width="60" height="60"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img-check~ipad.png" translatesAutoresizingMaskIntoConstraints="NO" id="6xF-bp-7gy">
+                    <rect key="frame" x="363" y="617" width="60" height="60"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-fb.png" translatesAutoresizingMaskIntoConstraints="NO" id="QOI-H8-kEq">
-                    <rect key="frame" x="61" y="589" width="60" height="60"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-fb~ipad.png" translatesAutoresizingMaskIntoConstraints="NO" id="QOI-H8-kEq">
+                    <rect key="frame" x="61" y="617" width="60" height="60"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-tw.png" translatesAutoresizingMaskIntoConstraints="NO" id="l68-kR-Oo4">
-                    <rect key="frame" x="602" y="589" width="60" height="60"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-tw~ipad.png" translatesAutoresizingMaskIntoConstraints="NO" id="l68-kR-Oo4">
+                    <rect key="frame" x="602" y="617" width="60" height="60"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3H-Pb-83m">
-                    <rect key="frame" x="0.0" y="669" width="1024" height="99"/>
-                    <color key="backgroundColor" red="0.11372549019607843" green="0.11372549019607843" blue="0.11372549019607843" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                    <state key="normal" title="NEXT">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <state key="highlighted">
-                        <color key="titleColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="sharePurchase:" destination="-1" eventType="touchUpInside" id="B3r-Dq-bHT"/>
-                    </connections>
-                </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img-check.png" translatesAutoresizingMaskIntoConstraints="NO" id="mxX-BQ-khr">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img-check~ipad.png" translatesAutoresizingMaskIntoConstraints="NO" id="mxX-BQ-khr">
                     <rect key="frame" x="903" y="589" width="60" height="60"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="0.11372549019607843" green="0.11372549019607843" blue="0.11372549019607843" alpha="1" colorSpace="calibratedRGB"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="933" y="154"/>
         </view>
     </objects>
     <resources>
         <image name="hdr-mi.png" width="49" height="14"/>
-        <image name="hdr-share-screen.png" width="197" height="61"/>
-        <image name="icon-fb.png" width="30" height="30"/>
-        <image name="icon-tw.png" width="30" height="30"/>
-        <image name="img-check.png" width="24" height="24"/>
-        <image name="img-share.png" width="66" height="57"/>
+        <image name="hdr-share-screen~ipad.png" width="349" height="101"/>
+        <image name="icon-fb~ipad.png" width="45" height="45"/>
+        <image name="icon-tw~ipad.png" width="45" height="45"/>
+        <image name="img-check~ipad.png" width="46" height="46"/>
+        <image name="img-share~ipad.png" width="106" height="106"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
