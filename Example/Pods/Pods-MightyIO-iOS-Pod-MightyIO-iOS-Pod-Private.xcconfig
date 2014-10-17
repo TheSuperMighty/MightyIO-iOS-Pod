@@ -1,6 +1,6 @@
 #include "Pods-MightyIO-iOS-Pod-MightyIO-iOS-Pod.xcconfig"
 FRAMEWORK_SEARCH_PATHS = ${PODS_MIGHTYIO_IOS_POD_MIGHTYIO_IOS_POD_FRAMEWORK_SEARCH_PATHS}
 GCC_PREPROCESSOR_DEFINITIONS = COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/MightyIO-iOS-Pod" "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/Bolts" "${PODS_ROOT}/Headers/FBSnapshotTestCase" "${PODS_ROOT}/Headers/Kiwi" "${PODS_ROOT}/Headers/MightyIO-iOS-Pod" "${PODS_ROOT}/Headers/Parse"
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/MightyIO-iOS-Pod" "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/Bolts" "${PODS_ROOT}/Headers/FBSnapshotTestCase" "${PODS_ROOT}/Headers/GoogleAnalytics-iOS-SDK" "${PODS_ROOT}/Headers/Kiwi" "${PODS_ROOT}/Headers/MightyIO-iOS-Pod" "${PODS_ROOT}/Headers/Parse"
 OTHER_LDFLAGS = -ObjC ${PODS_MIGHTYIO_IOS_POD_MIGHTYIO_IOS_POD_OTHER_LDFLAGS}
 PODS_ROOT = ${SRCROOT}

@@ -26,4 +26,5 @@ Pod::Spec.new do |s|
   s.vendored_frameworks = 'Pod/Classes/MightyIO.framework'
   s.frameworks = 'UIKit', 'MapKit','Social', 'StoreKit', 'CoreText'
   s.dependency 'Parse', '~> 1.4'
+  s.dependency 'GoogleAnalytics-iOS-SDK', '~> 3.0'
 end
