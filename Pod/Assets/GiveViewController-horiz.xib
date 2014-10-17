@@ -12,6 +12,7 @@
                 <outlet property="itemThumbnail" destination="XH9-Pn-rAo" id="2aX-u9-aUX"/>
                 <outlet property="mealsLabel" destination="lwO-Fv-JWM" id="00k-d6-RUk"/>
                 <outlet property="mealsPerItemLabel" destination="qRj-7Q-Zdc" id="TW5-hw-prg"/>
+                <outlet property="versionLabel" destination="UWh-Ck-pFU" id="cdf-BJ-clM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -30,11 +31,12 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="19w-D2-Utl">
-                    <rect key="frame" x="0.0" y="0.0" width="568" height="57"/>
+                    <rect key="frame" x="0.0" y="0.0" width="568" height="50"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jr9-Jh-fPm">
-                            <rect key="frame" x="6" y="7" width="49" height="40"/>
+                            <rect key="frame" x="6" y="5" width="49" height="40"/>
                             <constraints>
+                                <constraint firstAttribute="height" constant="40" id="faW-Jm-b8r"/>
                                 <constraint firstAttribute="width" constant="49" id="k3l-u6-XDt"/>
                             </constraints>
                             <state key="normal" image="btn-back.png">
@@ -44,16 +46,10 @@
                                 <action selector="popMighty:" destination="-1" eventType="touchUpInside" id="fKp-Qg-HO9"/>
                             </connections>
                         </button>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hdr-mi.png" translatesAutoresizingMaskIntoConstraints="NO" id="aqS-6q-cwp">
-                            <rect key="frame" x="479" y="20" width="49" height="14"/>
-                        </imageView>
                     </subviews>
                     <color key="backgroundColor" red="0.14117647058823529" green="0.14117647058823529" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="aqS-6q-cwp" secondAttribute="trailing" constant="40" id="CTr-eC-PO9"/>
-                        <constraint firstItem="jr9-Jh-fPm" firstAttribute="top" secondItem="19w-D2-Utl" secondAttribute="top" constant="7" id="Lmh-Pv-PqM"/>
-                        <constraint firstItem="aqS-6q-cwp" firstAttribute="top" secondItem="19w-D2-Utl" secondAttribute="top" constant="20" symbolic="YES" id="YWv-Ch-yRR"/>
-                        <constraint firstItem="aqS-6q-cwp" firstAttribute="centerY" secondItem="jr9-Jh-fPm" secondAttribute="centerY" id="jYA-n0-zhH"/>
+                        <constraint firstItem="jr9-Jh-fPm" firstAttribute="top" secondItem="19w-D2-Utl" secondAttribute="top" constant="5" id="Lmh-Pv-PqM"/>
                         <constraint firstItem="jr9-Jh-fPm" firstAttribute="leading" secondItem="19w-D2-Utl" secondAttribute="leading" constant="6" id="qkr-Q3-XBb"/>
                     </constraints>
                 </view>
@@ -148,9 +144,20 @@
                     <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                     <dataDetectorType key="dataDetectorTypes" link="YES"/>
                 </textView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SuperMighty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="UWh-Ck-pFU">
+                    <rect key="frame" x="222" y="14" width="124" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="124" id="dXP-cE-N86"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.3803921569" green="0.3803921569" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="0.11372549019607843" green="0.11372549019607843" blue="0.11372549019607843" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstItem="UWh-Ck-pFU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="14" id="2EG-Zr-WbL"/>
+                <constraint firstItem="UWh-Ck-pFU" firstAttribute="centerX" secondItem="19w-D2-Utl" secondAttribute="centerX" id="6aX-UE-S78"/>
                 <constraint firstItem="19w-D2-Utl" firstAttribute="centerX" secondItem="hON-dz-4Cz" secondAttribute="centerX" id="7NB-8X-rYn"/>
                 <constraint firstAttribute="trailing" secondItem="hOd-oI-py2" secondAttribute="trailing" constant="20" id="9B6-ae-UEC"/>
                 <constraint firstItem="hON-dz-4Cz" firstAttribute="trailing" secondItem="mZR-hu-4xz" secondAttribute="trailing" id="IYS-Fq-anh"/>
@@ -164,10 +171,11 @@
                 <constraint firstAttribute="bottom" secondItem="hON-dz-4Cz" secondAttribute="bottom" constant="92" id="cl9-B5-Q4j"/>
                 <constraint firstItem="19w-D2-Utl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="epD-YK-bCy"/>
                 <constraint firstItem="hON-dz-4Cz" firstAttribute="leading" secondItem="hOd-oI-py2" secondAttribute="leading" id="jhd-hE-eP2"/>
-                <constraint firstItem="wFQ-sR-uiX" firstAttribute="top" secondItem="19w-D2-Utl" secondAttribute="bottom" constant="8" symbolic="YES" id="nJr-eN-Ieg"/>
+                <constraint firstItem="wFQ-sR-uiX" firstAttribute="top" secondItem="19w-D2-Utl" secondAttribute="bottom" constant="15" id="nJr-eN-Ieg"/>
                 <constraint firstItem="19w-D2-Utl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="uyh-5h-GNj"/>
                 <constraint firstItem="wFQ-sR-uiX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="26" id="vds-qS-lAF"/>
-                <constraint firstItem="mZR-hu-4xz" firstAttribute="top" secondItem="19w-D2-Utl" secondAttribute="bottom" constant="8" symbolic="YES" id="yhZ-f1-Gpj"/>
+                <constraint firstItem="mZR-hu-4xz" firstAttribute="top" secondItem="UWh-Ck-pFU" secondAttribute="bottom" constant="30" id="x7k-4X-TJD"/>
+                <constraint firstItem="mZR-hu-4xz" firstAttribute="top" secondItem="19w-D2-Utl" secondAttribute="bottom" constant="15" id="yhZ-f1-Gpj"/>
             </constraints>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -175,7 +183,6 @@
     </objects>
     <resources>
         <image name="btn-back.png" width="21" height="19"/>
-        <image name="hdr-mi.png" width="49" height="14"/>
         <image name="img-plate.png" width="129" height="88"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

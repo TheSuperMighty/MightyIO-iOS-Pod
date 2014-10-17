@@ -12,6 +12,7 @@
                 <outlet property="itemThumbnail" destination="XH9-Pn-rAo" id="2aX-u9-aUX"/>
                 <outlet property="mealsLabel" destination="lwO-Fv-JWM" id="00k-d6-RUk"/>
                 <outlet property="mealsPerItemLabel" destination="qRj-7Q-Zdc" id="TW5-hw-prg"/>
+                <outlet property="versionLabel" destination="3P6-si-UOV" id="PvW-mX-mrV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -88,12 +89,24 @@
                                 <action selector="popMighty:" destination="-1" eventType="touchUpInside" id="fKp-Qg-HO9"/>
                             </connections>
                         </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SuperMighty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3P6-si-UOV">
+                            <rect key="frame" x="98" y="18" width="124" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="124" id="Qdy-PN-OUR"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.3803921569" green="0.3803921569" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" red="0.14117647058823529" green="0.14117647058823529" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
+                        <constraint firstItem="3P6-si-UOV" firstAttribute="top" secondItem="19w-D2-Utl" secondAttribute="top" constant="18" id="CF5-xr-XC4"/>
                         <constraint firstItem="jr9-Jh-fPm" firstAttribute="top" secondItem="19w-D2-Utl" secondAttribute="top" constant="7" id="cpG-bm-hhy"/>
                         <constraint firstItem="jr9-Jh-fPm" firstAttribute="leading" secondItem="19w-D2-Utl" secondAttribute="leading" id="ef2-Rp-gw7"/>
+                        <constraint firstAttribute="bottom" secondItem="3P6-si-UOV" secondAttribute="bottom" constant="18" id="mK8-V1-GzW"/>
                         <constraint firstAttribute="height" constant="57" id="oaB-Bz-jeW"/>
+                        <constraint firstAttribute="centerX" secondItem="3P6-si-UOV" secondAttribute="centerX" id="wQV-dn-Am0"/>
                         <constraint firstAttribute="bottom" secondItem="jr9-Jh-fPm" secondAttribute="bottom" constant="6" id="zuk-8A-nVO"/>
                     </constraints>
                 </view>
