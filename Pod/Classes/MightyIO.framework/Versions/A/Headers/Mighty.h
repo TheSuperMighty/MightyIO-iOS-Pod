@@ -9,13 +9,19 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <StoreKit/StoreKit.h>
-#import "Parse.h"
 #import <Social/Social.h>
 #import <Security/Security.h>
+#import "GAI.h"
+#import "Parse.h"
 
+@class PFObject;
 @class Mighty;
 @protocol MightyDelegate <NSObject>
 @optional
+
+- (void)superMightyFinishedLoadingWithActiveCampaign:(BOOL)hasCampaign;
+
+@required
 
 - (void)didRecordSuccessfulTransaction:(SKPaymentTransaction*)transaction;
 - (void)mightyTransactionFailedWithError:(NSError*)error;

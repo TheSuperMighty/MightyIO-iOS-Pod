@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <objects>
@@ -9,6 +8,7 @@
             <connections>
                 <outlet property="itemNameLabel" destination="LkZ-7W-2E5" id="OMz-Ah-05R"/>
                 <outlet property="itemThumbnail" destination="KTZ-Vd-T7t" id="8KO-wo-ttL"/>
+                <outlet property="versionLabel" destination="qmb-M6-it6" id="72j-vg-0ij"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -43,12 +43,6 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4cd-nr-L3w">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hdr-mi.png" translatesAutoresizingMaskIntoConstraints="NO" id="HQx-kH-hgi">
-                            <rect key="frame" x="8" y="15" width="49" height="19"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="19" id="VQ4-VZ-P3M"/>
-                            </constraints>
-                        </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mrS-Ny-xVT">
                             <rect key="frame" x="270" y="0.0" width="50" height="50"/>
                             <constraints>
@@ -62,15 +56,25 @@
                                 <action selector="closeMighty:" destination="-1" eventType="touchUpInside" id="nne-eo-5qi"/>
                             </connections>
                         </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SuperMighty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qmb-M6-it6">
+                            <rect key="frame" x="98" y="14" width="124" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="124" id="CuP-jS-sJH"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.3803921569" green="0.3803921569" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" red="0.10980392160000001" green="0.10980392160000001" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstItem="mrS-Ny-xVT" firstAttribute="top" secondItem="4cd-nr-L3w" secondAttribute="top" id="8Qe-Xj-os1"/>
+                        <constraint firstAttribute="centerX" secondItem="qmb-M6-it6" secondAttribute="centerX" id="CT0-Kx-Q4u"/>
+                        <constraint firstItem="qmb-M6-it6" firstAttribute="top" secondItem="4cd-nr-L3w" secondAttribute="top" constant="14" id="EEi-Vo-oSc"/>
                         <constraint firstAttribute="bottom" secondItem="mrS-Ny-xVT" secondAttribute="bottom" id="HGn-Ev-eHk"/>
                         <constraint firstAttribute="height" constant="50" id="MXH-Jr-t54"/>
-                        <constraint firstItem="HQx-kH-hgi" firstAttribute="leading" secondItem="4cd-nr-L3w" secondAttribute="leading" constant="8" id="PMX-ol-XMr"/>
+                        <constraint firstAttribute="bottom" secondItem="qmb-M6-it6" secondAttribute="bottom" constant="15" id="gFG-c4-vO8"/>
                         <constraint firstAttribute="trailing" secondItem="mrS-Ny-xVT" secondAttribute="trailing" id="ugE-y1-J5O"/>
-                        <constraint firstItem="HQx-kH-hgi" firstAttribute="top" secondItem="4cd-nr-L3w" secondAttribute="top" constant="15" id="wOM-ZR-iOj"/>
                     </constraints>
                 </view>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOU HAVE UNLOCKED THE MOSTER TRUCK!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" preferredMaxLayoutWidth="216" translatesAutoresizingMaskIntoConstraints="NO" id="LkZ-7W-2E5">
@@ -114,7 +118,6 @@
     </objects>
     <resources>
         <image name="btn-close.png" width="30" height="30"/>
-        <image name="hdr-mi.png" width="49" height="14"/>
         <image name="img-heart.png" width="25" height="20"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -15,6 +15,7 @@
                 <outlet property="itemNameLabel" destination="gJs-GM-SmH" id="4t9-C2-lzP"/>
                 <outlet property="itemThumbnail" destination="vKX-gb-Ae3" id="P8j-Tc-bpb"/>
                 <outlet property="mealsGivenLabel" destination="guW-90-A64" id="mbT-t5-Xmv"/>
+                <outlet property="versionLabel" destination="7t5-oZ-FQ8" id="B2M-z8-w9E"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -35,11 +36,23 @@
                                 <action selector="closeMighty:" destination="-1" eventType="touchUpInside" id="h0w-GX-mA4"/>
                             </connections>
                         </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SuperMighty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7t5-oZ-FQ8">
+                            <rect key="frame" x="98" y="14" width="124" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="124" id="Uet-64-YQY"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.38039215686274508" green="0.38039215686274508" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" red="0.14117647058823529" green="0.14117647058823529" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
+                        <constraint firstAttribute="centerX" secondItem="7t5-oZ-FQ8" secondAttribute="centerX" id="cqA-iU-Wc9"/>
                         <constraint firstAttribute="width" constant="320" id="gUr-iG-P9M"/>
+                        <constraint firstItem="7t5-oZ-FQ8" firstAttribute="top" secondItem="qIO-vd-cBk" secondAttribute="top" constant="14" id="kJC-fp-NXV"/>
                         <constraint firstAttribute="height" constant="50" id="rsg-vM-9eL"/>
+                        <constraint firstAttribute="bottom" secondItem="7t5-oZ-FQ8" secondAttribute="bottom" constant="15" id="tJO-nF-Mju"/>
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYo-jz-lYk" userLabel="My Impact Button">
@@ -256,7 +269,7 @@
                 <constraint firstAttribute="trailing" secondItem="qx0-BN-Fp0" secondAttribute="trailing" id="sF6-3B-N91"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
-            <point key="canvasLocation" x="369" y="215"/>
+            <point key="canvasLocation" x="328" y="215"/>
         </view>
     </objects>
     <resources>

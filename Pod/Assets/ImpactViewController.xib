@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <objects>
@@ -9,6 +8,7 @@
             <connections>
                 <outlet property="contentView" destination="C8b-5k-JJl" id="nVe-SH-2bR"/>
                 <outlet property="scrollView" destination="4SL-gJ-2ef" id="rDW-Xi-b5O"/>
+                <outlet property="versionLabel" destination="gIw-DQ-6O2" id="qDy-mL-WnW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -100,10 +100,6 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="57"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hdr-mi.png" id="nw4-V9-0B7">
-                            <rect key="frame" x="243" y="19" width="57" height="19"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="pfE-aG-Bvc">
                             <rect key="frame" x="8" y="11" width="42" height="35"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -114,6 +110,13 @@
                                 <action selector="popMighty:" destination="-1" eventType="touchUpInside" id="Byj-6M-kDv"/>
                             </connections>
                         </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SuperMighty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="gIw-DQ-6O2">
+                            <rect key="frame" x="79" y="18" width="163" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.3803921569" green="0.3803921569" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" red="0.1137254902" green="0.1137254902" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
@@ -126,7 +129,6 @@
     </objects>
     <resources>
         <image name="btn-back.png" width="21" height="19"/>
-        <image name="hdr-mi.png" width="49" height="14"/>
         <image name="impact-childhood-hunger.png" width="224" height="143"/>
         <image name="impact-children.png" width="283" height="134"/>
         <image name="impact-food.png" width="169" height="109"/>
