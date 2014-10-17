@@ -11,6 +11,7 @@
                 <outlet property="iconFB" destination="QOI-H8-kEq" id="GK3-C7-a55"/>
                 <outlet property="iconTw" destination="l68-kR-Oo4" id="xHL-Om-YYt"/>
                 <outlet property="mealsGivenLabel" destination="QhU-1y-yg6" id="tcT-aq-eaE"/>
+                <outlet property="versionLabel" destination="Exj-oM-Zcr" id="LZJ-Sk-qTd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="youGaveLabel" destination="ut3-uX-78a" id="YQU-1H-yux"/>
             </connections>
@@ -32,13 +33,25 @@
                                 <action selector="sharePurchase:" destination="-1" eventType="touchUpInside" id="Bc2-D9-MHe"/>
                             </connections>
                         </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SuperMighty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Exj-oM-Zcr">
+                            <rect key="frame" x="222" y="14" width="124" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="124" id="wq2-sU-2Xi"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.3803921569" green="0.3803921569" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" red="0.14117647059999999" green="0.14117647059999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="dNX-DB-7vs" secondAttribute="bottom" constant="8" id="8fW-iE-WKD"/>
                         <constraint firstAttribute="height" constant="50" id="O7H-bE-Bjq"/>
+                        <constraint firstAttribute="centerX" secondItem="Exj-oM-Zcr" secondAttribute="centerX" id="XLb-tR-D9C"/>
+                        <constraint firstItem="Exj-oM-Zcr" firstAttribute="top" secondItem="Peq-V7-yJt" secondAttribute="top" constant="14" id="jAv-UD-2tS"/>
                         <constraint firstAttribute="trailing" secondItem="dNX-DB-7vs" secondAttribute="trailing" constant="20" symbolic="YES" id="mOM-o5-NfW"/>
                         <constraint firstItem="dNX-DB-7vs" firstAttribute="top" secondItem="Peq-V7-yJt" secondAttribute="top" constant="8" id="rbV-Ze-7Ju"/>
+                        <constraint firstAttribute="bottom" secondItem="Exj-oM-Zcr" secondAttribute="bottom" constant="15" id="tMG-48-SKY"/>
                     </constraints>
                 </view>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOU JUST MADE AMAZING POSSIBLE!" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" preferredMaxLayoutWidth="233" translatesAutoresizingMaskIntoConstraints="NO" id="u0D-b5-LT6">
