@@ -34,8 +34,7 @@
 }
 
 @property (nonatomic, weak) id<MightyDelegate> mightyDelegate;
-@property (strong, nonatomic) NSString* username;
-@property (strong, nonatomic) NSString* password;
+@property (strong, nonatomic) NSString* authToken;
 @property (strong, nonatomic) NSArray* mightyItems;
 @property (strong, nonatomic) PFObject* game;
 @property (strong, nonatomic) PFObject* currentItem;
@@ -75,10 +74,10 @@
 + (Mighty*)sharedInstance;
 
 /**
- Inits the Mighty class and logs into the MightyIO system with supplied credentials. 
+ Inits the Mighty class and logs into the MightyIO system with supplied auth token.
  @return The singleton @c Mighty object that can be used throughout the app
  */
-+ (Mighty*)initWithUsername:(NSString*)username andPassword:(NSString*)password;
++ (Mighty*)initWithAuthToken:(NSString*)token;
 
 /**
  Checks the Campaign Status of an Item when App becomes active
