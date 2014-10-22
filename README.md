@@ -11,10 +11,10 @@ The MightyIO-iOS-Pod will provide you with the methods you need to easily interf
 
 ## Quick Start Guide
 1. Add 'MightyIO-iOS-Pod' to your Podfile http://cocoapods.org/?q=mighty: 
-``pod 'MightyIO-iOS-Pod', '~> 0.7'``
+``pod 'MightyIO-iOS-Pod', '~> 0.10'``
 2. Run Pod install (Refer to CocoaPod’s [Getting Started Guide](http://cocoapods.org/#getstarted) for detailed instructions.)
 3. Import Mighty.h in your AppDelegate ``#import <MightyIO-iOS-Pod/Mighty.h>``
-4. Add ``[Mighty initWithUsername:@"username" andPassword:@"password"];`` to - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions;
+4. Add ``[Mighty initWithAuthToken:@"authtoken"];`` to - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions;
 5. Place the Super Mighty Ribbon on your home screen using the code ``[[Mighty sharedInstance] makeRibbonWithCenter:CGPointMake(260, 45) inViewController:self];`` or place the ribbon asset in your home screen as an UIButton and pass it to SuperMighty using ``[[Mighty sharedInstance] makeRibbonWithIBOutlet:smRibbonOutlet inViewController:self];``.
 6. Add the Mighty Delegate to your view controller: ``@interface HomeViewController : UIViewController <MightyDelegate>``
 7. In your ViewController add ``[Mighty sharedInstance].mightyDelegate = self;`` to -(void)viewDidLoad;
@@ -35,7 +35,7 @@ Installation
     ```objective-c
     - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
     {
-        [Mighty initWithUsername:@"username" andPassword:@"password"];
+        [Mighty initWithAuthToken:@"authtoken"];
         // Override point for customization after application launch.
         return YES;
     }
@@ -62,19 +62,18 @@ An class method that returns a shared instance of the Mighty.
 * (Mighty*)sharedInstance - a shared instance of Mighty
 ___
 
-**+ (Mighty*)initWithUsername:(NSString*)username andPassword:(NSString*)password;**  
+**+ (Mighty*)initWithAuthToken:(NSString*)token**  
 An class method logs into the MightyIO. On login this method will return your game information based on bundleIdentifier as well as the Mighty Item associated with that game.
 
-**params:**
+**param:**
 
-* (NSString*)username - SuperMighty username
-* (NSString*)password - SuperMighty password
+* (NSString*)token - SuperMighty Auth Token.  (Generated on sign up)
 
 **example:**
 ```objective-c
     - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
     {
-        [Mighty initWithUsername:@"username" andPassword:@"password"];
+        [Mighty initWithAuthToken:@"authtoken"];
         // Override point for customization after application launch.
         return YES;
     }
