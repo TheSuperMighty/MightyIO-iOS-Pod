@@ -15,7 +15,7 @@
 // FBSnapshotTestCase
 #define COCOAPODS_POD_AVAILABLE_FBSnapshotTestCase
 #define COCOAPODS_VERSION_MAJOR_FBSnapshotTestCase 1
-#define COCOAPODS_VERSION_MINOR_FBSnapshotTestCase 2
+#define COCOAPODS_VERSION_MINOR_FBSnapshotTestCase 3
 #define COCOAPODS_VERSION_PATCH_FBSnapshotTestCase 0
 
 // GoogleAnalytics-iOS-SDK
@@ -33,7 +33,7 @@
 // MightyIO-iOS-Pod
 #define COCOAPODS_POD_AVAILABLE_MightyIO_iOS_Pod
 #define COCOAPODS_VERSION_MAJOR_MightyIO_iOS_Pod 0
-#define COCOAPODS_VERSION_MINOR_MightyIO_iOS_Pod 8
+#define COCOAPODS_VERSION_MINOR_MightyIO_iOS_Pod 9
 #define COCOAPODS_VERSION_PATCH_MightyIO_iOS_Pod 1
 
 // Parse
