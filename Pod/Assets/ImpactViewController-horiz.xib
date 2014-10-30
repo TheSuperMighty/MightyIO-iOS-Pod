@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ImpactViewController">
             <connections>
                 <outlet property="contentView" destination="C8b-5k-JJl" id="nVe-SH-2bR"/>
                 <outlet property="scrollView" destination="4SL-gJ-2ef" id="rDW-Xi-b5O"/>
-                <outlet property="versionLabel" destination="YmJ-BX-Pfs" id="Jcg-TG-eZd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -46,7 +44,7 @@
                                         <constraint firstAttribute="height" constant="225" id="luN-xt-uTQ"/>
                                     </constraints>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THIS MORNING IN THE U.S., 16 MILLION CHILDREN WOKE UP IN A HOME THAT IS FOOD INSECURE." lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flK-wa-Ysm">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THIS MORNING IN THE U.S., 16 MILLION CHILDREN WOKE UP IN A HOME THAT IS FOOD INSECURE." lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="198" translatesAutoresizingMaskIntoConstraints="NO" id="flK-wa-Ysm">
                                     <rect key="frame" x="265" y="152" width="198" height="81"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="81" id="aiC-d8-E5l"/>
@@ -55,7 +53,7 @@
                                     <color key="textColor" red="0.38039215686274508" green="0.38039215686274508" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="CHILDHOOD HUNGER AFFECTS NEARLY ONE IN EVERY FIVE CHILDREN IN THE U.S." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTY-jd-vyz">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="CHILDHOOD HUNGER AFFECTS NEARLY ONE IN EVERY FIVE CHILDREN IN THE U.S." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="206" translatesAutoresizingMaskIntoConstraints="NO" id="CTY-jd-vyz">
                                     <rect key="frame" x="20" y="327" width="206" height="80"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="80" id="hCI-Ea-sPN"/>
@@ -71,13 +69,13 @@
                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="JZV-2h-Fdf"/>
                                     </constraints>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="HELP CHANGE THESE NUMBERS TODAY WITH YOUR PURCHASE OF A MIGHTYITEM." lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yMS-b7-1Mo">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="HELP CHANGE THESE NUMBERS TODAY WITH YOUR PURCHASE OF A MIGHTYITEM." lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="191" translatesAutoresizingMaskIntoConstraints="NO" id="yMS-b7-1Mo">
                                     <rect key="frame" x="20" y="730" width="191" height="67"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <color key="textColor" red="0.3803921569" green="0.3803921569" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="CHILDREN WHO EAT BREAKFAST ARE 20% MORE LIKELY TO GRADUATE HIGH SCHOOL." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZr-6i-RVZ">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="CHILDREN WHO EAT BREAKFAST ARE 20% MORE LIKELY TO GRADUATE HIGH SCHOOL." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="206" translatesAutoresizingMaskIntoConstraints="NO" id="pZr-6i-RVZ">
                                     <rect key="frame" x="254" y="547" width="206" height="67"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <color key="textColor" red="0.3803921569" green="0.3803921569" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
@@ -85,7 +83,7 @@
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="799-GR-fN6" userLabel="Give Water Button">
                                     <rect key="frame" x="20" y="864" width="440" height="49"/>
-                                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="0.38039215686274508" green="0.38039215686274508" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                     <state key="normal" title="GIVE &amp; UNLOCK">
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -98,7 +96,7 @@
                                     </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" red="0.14117647058823529" green="0.14117647058823529" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.2196078431372549" green="0.2196078431372549" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstItem="yMS-b7-1Mo" firstAttribute="leading" secondItem="C8b-5k-JJl" secondAttribute="leading" constant="20" id="0hw-mj-xtJ"/>
                                 <constraint firstAttribute="trailing" secondItem="M2k-UO-vfB" secondAttribute="trailing" constant="17" id="7Jl-g9-m18"/>
@@ -140,50 +138,11 @@
                         <outlet property="delegate" destination="-1" id="htT-y6-Me9"/>
                     </connections>
                 </scrollView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5E6-ej-Oad">
-                    <rect key="frame" x="0.0" y="0.0" width="480" height="50"/>
-                    <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oq9-XR-hEv">
-                            <rect key="frame" x="8" y="7" width="42" height="35"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="35" id="WCy-F8-jAc"/>
-                                <constraint firstAttribute="width" constant="42" id="lCE-Sg-Ia4"/>
-                            </constraints>
-                            <state key="normal" image="btn-back.png">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="popMighty:" destination="-1" eventType="touchUpInside" id="dnM-IQ-DRF"/>
-                            </connections>
-                        </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SuperMighty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="YmJ-BX-Pfs">
-                            <rect key="frame" x="178" y="14" width="124" height="21"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="124" id="Pa1-qL-ZJB"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <color key="textColor" red="0.3803921569" green="0.3803921569" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
-                    <color key="backgroundColor" red="0.1137254902" green="0.1137254902" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="bottom" secondItem="YmJ-BX-Pfs" secondAttribute="bottom" constant="15" id="6uC-jR-3zW"/>
-                        <constraint firstAttribute="height" constant="50" id="M2U-Pc-3uP"/>
-                        <constraint firstItem="oq9-XR-hEv" firstAttribute="leading" secondItem="5E6-ej-Oad" secondAttribute="leading" constant="8" id="Mpw-fJ-a2p"/>
-                        <constraint firstItem="YmJ-BX-Pfs" firstAttribute="top" secondItem="5E6-ej-Oad" secondAttribute="top" constant="14" id="pz9-BB-azR"/>
-                        <constraint firstAttribute="centerX" secondItem="YmJ-BX-Pfs" secondAttribute="centerX" id="rdD-J8-fiP"/>
-                        <constraint firstItem="oq9-XR-hEv" firstAttribute="bottom" secondItem="5E6-ej-Oad" secondAttribute="bottomMargin" id="vzl-eO-4Bp"/>
-                    </constraints>
-                </view>
             </subviews>
             <color key="backgroundColor" red="0.2274509804" green="0.2274509804" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="4SL-gJ-2ef" secondAttribute="bottom" id="4NT-j3-MlA"/>
                 <constraint firstAttribute="bottom" secondItem="4SL-gJ-2ef" secondAttribute="bottom" id="BV2-SH-T1d"/>
-                <constraint firstItem="5E6-ej-Oad" firstAttribute="top" secondItem="4SL-gJ-2ef" secondAttribute="top" id="Dke-YS-PLx"/>
-                <constraint firstItem="5E6-ej-Oad" firstAttribute="leading" secondItem="4SL-gJ-2ef" secondAttribute="leading" id="GdU-q1-wcW"/>
-                <constraint firstItem="5E6-ej-Oad" firstAttribute="trailing" secondItem="4SL-gJ-2ef" secondAttribute="trailing" id="M6W-2q-x5u"/>
                 <constraint firstItem="4SL-gJ-2ef" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="N2W-bR-sd1"/>
                 <constraint firstItem="4SL-gJ-2ef" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="fPU-6f-67P"/>
                 <constraint firstAttribute="trailing" secondItem="4SL-gJ-2ef" secondAttribute="trailing" id="jN5-ja-IGB"/>
@@ -195,7 +154,6 @@
         </view>
     </objects>
     <resources>
-        <image name="btn-back.png" width="21" height="19"/>
         <image name="impact-childhood-hunger.png" width="224" height="143"/>
         <image name="impact-children.png" width="283" height="134"/>
         <image name="impact-high-school.png" width="194" height="191"/>

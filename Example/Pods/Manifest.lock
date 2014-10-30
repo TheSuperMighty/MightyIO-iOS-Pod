@@ -1,9 +1,9 @@
 PODS:
   - Bolts (1.1.3)
-  - FBSnapshotTestCase (1.2)
+  - FBSnapshotTestCase (1.3)
   - GoogleAnalytics-iOS-SDK (3.0.9)
   - Kiwi (2.3.0)
-  - MightyIO-iOS-Pod (0.8.1):
+  - MightyIO-iOS-Pod (0.9.1):
     - GoogleAnalytics-iOS-SDK (~> 3.0)
     - Parse (~> 1.4)
   - Parse (1.4.2):
@@ -20,10 +20,10 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Bolts: 3db0a875235e0c9042b013af13af0f00f79b102c
-  FBSnapshotTestCase: 4159bdf235fdae25aa7d813f1452a4f05ad4f9cd
+  FBSnapshotTestCase: 4fc617f1cb970fe987b98b3525b3aac106baaabf
   GoogleAnalytics-iOS-SDK: d9e198b1f955259a72886769be7377cdfcdb2250
   Kiwi: 54bece5b35564d9b8e03c608d926f1a22fcfc589
-  MightyIO-iOS-Pod: 37261a7b3c782a18f430293e014e10392b151b2d
+  MightyIO-iOS-Pod: 71cde1aa40923e7fbb933e45a2de66fca7a4b292
   Parse: fc9ceb6edbc6bb6a1a1f3c33f0db3293a6894f94
 
 COCOAPODS: 0.33.1
