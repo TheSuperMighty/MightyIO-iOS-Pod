@@ -11,7 +11,7 @@ The MightyIO-iOS-Pod will provide you with the methods you need to easily interf
 
 ## Quick Start Guide
 1. Add 'MightyIO-iOS-Pod' to your Podfile http://cocoapods.org/?q=mighty: 
-``pod 'MightyIO-iOS-Pod', '~> 0.10'``
+``pod 'MightyIO-iOS-Pod', :head``
 2. Run Pod install (Refer to CocoaPod’s [Getting Started Guide](http://cocoapods.org/#getstarted) for detailed instructions.)
 3. Import Mighty.h in your AppDelegate ``#import <MightyIO-iOS-Pod/Mighty.h>``
 4. Add ``[Mighty initWithAuthToken:@"authtoken"];`` to - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions;
