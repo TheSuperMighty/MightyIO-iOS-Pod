@@ -11,11 +11,12 @@
 #import <StoreKit/StoreKit.h>
 #import <Social/Social.h>
 #import <Security/Security.h>
-#import "GAI.h"
 #import "Parse.h"
 
 @class PFObject;
 @class Mighty;
+@class SVProgressHUD;
+
 @protocol MightyDelegate <NSObject>
 @optional
 
@@ -28,7 +29,7 @@
 
 @end
 
-@interface Mighty : NSObject <SKProductsRequestDelegate> {
+@interface Mighty : NSObject <SKProductsRequestDelegate, UIAlertViewDelegate> {
     __weak id<MightyDelegate> mightyDelegate;
     SKProductsRequest* _productsRequest;
 }
@@ -51,11 +52,14 @@
 @property BOOL fullyLoaded;
 @property BOOL isCampaignActive;
 @property BOOL simulator;
+@property BOOL appleConfirmed;
 
 @property float itemsBought;
 @property float mealsPerItem;
 @property float mealsGiven;
 @property float developerContrib;
+
+@property SVProgressHUD *loader;
 
 // Init Functions
 
@@ -135,6 +139,16 @@
  */
 - (void)calculateTotalGoodForItem:(PFObject*)item;
 
+/**
+Show loader over overview until item is confirmed with Apple
+ @return void
+ */
 - (void)loadOverViewInWindow:(UIWindow*)window;
+
+/**
+ Calls all relevent game information from API.
+ @return void
+ */
+- (void)getCustomGameWithBlock:(void (^)(PFObject*, NSError*))block;
 
 @end

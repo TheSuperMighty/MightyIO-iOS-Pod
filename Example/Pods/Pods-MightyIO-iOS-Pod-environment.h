@@ -21,7 +21,7 @@
 // MightyIO-iOS-Pod
 #define COCOAPODS_POD_AVAILABLE_MightyIO_iOS_Pod
 #define COCOAPODS_VERSION_MAJOR_MightyIO_iOS_Pod 0
-#define COCOAPODS_VERSION_MINOR_MightyIO_iOS_Pod 8
+#define COCOAPODS_VERSION_MINOR_MightyIO_iOS_Pod 9
 #define COCOAPODS_VERSION_PATCH_MightyIO_iOS_Pod 1
 
 // Parse
