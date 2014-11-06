@@ -1,1 +1,0 @@
-../../../../Pod/Classes/MightyIO.framework/Versions/A/Headers/SuperMighty.h
