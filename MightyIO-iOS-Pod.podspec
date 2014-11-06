@@ -24,7 +24,6 @@ Pod::Spec.new do |s|
   s.preserve_paths = 'Pod/Classes/MightyIO.framework',
   s.public_header_files = 'Pod/Classes/MightyIO.framework/**/*.h'
   s.vendored_frameworks = 'Pod/Classes/MightyIO.framework'
-  s.frameworks = 'UIKit', 'MapKit','Social', 'StoreKit', 'CoreText'
+  s.frameworks = 'UIKit', 'MapKit','Social', 'StoreKit', 'CoreText', 'CoreData', 'SystemConfiguration'
   s.dependency 'Parse', '~> 1.4'
-  s.dependency 'GoogleAnalytics-iOS-SDK', '~> 3.0'
 end
