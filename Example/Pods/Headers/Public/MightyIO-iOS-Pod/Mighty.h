@@ -1,0 +1,1 @@
+../../../../../Pod/Classes/MightyIO.framework/Versions/A/Headers/Mighty.h

@@ -1,0 +1,7 @@
+FRAMEWORK_SEARCH_PATHS = "$(PODS_ROOT)/../../Pod/Classes" "$(PODS_ROOT)/Parse"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/Bolts" "${PODS_ROOT}/Headers/Public/FBSnapshotTestCase" "${PODS_ROOT}/Headers/Public/Kiwi" "${PODS_ROOT}/Headers/Public/MightyIO-iOS-Pod" "${PODS_ROOT}/Headers/Public/Parse"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/Bolts" -isystem "${PODS_ROOT}/Headers/Public/FBSnapshotTestCase" -isystem "${PODS_ROOT}/Headers/Public/Kiwi" -isystem "${PODS_ROOT}/Headers/Public/MightyIO-iOS-Pod" -isystem "${PODS_ROOT}/Headers/Public/Parse"
+OTHER_LDFLAGS = -ObjC -l"Pods-MightyIO-iOS-Pod-Bolts" -l"Pods-MightyIO-iOS-Pod-MightyIO-iOS-Pod" -l"Pods-MightyIO-iOS-Pod-Parse" -l"sqlite3" -l"z" -framework "AudioToolbox" -framework "CFNetwork" -framework "CoreData" -framework "CoreGraphics" -framework "CoreLocation" -framework "CoreText" -framework "MapKit" -framework "MightyIO" -framework "MobileCoreServices" -framework "Parse" -framework "QuartzCore" -framework "Security" -framework "Social" -framework "StoreKit" -framework "SystemConfiguration" -framework "UIKit" -weak_framework "Accounts" -weak_framework "Social"
+OTHER_LIBTOOLFLAGS = $(OTHER_LDFLAGS)
+PODS_ROOT = ${SRCROOT}/Pods
