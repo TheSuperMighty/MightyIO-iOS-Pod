@@ -18,7 +18,7 @@ The MightyIO-iOS-Pod will provide you with the methods you need to easily interf
 5. Place the Super Mighty Ribbon on your home screen using the code ``[[Mighty sharedInstance] makeRibbonWithCenter:CGPointMake(260, 45) inViewController:self];`` or place the ribbon asset in your home screen as an UIButton and pass it to SuperMighty using ``[[Mighty sharedInstance] makeRibbonWithIBOutlet:smRibbonOutlet inViewController:self];``.
 6. Add the Mighty Delegate to your view controller: ``@interface HomeViewController : UIViewController <MightyDelegate>``
 7. In your ViewController add ``[Mighty sharedInstance].mightyDelegate = self;`` to -(void)viewDidLoad;
-8. Add the SuperMighty callback function to your ViewController ``- (void)didRecordSuccessfulTransaction:(SKPaymentTransaction*)transaction;``
+8. Add the SuperMighty callback function to your ViewController ``- (void)mightyDidRecordSuccessfulTransaction:(SKPaymentTransaction*)transaction;``
 9. Inside the didRecordSuccessfulTransaction function place the code to unlock your item.
 
 
@@ -113,12 +113,79 @@ This method allows you to manually place the SuperMighty ribbon asset in your vi
         [[Mighty sharedInstance] makeRibbonWithIBOutlet:smRibbonOutlet inViewController:self];
     }
 ```
+___
+
 
 ###Mighty Delegate Functions
-The Mighty Delegate provides the methods required for your game to react to a purchase made through SuperMighty.  Typically this would involve unlocking them item or feature that the user has just payed for. 
+The Mighty Delegate provides the methods allow you to react to MightyIO actions inside your code such as: loading /opening/closing the pop-up shop and completing a purchase.
 
-To implement this:
-1. Add the Mighty Delegate to your class:
-``@interface HomeViewController : UIViewController <MightyDelegate>``
-2. In your implementation add the method ``- (void)didRecordSuccessfulTransaction:(SKPaymentTransaction*)transaction;``  
-3. Inside the didRecordSuccessfulTransaction method place your code to unlock your items.  Unlocking items dynamically is the best way to do this so that you can add new campaigns without resubmitting your app.
+####Required
+
+**- (void)mightyDidRecordSuccessfulTransaction:(SKPaymentTransaction*)transaction;**
+When a player completes a purchase inside of the Mighty Pop-up Shop this delegate function is fired which returns an instance of the player transaction.  Place your code to unlock the item inside of this delegate method.
+
+**params:**
+
+* (SKPaymentTransaction*)transaction - Instance of the completed SKPaymentTransaction created by your player purchasing the MightyItem.
+
+**example:**
+```objective-c
+- (void)mightyDidRecordSuccessfulTransaction:(SKPaymentTransaction*)transaction
+{
+    // You code to unlock the In-App Purchase
+    // Ideally this would be dynamic so that a new deployment will not be necessary to create a new MightyItem
+}
+```
+___
+
+**- (void)mightyTransactionFailedWithError:(NSError*)error;**
+This delegate method can be used to inform the player that their transaction was not able to be processed.
+
+**params:**
+
+* (NSError*)error - The error produced by the failed purchase.
+
+**example:**
+```objective-c
+- (void)mightyTransactionFailedWithError:(NSError*)error
+{
+    UIAlertView *purchaseError = [[UIAlertView alloc] initWithTitle:@"Purchase Error" message:@"There was an error processing their purchase." delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil];
+        [purchaseError show];
+}
+```
+___
+
+**- (void)mightyFinishedLoadingWithActiveCampaign:(BOOL)hasCampaign;**
+When your game loads the MightyIO runs a check to verify that the a MightyItem exists for a game matching your Bundle Identifier.  This delegate method is fired at this time.
+
+**params:**
+
+* (BOOL)hasCampaign - Returns true if a game and MightyItem matching the current bundle identifier exist.  Returns false if a game with the current bundle identifier is not found or if a MightyItem has not been set up yet.
+
+___
+
+**- (void)mightyModalOpen;**
+This delegate method is triggered when a user clicks on the ribbon and opens the Mighty Pop-up Shop.
+
+**example:**
+```objective-c
+- (void)mightyModalOpen
+{
+    //Pause game play
+}
+```
+
+___
+
+**- (void)mightyModalOpen;**
+This delegate method is triggered when a player closes the Mighty Pop-up Shop.
+
+**example:**
+```objective-c
+- (void)mightyModalClosed
+{
+    //Resume game play
+}
+```
+
+___
