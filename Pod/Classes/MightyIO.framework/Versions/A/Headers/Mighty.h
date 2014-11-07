@@ -20,11 +20,13 @@
 @protocol MightyDelegate <NSObject>
 @optional
 
-- (void)superMightyFinishedLoadingWithActiveCampaign:(BOOL)hasCampaign;
+- (void)mightyFinishedLoadingWithActiveCampaign:(BOOL)hasCampaign;
+- (void)mightyModalOpen;
+- (void)mightyModalClosed;
 
 @required
 
-- (void)didRecordSuccessfulTransaction:(SKPaymentTransaction*)transaction;
+- (void)mightyDidRecordSuccessfulTransaction:(SKPaymentTransaction*)transaction;
 - (void)mightyTransactionFailedWithError:(NSError*)error;
 
 @end
