@@ -9,6 +9,8 @@
             <connections>
                 <outlet property="btnFacebook" destination="fTo-Nr-yI6" id="3Nx-bm-475"/>
                 <outlet property="btnTwitter" destination="zbZ-BW-FA6" id="Zc0-Lo-Al4"/>
+                <outlet property="purchaseCompleteLabel" destination="GEW-FA-GL4" id="b6t-vj-kCY"/>
+                <outlet property="shareCallOutLabel" destination="u0D-b5-LT6" id="0p1-D8-Lvp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,33 +20,24 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PURCHASE COMPLETE!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" preferredMaxLayoutWidth="233" translatesAutoresizingMaskIntoConstraints="NO" id="GEW-FA-GL4">
-                    <rect key="frame" x="45" y="55" width="248" height="27"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="27" id="KXu-Gk-f4D"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <rect key="frame" x="40" y="50" width="231" height="33"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="253" image="MIO_gavePlate.png" translatesAutoresizingMaskIntoConstraints="NO" id="BaY-Ye-oHX">
-                    <rect key="frame" x="353" y="87" width="149" height="91"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="149" id="Osm-Pm-bTd"/>
-                    </constraints>
-                </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SW5-7K-CEr">
-                    <rect key="frame" x="104" y="142" width="131" height="53"/>
+                    <rect key="frame" x="88" y="151" width="131" height="54"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbZ-BW-FA6" userLabel="Button - facebook">
-                            <rect key="frame" x="0.0" y="-8" width="54" height="68"/>
+                        <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbZ-BW-FA6" userLabel="Button - twitter">
+                            <rect key="frame" x="0.0" y="0.0" width="54" height="54"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <state key="normal" image="MIO_btnTwitter.png"/>
                             <connections>
                                 <action selector="shareOnTwitter:" destination="-1" eventType="touchUpInside" id="zXB-LL-dHn"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTo-Nr-yI6" userLabel="Button - twitter">
-                            <rect key="frame" x="77" y="-1" width="54" height="54"/>
+                        <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTo-Nr-yI6" userLabel="Button - facebook">
+                            <rect key="frame" x="77" y="0.0" width="54" height="54"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <state key="normal" image="MIO_btnFacebook.png">
                                 <color key="titleColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -60,19 +53,32 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstItem="zbZ-BW-FA6" firstAttribute="top" secondItem="SW5-7K-CEr" secondAttribute="top" id="A9d-mh-BIU"/>
+                        <constraint firstAttribute="bottom" secondItem="fTo-Nr-yI6" secondAttribute="bottom" id="J2V-KQ-SBv"/>
                         <constraint firstAttribute="width" constant="131" id="KEc-51-AYe"/>
-                        <constraint firstAttribute="height" constant="53" id="jay-EY-Ev0"/>
+                        <constraint firstItem="zbZ-BW-FA6" firstAttribute="leading" secondItem="SW5-7K-CEr" secondAttribute="leading" id="Wvu-FN-6Uw"/>
+                        <constraint firstItem="fTo-Nr-yI6" firstAttribute="leading" secondItem="zbZ-BW-FA6" secondAttribute="trailing" constant="23" id="ZNb-BE-Z9Q"/>
+                        <constraint firstItem="fTo-Nr-yI6" firstAttribute="top" secondItem="SW5-7K-CEr" secondAttribute="top" id="bB2-oS-YXE"/>
+                        <constraint firstAttribute="trailing" secondItem="fTo-Nr-yI6" secondAttribute="trailing" id="j6z-rU-Hgu"/>
+                        <constraint firstAttribute="height" constant="54" id="jay-EY-Ev0"/>
+                        <constraint firstAttribute="bottom" secondItem="zbZ-BW-FA6" secondAttribute="bottom" id="rR9-Y5-amR"/>
                     </constraints>
                 </view>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOU JUST MADE AMAZING POSSIBLE!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" preferredMaxLayoutWidth="233" translatesAutoresizingMaskIntoConstraints="NO" id="u0D-b5-LT6">
-                    <rect key="frame" x="67" y="82" width="204" height="51"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <rect key="frame" x="40" y="82" width="232" height="58"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="80" id="SaP-ov-vTM"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lLE-cf-TfU">
-                    <rect key="frame" x="20" y="247" width="528" height="53"/>
+                    <rect key="frame" x="20" y="240" width="528" height="60"/>
                     <color key="backgroundColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="80" id="zh7-2p-tHS"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                     <state key="normal" title="UNLOCK ITEM">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -84,27 +90,37 @@
                         <action selector="sharePurchase:" destination="-1" eventType="touchUpInside" id="bau-NH-Bpc"/>
                     </connections>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="253" horizontalCompressionResistancePriority="749" image="MIO_gavePlate.png" translatesAutoresizingMaskIntoConstraints="NO" id="BaY-Ye-oHX">
+                    <rect key="frame" x="370" y="77" width="132" height="91"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="sZd-UK-npl"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="131" id="wai-l4-87c"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="0.2196078431372549" green="0.2196078431372549" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="lLE-cf-TfU" firstAttribute="top" secondItem="SW5-7K-CEr" secondAttribute="bottom" constant="52" id="0AB-j9-2Zq"/>
-                <constraint firstItem="GEW-FA-GL4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="45" id="0yy-ik-Q4K"/>
-                <constraint firstItem="SW5-7K-CEr" firstAttribute="centerX" secondItem="u0D-b5-LT6" secondAttribute="centerX" constant="0.5" id="9mF-gD-IFl"/>
-                <constraint firstItem="SW5-7K-CEr" firstAttribute="top" secondItem="u0D-b5-LT6" secondAttribute="bottom" constant="9" id="AGN-qV-Iqd"/>
-                <constraint firstAttribute="bottom" secondItem="lLE-cf-TfU" secondAttribute="bottom" constant="20" symbolic="YES" id="B55-q9-7XE"/>
-                <constraint firstItem="BaY-Ye-oHX" firstAttribute="leading" secondItem="GEW-FA-GL4" secondAttribute="trailing" priority="750" constant="60" id="GKz-ej-gfh"/>
-                <constraint firstItem="BaY-Ye-oHX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="87" id="TCB-o3-ji6"/>
-                <constraint firstItem="u0D-b5-LT6" firstAttribute="top" secondItem="GEW-FA-GL4" secondAttribute="bottom" id="a8O-Fs-Sd8"/>
-                <constraint firstItem="u0D-b5-LT6" firstAttribute="centerX" secondItem="GEW-FA-GL4" secondAttribute="centerX" id="cly-Uk-SX8"/>
+                <constraint firstItem="lLE-cf-TfU" firstAttribute="top" secondItem="SW5-7K-CEr" secondAttribute="bottom" priority="750" constant="35" id="0AB-j9-2Zq"/>
+                <constraint firstItem="GEW-FA-GL4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" priority="750" constant="40" id="0yy-ik-Q4K"/>
+                <constraint firstItem="SW5-7K-CEr" firstAttribute="centerX" secondItem="u0D-b5-LT6" secondAttribute="centerX" constant="-2.5" id="9mF-gD-IFl"/>
+                <constraint firstItem="SW5-7K-CEr" firstAttribute="top" secondItem="u0D-b5-LT6" secondAttribute="bottom" constant="11" id="AGN-qV-Iqd"/>
+                <constraint firstItem="u0D-b5-LT6" firstAttribute="trailing" secondItem="GEW-FA-GL4" secondAttribute="trailing" constant="1" id="AWI-cp-ua0"/>
+                <constraint firstAttribute="bottom" secondItem="lLE-cf-TfU" secondAttribute="bottom" constant="20" id="B55-q9-7XE"/>
+                <constraint firstItem="BaY-Ye-oHX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GEW-FA-GL4" secondAttribute="trailing" constant="30" id="GKz-ej-gfh"/>
+                <constraint firstAttribute="trailing" secondItem="BaY-Ye-oHX" secondAttribute="trailing" priority="750" constant="66" id="J8q-Dd-e0s"/>
+                <constraint firstItem="GEW-FA-GL4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="L6n-v0-xMy"/>
+                <constraint firstItem="BaY-Ye-oHX" firstAttribute="centerY" secondItem="u0D-b5-LT6" secondAttribute="centerY" constant="11.5" id="QXu-I0-RAP"/>
+                <constraint firstItem="u0D-b5-LT6" firstAttribute="leading" secondItem="GEW-FA-GL4" secondAttribute="leading" id="SAv-If-Dhr"/>
+                <constraint firstItem="u0D-b5-LT6" firstAttribute="top" secondItem="GEW-FA-GL4" secondAttribute="bottom" constant="-1" id="a8O-Fs-Sd8"/>
                 <constraint firstItem="u0D-b5-LT6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="82" id="kd4-ZK-IKc"/>
                 <constraint firstItem="lLE-cf-TfU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" symbolic="YES" id="kkw-Za-Md5"/>
                 <constraint firstAttribute="trailing" secondItem="lLE-cf-TfU" secondAttribute="trailing" constant="20" symbolic="YES" id="krw-r0-Yap"/>
-                <constraint firstItem="GEW-FA-GL4" firstAttribute="centerX" secondItem="u0D-b5-LT6" secondAttribute="centerX" id="mVe-F5-6ks"/>
-                <constraint firstAttribute="trailing" secondItem="BaY-Ye-oHX" secondAttribute="trailing" priority="750" constant="66" id="nll-5Q-18I"/>
-                <constraint firstItem="GEW-FA-GL4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="55" id="xZf-M4-Xho"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="BaY-Ye-oHX" secondAttribute="trailing" constant="20" id="nll-5Q-18I"/>
+                <constraint firstItem="GEW-FA-GL4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="xZf-M4-Xho"/>
             </constraints>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-            <point key="canvasLocation" x="257" y="220"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="314" y="180"/>
         </view>
     </objects>
     <resources>

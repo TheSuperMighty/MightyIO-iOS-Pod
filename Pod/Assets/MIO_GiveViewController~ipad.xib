@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GiveViewController">
@@ -13,6 +14,7 @@
                 <outlet property="clockSecLabel" destination="hNK-lq-7f1" id="lsr-P9-HFl"/>
                 <outlet property="developerContributionLabel" destination="ecs-Lg-1Xw" id="LZL-Y6-a0J"/>
                 <outlet property="developerInfoLabel" destination="nZR-CR-szJ" id="3ti-ll-blo"/>
+                <outlet property="giveCallToActionLabel" destination="wFQ-sR-uiX" id="Q2v-uw-MNI"/>
                 <outlet property="itemPrice" destination="LNN-FW-JLL" id="geZ-Fi-90Q"/>
                 <outlet property="itemThumbnail" destination="XH9-Pn-rAo" id="2aX-u9-aUX"/>
                 <outlet property="mealsGivenLabel" destination="lxC-Oq-Wtm" id="Mm6-cG-wtI"/>
@@ -137,7 +139,7 @@
                     <rect key="frame" x="20" y="765" width="728" height="82"/>
                     <string key="text">*FOR EACH PURCHASE OF THIS MIGHTYITEM(TM) SUPERMIGHTY WILL GIVE $0.42 TO SILICON VALLEY COMMUNITY FOUNDATION TO BE DISTRIBUTED TO EFFORTS FIGHTING CHILDHOOD HUNGER. CLICK HERE TO LEARN MORE.</string>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="textColor" red="0.43137254899999999" green="0.43137254899999999" blue="0.43137254899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MNX-Qm-bJe">
