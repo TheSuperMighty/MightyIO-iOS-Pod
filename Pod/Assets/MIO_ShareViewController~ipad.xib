@@ -9,6 +9,7 @@
             <connections>
                 <outlet property="btnFacebook" destination="eUp-HA-e67" id="qcX-T8-n6b"/>
                 <outlet property="btnTwitter" destination="4Mb-kI-zpg" id="DBa-E3-Gbb"/>
+                <outlet property="purchaseCompleteLabel" destination="bEv-0G-Toc" id="Mye-P9-EOT"/>
                 <outlet property="versionLabel" destination="8f9-aP-OwW" id="rB3-hW-ovB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

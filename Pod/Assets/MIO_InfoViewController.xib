@@ -84,7 +84,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="125" id="vHH-1H-RDF"/>
                     </constraints>
-                    <string key="text">MightyItems™ are in-app purchases that have social impact. By purchasing a MightItem™ you are helping fight hunger, provide clean water, and deliver medicine.</string>
+                    <string key="text">MightyItems™ are in-app purchases that have social impact. By purchasing a MightyItem™ you are helping fight hunger, provide clean water, and deliver medicine.</string>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -109,7 +109,7 @@
                 <constraint firstItem="boo-ec-dEj" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dsO-ee-Pdr"/>
                 <constraint firstItem="C5q-7N-Mud" firstAttribute="top" secondItem="boo-ec-dEj" secondAttribute="bottom" constant="8" symbolic="YES" id="pJl-pv-fp9"/>
                 <constraint firstItem="YEG-el-Bff" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="63" id="ptN-CR-tvS"/>
-                <constraint firstItem="boo-ec-dEj" firstAttribute="top" secondItem="qSS-E1-iAz" secondAttribute="bottom" priority="750" constant="45" id="wV3-AQ-wM3"/>
+                <constraint firstItem="boo-ec-dEj" firstAttribute="top" relation="lessThanOrEqual" secondItem="qSS-E1-iAz" secondAttribute="bottom" constant="60" id="wV3-AQ-wM3"/>
             </constraints>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
