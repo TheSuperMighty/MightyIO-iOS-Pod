@@ -12,10 +12,14 @@
 #import <Social/Social.h>
 #import <Security/Security.h>
 #import "Parse.h"
+//#import "SMUser.h"
+//#import "SMGame.h"
 
 @class PFObject;
 @class Mighty;
 @class SVProgressHUD;
+@class SMUser;
+@class SMGame;
 
 @protocol MightyDelegate <NSObject>
 @optional
@@ -36,11 +40,13 @@
     SKProductsRequest* _productsRequest;
 }
 
+/* REFACTOR */
+
+@property (strong, nonatomic) SMGame* smGame;
+
+/* END REFACTOR */
 @property (nonatomic, weak) id<MightyDelegate> mightyDelegate;
 @property (strong, nonatomic) NSString* authToken;
-@property (strong, nonatomic) NSArray* mightyItems;
-@property (strong, nonatomic) PFObject* game;
-@property (strong, nonatomic) PFObject* currentItem;
 @property (strong, nonatomic) PFObject* completedPurchase;
 @property (strong, nonatomic) SKPaymentTransaction* lastTransaction;
 @property (strong, nonatomic) UIViewController* presentingViewController;
@@ -55,13 +61,9 @@
 @property BOOL isCampaignActive;
 @property BOOL simulator;
 @property BOOL appleConfirmed;
+@property BOOL disableIAP;
 
-@property float itemsBought;
-@property float mealsPerItem;
-@property float mealsGiven;
-@property float developerContrib;
-
-@property SVProgressHUD *loader;
+@property SVProgressHUD* loader;
 
 // Init Functions
 
@@ -85,31 +87,6 @@
  */
 + (Mighty*)initWithAuthToken:(NSString*)token;
 
-/**
- Checks the Campaign Status of an Item when App becomes active
- @return void
- */
-- (void)checkActiveStatus;
-
-// Transactional Functions
-/**
- Sends notification of the successful purchase to MightyIO
- @return void
- */
-- (void)purchaseMightyItem:(PFObject*)item;
-
-/**
- Processes the SKPaymentTransaction and prepares to send to MightyIO
- @return void
- */
-- (void)processTransaction:(SKPaymentTransaction*)transaction;
-
-/**
- Helper function with block, see @code - (void)processTransaction:(SKPaymentTransaction*)transaction; @endcode
- @return void
- */
-- (void)processTransaction:(SKPaymentTransaction*)transaction withBlock:(void (^)(void))block;
-
 // Dev Helpers
 /**
  Helper function to log debug messages
@@ -127,7 +104,7 @@
  Helper function to link Button outlet in presenting controller to SM ribbon
  @return void
  */
--(void)makeRibbonWithIBOutlet:(UIButton*)button inViewController:(UIViewController*)viewController;
+- (void)makeRibbonWithIBOutlet:(UIButton*)button inViewController:(UIViewController*)viewController;
 
 /**
  Helper function to launch SuperMighty from custom event
@@ -136,21 +113,15 @@
 - (void)startSuperMightyInViewController:(UIViewController*)viewController;
 
 /**
- Helper function to calculate and set the overall good done by the item
+ Helper function to show/hide ribbom based on item status
  @return void
  */
-- (void)calculateTotalGoodForItem:(PFObject*)item;
+- (void)setRibbonVisibility;
 
 /**
 Show loader over overview until item is confirmed with Apple
  @return void
  */
 - (void)loadOverViewInWindow:(UIWindow*)window;
-
-/**
- Calls all relevent game information from API.
- @return void
- */
-- (void)getCustomGameWithBlock:(void (^)(PFObject*, NSError*))block;
 
 @end
