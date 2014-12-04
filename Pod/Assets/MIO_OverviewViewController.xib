@@ -22,6 +22,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYo-jz-lYk" userLabel="My Impact Button">
                     <rect key="frame" x="30" y="169" width="260" height="55"/>
                     <color key="backgroundColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <accessibility key="accessibilityConfiguration" label="learn about childhood hunger"/>
                     <constraints>
                         <constraint firstAttribute="height" priority="750" constant="55" id="Igb-XO-cb2"/>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="uQz-fi-ezU"/>
@@ -68,6 +69,9 @@
                         </imageView>
                         <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="748" image="MIO_placeholdersquare.png" translatesAutoresizingMaskIntoConstraints="NO" id="vKX-gb-Ae3">
                             <rect key="frame" x="20" y="-216" width="96" height="600"/>
+                            <accessibility key="accessibilityConfiguration" label="imgOverviewGameIcon">
+                                <bool key="isElement" value="YES"/>
+                            </accessibility>
                             <constraints>
                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="92" id="ZKH-wo-eXd"/>
                             </constraints>
@@ -95,6 +99,7 @@
                 <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="246" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L6S-Jw-8PQ" userLabel="Give Water Button">
                     <rect key="frame" x="20" y="457" width="280" height="65"/>
                     <color key="backgroundColor" red="0.3803921569" green="0.3803921569" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                    <accessibility key="accessibilityConfiguration" label="Give and Unlock"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="65" id="eNK-sk-I4a"/>
                     </constraints>
@@ -109,8 +114,11 @@
                         <action selector="pushToGive:" destination="-1" eventType="touchUpInside" id="DIE-5m-mlE"/>
                     </connections>
                 </button>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" text="FIGHT CHILDHOOD HUNGER &amp; UNLOCK THE MONSTER TRUCK" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" minimumFontSize="8" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="IiH-hY-ckw">
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" text="FIGHT CHILDHOOD HUNGER &amp; UNLOCK ITEM" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" minimumFontSize="8" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="IiH-hY-ckw">
                     <rect key="frame" x="20" y="50" width="280" height="104"/>
+                    <accessibility key="accessibilityConfiguration" label="">
+                        <accessibilityTraits key="traits" none="YES" staticText="YES" notEnabled="YES"/>
+                    </accessibility>
                     <constraints>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="fly-uM-Ykm"/>
                     </constraints>
@@ -120,6 +128,7 @@
                 </label>
             </subviews>
             <color key="backgroundColor" red="0.2196078431372549" green="0.2196078431372549" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <accessibility key="accessibilityConfiguration" label="Overview"/>
             <constraints>
                 <constraint firstItem="IiH-hY-ckw" firstAttribute="trailing" secondItem="L6S-Jw-8PQ" secondAttribute="trailing" id="1lQ-pn-mmu"/>
                 <constraint firstItem="o8h-vv-YOf" firstAttribute="top" secondItem="WYo-jz-lYk" secondAttribute="bottom" priority="750" constant="28" id="5gS-Lg-cWf"/>

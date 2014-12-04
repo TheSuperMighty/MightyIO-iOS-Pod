@@ -45,6 +45,7 @@
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="qSS-E1-iAz">
                     <rect key="frame" x="58" y="215" width="653" height="322"/>
+                    <accessibility key="accessibilityConfiguration" label="Info"/>
                     <string key="text">MightyItems™ are in-app purchases that have social impact. By purchasing a MightyItem™ you are helping fight hunger, provide clean water, and deliver medicine.</string>
                     <fontDescription key="fontDescription" type="system" pointSize="44"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -72,6 +73,7 @@
                 </label>
             </subviews>
             <color key="backgroundColor" red="0.2196078431372549" green="0.2196078431372549" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <accessibility key="accessibilityConfiguration" label="Info"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="334" y="274"/>

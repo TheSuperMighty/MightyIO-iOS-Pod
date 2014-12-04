@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <objects>
@@ -29,6 +28,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJa-gP-F7L">
                     <rect key="frame" x="20" y="450" width="280" height="65"/>
                     <color key="backgroundColor" red="0.3803921569" green="0.3803921569" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                    <accessibility key="accessibilityConfiguration" label="Next"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="65" id="SO7-ob-o82"/>
                     </constraints>
@@ -53,9 +53,19 @@
                     <color key="textColor" red="0.3803921569" green="0.3803921569" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Mb-kI-zpg" userLabel="Button - facebook">
-                    <rect key="frame" x="93" y="285" width="54" height="54"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PURCHASE COMPLETE!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" preferredMaxLayoutWidth="205" translatesAutoresizingMaskIntoConstraints="NO" id="bEv-0G-Toc">
+                    <rect key="frame" x="29" y="51" width="262" height="51"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="262" id="nWM-zO-cwZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Mb-kI-zpg" userLabel="Button - facebook">
+                    <rect key="frame" x="95" y="280" width="54" height="54"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <accessibility key="accessibilityConfiguration" label="Tweet Good"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="54" id="XF9-4s-lkD"/>
                         <constraint firstAttribute="width" constant="54" id="rBI-Ls-9XN"/>
@@ -65,9 +75,10 @@
                         <action selector="shareOnTwitter:" destination="-1" eventType="touchUpInside" id="ulb-Qt-HLR"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUp-HA-e67" userLabel="Button - twitter">
-                    <rect key="frame" x="169" y="285" width="54" height="54"/>
+                <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUp-HA-e67" userLabel="Button - twitter">
+                    <rect key="frame" x="171" y="280" width="54" height="54"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <accessibility key="accessibilityConfiguration" label="Share Good"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="54" id="6Um-x6-mVC"/>
                         <constraint firstAttribute="height" constant="54" id="svv-QA-dO7"/>
@@ -83,22 +94,14 @@
                         <action selector="shareOnFacebook:" destination="-1" eventType="touchUpInside" id="CfI-Mk-vNm"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="253" misplaced="YES" image="MIO_gavePlate.png" translatesAutoresizingMaskIntoConstraints="NO" id="Sdq-4q-2WQ">
-                    <rect key="frame" x="92" y="166" width="132" height="91"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="253" image="MIO_gavePlate.png" translatesAutoresizingMaskIntoConstraints="NO" id="Sdq-4q-2WQ">
+                    <rect key="frame" x="94" y="161" width="132" height="91"/>
                 </imageView>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PURCHASE COMPLETE!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" preferredMaxLayoutWidth="205" translatesAutoresizingMaskIntoConstraints="NO" id="bEv-0G-Toc">
-                    <rect key="frame" x="29" y="51" width="262" height="51"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="262" id="nWM-zO-cwZ"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </subviews>
             <color key="backgroundColor" red="0.2196078431372549" green="0.2196078431372549" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+            <accessibility key="accessibilityConfiguration" label="Share"/>
             <constraints>
-                <constraint firstItem="8f9-aP-OwW" firstAttribute="centerX" secondItem="Sdq-4q-2WQ" secondAttribute="centerX" id="0XI-Ph-yHv"/>
+                <constraint firstItem="8f9-aP-OwW" firstAttribute="centerX" secondItem="Sdq-4q-2WQ" secondAttribute="centerX" constant="-2.5" id="0XI-Ph-yHv"/>
                 <constraint firstItem="tJa-gP-F7L" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="53r-sM-JfC"/>
                 <constraint firstItem="Sdq-4q-2WQ" firstAttribute="trailing" secondItem="eUp-HA-e67" secondAttribute="trailing" constant="1" id="COG-Pw-aIp"/>
                 <constraint firstItem="bEv-0G-Toc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="51" id="IDf-sY-nKM"/>
@@ -106,16 +109,16 @@
                 <constraint firstItem="8f9-aP-OwW" firstAttribute="top" secondItem="tJa-gP-F7L" secondAttribute="bottom" constant="18" id="Ies-xZ-bfq"/>
                 <constraint firstItem="Sdq-4q-2WQ" firstAttribute="leading" secondItem="4Mb-kI-zpg" secondAttribute="leading" constant="-1" id="Nfg-Ex-oMK"/>
                 <constraint firstItem="eUp-HA-e67" firstAttribute="leading" relation="lessThanOrEqual" secondItem="4Mb-kI-zpg" secondAttribute="trailing" constant="23" id="SPQ-yN-xgP"/>
-                <constraint firstItem="Sdq-4q-2WQ" firstAttribute="centerX" secondItem="u0D-b5-LT6" secondAttribute="centerX" id="TF8-W8-c1P"/>
+                <constraint firstItem="Sdq-4q-2WQ" firstAttribute="centerX" secondItem="u0D-b5-LT6" secondAttribute="centerX" constant="2" id="TF8-W8-c1P"/>
                 <constraint firstItem="eUp-HA-e67" firstAttribute="top" secondItem="4Mb-kI-zpg" secondAttribute="top" id="ccJ-gX-4gf"/>
                 <constraint firstAttribute="bottom" secondItem="8f9-aP-OwW" secondAttribute="bottom" constant="14" id="jRn-hW-j32"/>
                 <constraint firstItem="4Mb-kI-zpg" firstAttribute="top" secondItem="Sdq-4q-2WQ" secondAttribute="bottom" constant="28" id="jWj-gm-fs2"/>
                 <constraint firstItem="tJa-gP-F7L" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="job-aQ-gjy"/>
                 <constraint firstAttribute="trailing" secondItem="u0D-b5-LT6" secondAttribute="trailing" constant="40" id="mZs-DV-5Jj"/>
                 <constraint firstItem="bEv-0G-Toc" firstAttribute="centerX" secondItem="tJa-gP-F7L" secondAttribute="centerX" id="oLn-Qi-mcd"/>
-                <constraint firstItem="Sdq-4q-2WQ" firstAttribute="top" secondItem="u0D-b5-LT6" secondAttribute="bottom" constant="25" id="oPO-7Y-9Nr"/>
+                <constraint firstItem="Sdq-4q-2WQ" firstAttribute="top" secondItem="u0D-b5-LT6" secondAttribute="bottom" constant="19" id="oPO-7Y-9Nr"/>
                 <constraint firstItem="u0D-b5-LT6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="36" id="oTY-SK-5IK"/>
-                <constraint firstItem="Sdq-4q-2WQ" firstAttribute="top" secondItem="bEv-0G-Toc" secondAttribute="bottom" constant="65" id="uk6-Mb-771"/>
+                <constraint firstItem="Sdq-4q-2WQ" firstAttribute="top" secondItem="bEv-0G-Toc" secondAttribute="bottom" constant="59" id="uk6-Mb-771"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <point key="canvasLocation" x="348.5" y="70.5"/>

@@ -140,6 +140,7 @@
                 </scrollView>
             </subviews>
             <color key="backgroundColor" red="0.2274509804" green="0.2274509804" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
+            <accessibility key="accessibilityConfiguration" label="Impact"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="4SL-gJ-2ef" secondAttribute="bottom" id="4NT-j3-MlA"/>
                 <constraint firstAttribute="bottom" secondItem="4SL-gJ-2ef" secondAttribute="bottom" id="BV2-SH-T1d"/>

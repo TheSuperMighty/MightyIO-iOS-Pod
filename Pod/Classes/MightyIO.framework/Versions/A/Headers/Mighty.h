@@ -35,16 +35,11 @@
 
 @end
 
-@interface Mighty : NSObject <SKProductsRequestDelegate, UIAlertViewDelegate> {
+@interface Mighty : NSObject {
     __weak id<MightyDelegate> mightyDelegate;
-    SKProductsRequest* _productsRequest;
 }
 
-/* REFACTOR */
-
 @property (strong, nonatomic) SMGame* smGame;
-
-/* END REFACTOR */
 @property (nonatomic, weak) id<MightyDelegate> mightyDelegate;
 @property (strong, nonatomic) NSString* authToken;
 @property (strong, nonatomic) PFObject* completedPurchase;
@@ -60,7 +55,6 @@
 @property BOOL fullyLoaded;
 @property BOOL isCampaignActive;
 @property BOOL simulator;
-@property BOOL appleConfirmed;
 @property BOOL disableIAP;
 
 @property SVProgressHUD* loader;

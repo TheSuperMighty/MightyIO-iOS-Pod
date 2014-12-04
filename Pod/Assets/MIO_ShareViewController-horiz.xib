@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <objects>
@@ -20,13 +19,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PURCHASE COMPLETE!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" preferredMaxLayoutWidth="233" translatesAutoresizingMaskIntoConstraints="NO" id="GEW-FA-GL4">
-                    <rect key="frame" x="40" y="50" width="231" height="33"/>
+                    <rect key="frame" x="43" y="50" width="231" height="33"/>
                     <fontDescription key="fontDescription" type="system" pointSize="23"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SW5-7K-CEr">
-                    <rect key="frame" x="88" y="151" width="131" height="54"/>
+                    <rect key="frame" x="91" y="150" width="131" height="54"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbZ-BW-FA6" userLabel="Button - twitter">
                             <rect key="frame" x="0.0" y="0.0" width="54" height="54"/>
@@ -65,7 +64,7 @@
                     </constraints>
                 </view>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOU JUST MADE AMAZING POSSIBLE!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" preferredMaxLayoutWidth="233" translatesAutoresizingMaskIntoConstraints="NO" id="u0D-b5-LT6">
-                    <rect key="frame" x="40" y="82" width="232" height="58"/>
+                    <rect key="frame" x="43" y="82" width="232" height="57.5"/>
                     <constraints>
                         <constraint firstAttribute="height" relation="lessThanOrEqual" constant="80" id="SaP-ov-vTM"/>
                     </constraints>
@@ -74,10 +73,10 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lLE-cf-TfU">
-                    <rect key="frame" x="20" y="240" width="528" height="60"/>
+                    <rect key="frame" x="20" y="239.5" width="528" height="60"/>
                     <color key="backgroundColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="80" id="zh7-2p-tHS"/>
+                        <constraint firstAttribute="height" constant="60" id="zh7-2p-tHS"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                     <state key="normal" title="UNLOCK ITEM">
@@ -91,7 +90,7 @@
                     </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="253" horizontalCompressionResistancePriority="749" image="MIO_gavePlate.png" translatesAutoresizingMaskIntoConstraints="NO" id="BaY-Ye-oHX">
-                    <rect key="frame" x="370" y="77" width="132" height="91"/>
+                    <rect key="frame" x="371" y="77" width="132" height="91"/>
                     <constraints>
                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="sZd-UK-npl"/>
                         <constraint firstAttribute="height" relation="lessThanOrEqual" constant="131" id="wai-l4-87c"/>
@@ -99,15 +98,16 @@
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="0.2196078431372549" green="0.2196078431372549" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+            <accessibility key="accessibilityConfiguration" label="Share"/>
             <constraints>
-                <constraint firstItem="lLE-cf-TfU" firstAttribute="top" secondItem="SW5-7K-CEr" secondAttribute="bottom" priority="750" constant="35" id="0AB-j9-2Zq"/>
-                <constraint firstItem="GEW-FA-GL4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" priority="750" constant="40" id="0yy-ik-Q4K"/>
+                <constraint firstItem="lLE-cf-TfU" firstAttribute="top" secondItem="SW5-7K-CEr" secondAttribute="bottom" priority="750" constant="48" id="0AB-j9-2Zq"/>
+                <constraint firstItem="GEW-FA-GL4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" priority="750" constant="43" id="0yy-ik-Q4K"/>
                 <constraint firstItem="SW5-7K-CEr" firstAttribute="centerX" secondItem="u0D-b5-LT6" secondAttribute="centerX" constant="-2.5" id="9mF-gD-IFl"/>
                 <constraint firstItem="SW5-7K-CEr" firstAttribute="top" secondItem="u0D-b5-LT6" secondAttribute="bottom" constant="11" id="AGN-qV-Iqd"/>
                 <constraint firstItem="u0D-b5-LT6" firstAttribute="trailing" secondItem="GEW-FA-GL4" secondAttribute="trailing" constant="1" id="AWI-cp-ua0"/>
                 <constraint firstAttribute="bottom" secondItem="lLE-cf-TfU" secondAttribute="bottom" constant="20" id="B55-q9-7XE"/>
                 <constraint firstItem="BaY-Ye-oHX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GEW-FA-GL4" secondAttribute="trailing" constant="30" id="GKz-ej-gfh"/>
-                <constraint firstAttribute="trailing" secondItem="BaY-Ye-oHX" secondAttribute="trailing" priority="750" constant="66" id="J8q-Dd-e0s"/>
+                <constraint firstAttribute="trailing" secondItem="BaY-Ye-oHX" secondAttribute="trailing" priority="750" constant="65" id="J8q-Dd-e0s"/>
                 <constraint firstItem="GEW-FA-GL4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="L6n-v0-xMy"/>
                 <constraint firstItem="BaY-Ye-oHX" firstAttribute="centerY" secondItem="u0D-b5-LT6" secondAttribute="centerY" constant="11.5" id="QXu-I0-RAP"/>
                 <constraint firstItem="u0D-b5-LT6" firstAttribute="leading" secondItem="GEW-FA-GL4" secondAttribute="leading" id="SAv-If-Dhr"/>
@@ -116,6 +116,7 @@
                 <constraint firstItem="lLE-cf-TfU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" symbolic="YES" id="kkw-Za-Md5"/>
                 <constraint firstAttribute="trailing" secondItem="lLE-cf-TfU" secondAttribute="trailing" constant="20" symbolic="YES" id="krw-r0-Yap"/>
                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="BaY-Ye-oHX" secondAttribute="trailing" constant="20" id="nll-5Q-18I"/>
+                <constraint firstItem="BaY-Ye-oHX" firstAttribute="leading" relation="lessThanOrEqual" secondItem="u0D-b5-LT6" secondAttribute="trailing" constant="141" id="oPk-yO-fk0"/>
                 <constraint firstItem="GEW-FA-GL4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="xZf-M4-Xho"/>
             </constraints>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
