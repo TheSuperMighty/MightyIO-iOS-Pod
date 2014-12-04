@@ -47,6 +47,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tYJ-0N-Pqa">
                     <rect key="frame" x="20" y="450" width="280" height="65"/>
                     <color key="backgroundColor" red="0.3803921569" green="0.3803921569" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                    <accessibility key="accessibilityConfiguration" label="Close"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="65" id="cBD-g8-NL2"/>
                     </constraints>
@@ -89,6 +90,9 @@
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="0.21960784310000001" green="0.21960784310000001" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+            <accessibility key="accessibilityConfiguration" label="Success">
+                <bool key="isElement" value="YES"/>
+            </accessibility>
             <constraints>
                 <constraint firstItem="1mf-k6-P5z" firstAttribute="top" secondItem="6PU-0j-meK" secondAttribute="bottom" constant="20" id="2hf-D0-5sK"/>
                 <constraint firstItem="6PU-0j-meK" firstAttribute="leading" secondItem="tYJ-0N-Pqa" secondAttribute="leading" id="7gs-Fe-BAH"/>

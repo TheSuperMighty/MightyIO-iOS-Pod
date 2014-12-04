@@ -97,6 +97,7 @@
                                 </button>
                             </subviews>
                             <color key="backgroundColor" red="0.2196078431372549" green="0.2196078431372549" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                            <accessibility key="accessibilityConfiguration" label="Impact"/>
                             <constraints>
                                 <constraint firstItem="flK-wa-Ysm" firstAttribute="top" secondItem="vEq-d0-xBh" secondAttribute="bottom" constant="5" id="35H-bs-Vnh"/>
                                 <constraint firstItem="yMS-b7-1Mo" firstAttribute="top" secondItem="M2k-UO-vfB" secondAttribute="bottom" constant="8" id="3PX-ZV-80K"/>
@@ -135,6 +136,7 @@
                 </scrollView>
             </subviews>
             <color key="backgroundColor" red="0.2196078431372549" green="0.2196078431372549" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+            <accessibility key="accessibilityConfiguration" label="Impact"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="4SL-gJ-2ef" secondAttribute="bottom" id="8X9-01-XnT"/>
                 <constraint firstItem="4SL-gJ-2ef" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="IwQ-ha-KHy"/>

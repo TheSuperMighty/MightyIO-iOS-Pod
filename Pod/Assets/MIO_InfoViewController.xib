@@ -91,6 +91,7 @@
                 </label>
             </subviews>
             <color key="backgroundColor" red="0.2196078431372549" green="0.2196078431372549" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <accessibility key="accessibilityConfiguration" label="Info"/>
             <constraints>
                 <constraint firstItem="boo-ec-dEj" firstAttribute="top" relation="greaterThanOrEqual" secondItem="qSS-E1-iAz" secondAttribute="bottom" constant="20" id="0XP-FH-mQA"/>
                 <constraint firstItem="C5q-7N-Mud" firstAttribute="trailing" secondItem="boo-ec-dEj" secondAttribute="trailing" id="0bq-a2-9kU"/>
