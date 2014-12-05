@@ -42,6 +42,7 @@
 @property (strong, nonatomic) SMGame* smGame;
 @property (nonatomic, weak) id<MightyDelegate> mightyDelegate;
 @property (strong, nonatomic) NSString* authToken;
+@property (strong, nonatomic) NSString* versionNumber;
 @property (strong, nonatomic) PFObject* completedPurchase;
 @property (strong, nonatomic) SKPaymentTransaction* lastTransaction;
 @property (strong, nonatomic) UIViewController* presentingViewController;
