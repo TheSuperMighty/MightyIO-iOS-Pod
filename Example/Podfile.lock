@@ -1,8 +1,8 @@
 PODS:
   - Bolts (1.1.3)
-  - MightyIO-iOS-Pod (0.14.0):
+  - MightyIO-iOS-Pod (0.14.2):
     - Parse (~> 1.4)
-  - Parse (1.5.0):
+  - Parse (1.6.0):
     - Bolts (~> 1.1.3)
 
 DEPENDENCIES:
@@ -14,7 +14,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Bolts: 3db0a875235e0c9042b013af13af0f00f79b102c
-  MightyIO-iOS-Pod: 34383ad9d7164d60cd3f3f11c1e1c831f2ec8344
-  Parse: 7de25b6f70f0b233e5d25835f62eabfa91e4f9d7
+  MightyIO-iOS-Pod: b8d29b095a5430f5f16c22cf49d12aceaac4cbaf
+  Parse: f15dfacd941ee8084a5decbef486da8b223c2810
 
 COCOAPODS: 0.35.0
