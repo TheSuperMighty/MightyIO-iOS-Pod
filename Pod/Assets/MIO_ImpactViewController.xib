@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <objects>
@@ -23,16 +22,16 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C8b-5k-JJl" userLabel="contentView">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="1321"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MIO_impact-children.png" translatesAutoresizingMaskIntoConstraints="NO" id="Kk9-Rm-3C1">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="MIO_impact-children.png" translatesAutoresizingMaskIntoConstraints="NO" id="Kk9-Rm-3C1">
                                     <rect key="frame" x="19" y="412" width="283" height="134"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="283" id="2ZX-Ah-925"/>
                                     </constraints>
                                 </imageView>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MIO_impact-high-school.png" translatesAutoresizingMaskIntoConstraints="NO" id="dDd-Y1-tU5">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="MIO_impact-high-school.png" translatesAutoresizingMaskIntoConstraints="NO" id="dDd-Y1-tU5">
                                     <rect key="frame" x="63" y="620" width="194" height="191"/>
                                 </imageView>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MIO_impact-childhood-hunger.png" translatesAutoresizingMaskIntoConstraints="NO" id="M2k-UO-vfB">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="MIO_impact-childhood-hunger.png" translatesAutoresizingMaskIntoConstraints="NO" id="M2k-UO-vfB">
                                     <rect key="frame" x="43" y="889" width="224" height="143"/>
                                 </imageView>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MIO_impact-united-states.png" translatesAutoresizingMaskIntoConstraints="NO" id="vEq-d0-xBh">
@@ -47,7 +46,7 @@
                                     <color key="textColor" red="0.38039215686274508" green="0.38039215686274508" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHILDHOOD HUNGER AFFECTS NEARLY ONE IN EVERY FIVE CHILDREN IN THE U.S." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="CTY-jd-vyz">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="CHILDHOOD HUNGER AFFECTS NEARLY ONE IN EVERY FIVE CHILDREN IN THE U.S." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="CTY-jd-vyz">
                                     <rect key="frame" x="20" y="554" width="280" height="51"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="280" id="GOf-wW-zRo"/>
@@ -56,7 +55,7 @@
                                     <color key="textColor" red="0.3803921569" green="0.3803921569" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHILDREN WHO EAT BREAKFAST ARE 20% MORE LIKELY TO GRADUATE HIGH SCHOOL." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="pZr-6i-RVZ">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="CHILDREN WHO EAT BREAKFAST ARE 20% MORE LIKELY TO GRADUATE HIGH SCHOOL." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="pZr-6i-RVZ">
                                     <rect key="frame" x="20" y="820" width="280" height="51"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="280" id="4ZX-Ua-a2U"/>
@@ -65,7 +64,7 @@
                                     <color key="textColor" red="0.3803921569" green="0.3803921569" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HELP CHANGE THESE NUMBERS TODAY WITH YOUR PURCHASE OF A MIGHTYITEM." lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="yMS-b7-1Mo">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="HELP CHANGE THESE NUMBERS TODAY WITH YOUR PURCHASE OF A MIGHTYITEM." lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="yMS-b7-1Mo">
                                     <rect key="frame" x="20" y="1040" width="280" height="51"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="280" id="JRs-pF-cwo"/>
@@ -74,10 +73,10 @@
                                     <color key="textColor" red="0.3803921569" green="0.3803921569" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MIO_impact-food.png" translatesAutoresizingMaskIntoConstraints="NO" id="AxU-z8-wwM">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="MIO_impact-food.png" translatesAutoresizingMaskIntoConstraints="NO" id="AxU-z8-wwM">
                                     <rect key="frame" x="71" y="1104" width="169" height="109"/>
                                 </imageView>
-                                <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5AK-Xp-iqj" userLabel="Give Water Button">
+                                <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5AK-Xp-iqj" userLabel="Give Water Button">
                                     <rect key="frame" x="19" y="1242" width="280" height="55"/>
                                     <color key="backgroundColor" red="0.38039215686274508" green="0.38039215686274508" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
