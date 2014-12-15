@@ -12,6 +12,7 @@
 #import <Social/Social.h>
 #import <Security/Security.h>
 #import "Parse.h"
+
 //#import "SMUser.h"
 //#import "SMGame.h"
 
@@ -53,7 +54,6 @@
 
 @property BOOL debug;
 @property BOOL authenticating;
-@property BOOL fullyLoaded;
 @property BOOL isCampaignActive;
 @property BOOL simulator;
 @property BOOL disableIAP;

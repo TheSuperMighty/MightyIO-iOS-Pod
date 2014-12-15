@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <objects>
@@ -66,7 +65,7 @@
                     <color key="textColor" red="0.3803921569" green="0.3803921569" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="747" text="YOUR PURCHASE GIVES MEALS TO HUNGRY KIDS." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="15" preferredMaxLayoutWidth="255" translatesAutoresizingMaskIntoConstraints="NO" id="wFQ-sR-uiX">
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="747" misplaced="YES" text="YOUR PURCHASE GIVES MEALS TO HUNGRY KIDS." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="15" preferredMaxLayoutWidth="255" translatesAutoresizingMaskIntoConstraints="NO" id="wFQ-sR-uiX">
                     <rect key="frame" x="20" y="45" width="280" height="88"/>
                     <constraints>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="67" id="g9g-9m-QmG"/>
@@ -231,7 +230,7 @@
                         <constraint firstItem="0gL-mC-HyB" firstAttribute="leading" secondItem="OMT-G7-bJw" secondAttribute="trailing" constant="16" id="xxU-J4-9eI"/>
                     </constraints>
                 </view>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalCompressionResistancePriority="748" image="MIO_img-plate.png" translatesAutoresizingMaskIntoConstraints="NO" id="XH9-Pn-rAo">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalCompressionResistancePriority="748" misplaced="YES" image="MIO_img-plate.png" translatesAutoresizingMaskIntoConstraints="NO" id="XH9-Pn-rAo">
                     <rect key="frame" x="85" y="146" width="148" height="88"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="148" id="C3S-Ko-u6B"/>
@@ -248,7 +247,7 @@
                         <action selector="openPurchaseBreakDown:" destination="-1" eventType="touchUpInside" id="a5A-ix-3yZ"/>
                     </connections>
                 </button>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" preferredMaxLayoutWidth="38" translatesAutoresizingMaskIntoConstraints="NO" id="qRj-7Q-Zdc">
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" preferredMaxLayoutWidth="38" translatesAutoresizingMaskIntoConstraints="NO" id="qRj-7Q-Zdc">
                     <rect key="frame" x="147" y="164" width="23" height="51"/>
                     <fontDescription key="fontDescription" type="system" pointSize="42"/>
                     <color key="textColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -292,7 +291,7 @@
         </view>
     </objects>
     <resources>
-        <image name="MIO_img-plate.png" width="129" height="88"/>
+        <image name="MIO_img-plate.png" width="283" height="134"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
