@@ -12,7 +12,7 @@
 #import <Social/Social.h>
 #import <Security/Security.h>
 #import "Parse.h"
-#import "SMRibbon.h"
+
 //#import "SMUser.h"
 //#import "SMGame.h"
 
