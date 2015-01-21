@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShareViewController">
             <connections>
-                <outlet property="btnFacebook" destination="fTo-Nr-yI6" id="3Nx-bm-475"/>
-                <outlet property="btnTwitter" destination="zbZ-BW-FA6" id="Zc0-Lo-Al4"/>
-                <outlet property="purchaseCompleteLabel" destination="h9n-3m-9UG" id="NGJ-bI-0HE"/>
+                <outlet property="btnFacebook" destination="eUp-HA-e67" id="qcX-T8-n6b"/>
+                <outlet property="btnTwitter" destination="4Mb-kI-zpg" id="DBa-E3-Gbb"/>
+                <outlet property="contentView" destination="bq2-II-9rY" id="Wmx-6V-2Tx"/>
+                <outlet property="lblShareHdr" destination="faR-m9-BSD" id="an8-Jb-q5f"/>
+                <outlet property="scrollView" destination="rYa-GB-ejA" id="O9g-QH-wAn"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewPlate" destination="elI-km-EIF" id="Yw2-Yh-kXO"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -18,63 +20,100 @@
             <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="253" fixedFrame="YES" image="MIO_gavePlate~ipad.png" translatesAutoresizingMaskIntoConstraints="NO" id="BaY-Ye-oHX">
-                    <rect key="frame" x="635" y="224" width="278" height="185"/>
-                </imageView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lLE-cf-TfU">
-                    <rect key="frame" x="20" y="668" width="985" height="79"/>
-                    <color key="backgroundColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                    <state key="normal" title="UNLOCK ITEM">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <state key="highlighted">
-                        <color key="titleColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="sharePurchase:" destination="-1" eventType="touchUpInside" id="bau-NH-Bpc"/>
-                    </connections>
-                </button>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PURCHASE COMPLE SHARE THE GOOD!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" preferredMaxLayoutWidth="205" translatesAutoresizingMaskIntoConstraints="NO" id="h9n-3m-9UG">
-                    <rect key="frame" x="34" y="190" width="520" height="136"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTo-Nr-yI6" userLabel="Button - twitter">
-                    <rect key="frame" x="317" y="334" width="108" height="108"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <state key="normal" image="MIO_btnFacebook~ipad.png">
-                        <color key="titleColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <state key="highlighted">
-                        <color key="titleColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="shareOnFacebook:" destination="-1" eventType="touchUpInside" id="F1p-Zu-PAq"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbZ-BW-FA6" userLabel="Button - facebook">
-                    <rect key="frame" x="164" y="334" width="108" height="108"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <state key="normal" image="MIO_btnTwitter~ipad.png"/>
-                    <connections>
-                        <action selector="shareOnTwitter:" destination="-1" eventType="touchUpInside" id="zXB-LL-dHn"/>
-                    </connections>
-                </button>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="rYa-GB-ejA">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" id="bq2-II-9rY" userLabel="contentView">
+                            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" id="elI-km-EIF">
+                                    <rect key="frame" x="650" y="253" width="145" height="145"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" alpha="0.5499999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="252" verticalHuggingPriority="251" image="MIO_graphic-plate-grey.png" id="2CY-qh-WEq">
+                                            <rect key="frame" x="30" y="46" width="85" height="54"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Sev-dg-Lkp">
+                                    <rect key="frame" x="252" y="432" width="214" height="86"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                    <state key="normal" title="Share to Facebook">
+                                        <color key="titleColor" red="1" green="0.090196078430000007" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="shareOnFacebook:" destination="-1" eventType="touchUpInside" id="pl5-IJ-1cD"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cqE-LA-4wC">
+                                    <rect key="frame" x="597" y="432" width="184" height="86"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                    <state key="normal" title="Share to Twitter">
+                                        <color key="titleColor" red="1" green="0.090196078430000007" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="shareOnTwitter:" destination="-1" eventType="touchUpInside" id="drj-71-5aZ"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your share gives meals for free." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="11" id="faR-m9-BSD">
+                                    <rect key="frame" x="372" y="249" width="224" height="81"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <accessibility key="accessibilityConfiguration" label="Your share gives meals for free."/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="eUp-HA-e67" userLabel="Button - facebook">
+                                    <rect key="frame" x="296" y="262" width="56" height="56"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <accessibility key="accessibilityConfiguration" label="Share Good"/>
+                                    <state key="normal" image="MIO_icon-circle-facebook.png">
+                                        <color key="titleColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="highlighted">
+                                        <color key="titleColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="shareOnFacebook:" destination="-1" eventType="touchUpInside" id="5za-VX-kTw"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4Mb-kI-zpg" userLabel="Button - twitter">
+                                    <rect key="frame" x="229" y="257" width="59" height="66"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <accessibility key="accessibilityConfiguration" label="Tweet Good"/>
+                                    <state key="normal" image="MIO_icon-ciricle-twitter.png"/>
+                                    <connections>
+                                        <action selector="shareOnTwitter:" destination="-1" eventType="touchUpInside" id="ulb-Qt-HLR"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </view>
+                    </subviews>
+                </scrollView>
             </subviews>
-            <color key="backgroundColor" red="0.2196078431372549" green="0.2196078431372549" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <accessibility key="accessibilityConfiguration" label="Share"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="162" y="162"/>
+            <point key="canvasLocation" x="347.5" y="203.5"/>
         </view>
     </objects>
     <resources>
-        <image name="MIO_btnFacebook~ipad.png" width="108" height="108"/>
-        <image name="MIO_btnTwitter~ipad.png" width="108" height="108"/>
-        <image name="MIO_gavePlate~ipad.png" width="278" height="185"/>
+        <image name="MIO_graphic-plate-grey.png" width="85" height="54"/>
+        <image name="MIO_icon-circle-facebook.png" width="56" height="56"/>
+        <image name="MIO_icon-ciricle-twitter.png" width="59" height="59"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
