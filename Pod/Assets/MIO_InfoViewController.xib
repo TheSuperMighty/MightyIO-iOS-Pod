@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InfoViewController">
             <connections>
+                <outlet property="btnLink1" destination="boo-ec-dEj" id="pcR-BC-bYl"/>
+                <outlet property="btnLink2" destination="C5q-7N-Mud" id="Aib-5k-URZ"/>
+                <outlet property="btnLink3" destination="sq4-Ns-jaK" id="bog-i6-hZM"/>
+                <outlet property="contentView" destination="Q9i-AG-dOQ" id="44L-Xs-vnp"/>
+                <outlet property="lblBody" destination="qSS-E1-iAz" id="Qrr-Us-cv4"/>
+                <outlet property="lblHeader" destination="YEG-el-Bff" id="bli-MV-P1d"/>
+                <outlet property="lblSubHeader" destination="sUN-fP-uGK" id="R1N-r8-S5a"/>
+                <outlet property="lblVersion" destination="nur-uf-y7l" id="U2u-mK-kOb"/>
+                <outlet property="scrollView" destination="19a-fF-ALj" id="RTc-5S-2nI"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,106 +23,131 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HELLO, I AM A MIGHTYITEM™." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="YEG-el-Bff">
-                    <rect key="frame" x="20" y="63" width="280" height="63"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="63" id="tJw-lY-V2O"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="boo-ec-dEj" userLabel="Give Water Button">
-                    <rect key="frame" x="20" y="308" width="280" height="50"/>
-                    <color key="backgroundColor" red="0.3803921569" green="0.3803921569" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" priority="750" constant="50" id="Lqs-yS-8jW"/>
-                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="kWo-q3-U1D"/>
-                        <constraint firstAttribute="width" constant="280" id="wrh-pQ-OA3"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <state key="normal" title="MORE DETAILS">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <state key="highlighted">
-                        <color key="titleColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="openInfoSite:" destination="-1" eventType="touchUpInside" id="7hM-LX-Ptp"/>
-                    </connections>
-                </button>
-                <button opaque="NO" tag="1" contentMode="scaleToFill" verticalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5q-7N-Mud" userLabel="Give Water Button">
-                    <rect key="frame" x="20" y="366" width="280" height="50"/>
-                    <color key="backgroundColor" red="0.3803921569" green="0.3803921569" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" priority="750" constant="50" id="A30-nR-Nh2"/>
-                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="gcI-ly-cmR"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <state key="normal" title="OTHER MIGHTY GAMES">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <state key="highlighted">
-                        <color key="titleColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="openInfoSite:" destination="-1" eventType="touchUpInside" id="6af-D5-wI1"/>
-                    </connections>
-                </button>
-                <button opaque="NO" tag="2" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sq4-Ns-jaK" userLabel="Give Water Button">
-                    <rect key="frame" x="20" y="424" width="280" height="50"/>
-                    <color key="backgroundColor" red="0.3803921569" green="0.3803921569" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" priority="750" constant="50" id="bVg-3L-skz"/>
-                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="zyK-q0-bbD"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <state key="normal" title="MEET THE CHARITIES">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <state key="highlighted">
-                        <color key="titleColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="openInfoSite:" destination="-1" eventType="touchUpInside" id="Hsa-nO-l4x"/>
-                    </connections>
-                </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="9" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="qSS-E1-iAz">
-                    <rect key="frame" x="20" y="138" width="280" height="125"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="125" id="vHH-1H-RDF"/>
-                    </constraints>
-                    <string key="text">MightyItems™ are in-app purchases that have social impact. By purchasing a MightyItem™ you are helping fight hunger, provide clean water, and deliver medicine.</string>
-                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="19a-fF-ALj">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" id="Q9i-AG-dOQ" userLabel="contentView">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="boo-ec-dEj" userLabel="Link1 Btn">
+                                    <rect key="frame" x="74" y="323" width="173" height="24"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <inset key="titleEdgeInsets" minX="7" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <state key="normal" title="How it Works" image="MIO_icon-new-window-grey.png">
+                                        <color key="titleColor" red="1" green="0.090196078430000007" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="highlighted">
+                                        <color key="titleColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="openInfoSite:" destination="-1" eventType="touchUpInside" id="7hM-LX-Ptp"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="1" contentMode="scaleToFill" verticalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="C5q-7N-Mud" userLabel="Link2 Btn">
+                                    <rect key="frame" x="37" y="365" width="246" height="24"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <inset key="titleEdgeInsets" minX="6" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <state key="normal" title="Mighty Game Studios" image="MIO_icon-new-window-grey.png">
+                                        <color key="titleColor" red="1" green="0.090196078430000007" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="highlighted">
+                                        <color key="titleColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="openInfoSite:" destination="-1" eventType="touchUpInside" id="6af-D5-wI1"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="9" id="qSS-E1-iAz">
+                                    <rect key="frame" x="22" y="184" width="280" height="92"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <string key="text">I give in-app purchases the power of social impact. You have the change to be a micro-philanthropist inside of the games you love.</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <color key="textColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am The Mighty Pop-Up Shop™." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" id="sUN-fP-uGK">
+                                    <rect key="frame" x="34" y="150" width="256" height="41"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <color key="textColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lovingly made by the nerds at SuperMighty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZvR-01-hQZ">
+                                    <rect key="frame" x="33" y="277" width="259" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <color key="textColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MIO_tmio-mark-flat-full-color.png" id="VP7-Ok-HXy">
+                                    <rect key="frame" x="134" y="51" width="53" height="51"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MIO_graphic-sm-brackets-small.png" id="bjL-Ly-rKf">
+                                    <rect key="frame" x="134" y="466" width="69" height="45"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="v0.0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nur-uf-y7l">
+                                    <rect key="frame" x="137" y="527" width="46" height="20"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" id="YEG-el-Bff">
+                                    <rect key="frame" x="65" y="109" width="190" height="46"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
+                                    <color key="textColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" tag="2" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sq4-Ns-jaK" userLabel="Link3 Btn">
+                                    <rect key="frame" x="63" y="413" width="194" height="24"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <state key="normal" title="Mighty Charities" image="MIO_icon-new-window-grey.png">
+                                        <color key="titleColor" red="1" green="0.090196078430000007" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="highlighted">
+                                        <color key="titleColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="openInfoSite:" destination="-1" eventType="touchUpInside" id="Hsa-nO-l4x"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </scrollView>
             </subviews>
-            <color key="backgroundColor" red="0.2196078431372549" green="0.2196078431372549" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <accessibility key="accessibilityConfiguration" label="Info"/>
-            <constraints>
-                <constraint firstItem="boo-ec-dEj" firstAttribute="top" relation="greaterThanOrEqual" secondItem="qSS-E1-iAz" secondAttribute="bottom" constant="20" id="0XP-FH-mQA"/>
-                <constraint firstItem="C5q-7N-Mud" firstAttribute="trailing" secondItem="boo-ec-dEj" secondAttribute="trailing" id="0bq-a2-9kU"/>
-                <constraint firstItem="YEG-el-Bff" firstAttribute="trailing" secondItem="qSS-E1-iAz" secondAttribute="trailing" id="4xg-mj-gq9"/>
-                <constraint firstAttribute="bottom" secondItem="sq4-Ns-jaK" secondAttribute="bottom" priority="750" constant="94" id="8FI-lv-ANY"/>
-                <constraint firstItem="boo-ec-dEj" firstAttribute="height" secondItem="C5q-7N-Mud" secondAttribute="height" id="A94-zD-7uw"/>
-                <constraint firstItem="sq4-Ns-jaK" firstAttribute="leading" secondItem="C5q-7N-Mud" secondAttribute="leading" id="FG3-hn-Ze2"/>
-                <constraint firstItem="boo-ec-dEj" firstAttribute="height" secondItem="sq4-Ns-jaK" secondAttribute="height" id="Suz-xH-UIA"/>
-                <constraint firstItem="C5q-7N-Mud" firstAttribute="trailing" secondItem="sq4-Ns-jaK" secondAttribute="trailing" id="U3W-cu-q5q"/>
-                <constraint firstItem="qSS-E1-iAz" firstAttribute="trailing" secondItem="boo-ec-dEj" secondAttribute="trailing" id="VgF-ot-OOu"/>
-                <constraint firstItem="YEG-el-Bff" firstAttribute="leading" secondItem="qSS-E1-iAz" secondAttribute="leading" id="Wsy-Rn-zqi"/>
-                <constraint firstItem="boo-ec-dEj" firstAttribute="leading" secondItem="C5q-7N-Mud" secondAttribute="leading" id="XZ3-tR-uMn"/>
-                <constraint firstItem="qSS-E1-iAz" firstAttribute="top" secondItem="YEG-el-Bff" secondAttribute="bottom" constant="12" id="XZL-Fm-tX1"/>
-                <constraint firstItem="qSS-E1-iAz" firstAttribute="leading" secondItem="boo-ec-dEj" secondAttribute="leading" id="cuh-az-U90"/>
-                <constraint firstItem="sq4-Ns-jaK" firstAttribute="top" secondItem="C5q-7N-Mud" secondAttribute="bottom" constant="8" symbolic="YES" id="dLb-aX-WUP"/>
-                <constraint firstItem="boo-ec-dEj" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dsO-ee-Pdr"/>
-                <constraint firstItem="C5q-7N-Mud" firstAttribute="top" secondItem="boo-ec-dEj" secondAttribute="bottom" constant="8" symbolic="YES" id="pJl-pv-fp9"/>
-                <constraint firstItem="YEG-el-Bff" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="63" id="ptN-CR-tvS"/>
-                <constraint firstItem="boo-ec-dEj" firstAttribute="top" relation="lessThanOrEqual" secondItem="qSS-E1-iAz" secondAttribute="bottom" constant="60" id="wV3-AQ-wM3"/>
-            </constraints>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-            <point key="canvasLocation" x="334" y="274"/>
+            <point key="canvasLocation" x="364" y="290"/>
         </view>
     </objects>
+    <resources>
+        <image name="MIO_graphic-sm-brackets-small.png" width="69" height="45"/>
+        <image name="MIO_icon-new-window-grey.png" width="17" height="15"/>
+        <image name="MIO_tmio-mark-flat-full-color.png" width="89" height="84"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>

@@ -13,9 +13,6 @@
 #import <Security/Security.h>
 #import "Parse.h"
 
-//#import "SMUser.h"
-//#import "SMGame.h"
-
 @class PFObject;
 @class Mighty;
 @class SVProgressHUD;
@@ -81,6 +78,12 @@
  @return The singleton @c Mighty object that can be used throughout the app
  */
 + (Mighty*)initWithAuthToken:(NSString*)token;
+
+/**
+ Returns positive if the app does not have deployment provisioning
+ @return Testing
+ */
+- (NSNumber*)isTesting;
 
 // Dev Helpers
 /**
