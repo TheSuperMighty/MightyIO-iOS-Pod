@@ -4,22 +4,9 @@ MightyIO - iOS
 [![License](https://img.shields.io/cocoapods/l/MightyIO-iOS-Pod.svg?style=flat)](http://cocoadocs.org/docsets/MightyIO-iOS-Pod)
 [![Platform](https://img.shields.io/cocoapods/p/MightyIO-iOS-Pod.svg?style=flat)](http://cocoadocs.org/docsets/MightyIO-iOS-Pod)
 
-The MightyIO-iOS-Pod will provide you with the methods you need to easily interface with the MightyIO.  It contains methods to log in, place the SuperMighty Ribbon, show/hide the ribbon, and unlock items/features when a SuperMighty purchase is complete.
+The MightyIO-iOS-Pod will provide you with the methods you need to easily interface with the MightyIO.  It contains methods to log in, place the Mighty Ribbon, show/hide the ribbon, and unlock items/features when a Mighty purchase is complete.
 
 ## Quick Start Guide
-1. Add 'MightyIO-iOS-Pod' to your Podfile http://cocoapods.org/?q=mighty: 
-``pod 'MightyIO-iOS-Pod', :head``
-2. Run Pod install (Refer to CocoaPod’s [Getting Started Guide](http://cocoapods.org/#getstarted) for detailed instructions.)
-3. Import Mighty.h in your AppDelegate ``#import <MightyIO-iOS-Pod/Mighty.h>``
-4. Add ``[Mighty initWithAuthToken:@"authtoken"];`` to - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions;
-5. Place the Super Mighty Ribbon on your home screen using the code ``[[Mighty sharedInstance] makeRibbonWithCenter:CGPointMake(260, 45) inViewController:self withIntroModalOnFirstLaunch:YES];`` or place the ribbon asset in your home screen as an UIButton and pass it to SuperMighty using ``[[Mighty sharedInstance] makeRibbonWithIBOutlet:smRibbonOutlet inViewController:self withIntroModalOnFirstLaunch:YES];``.  The withModalOnFirstLaunch argument controls weather an information modal telling your players about the MightyIO will appear the first time the launch your game with the Mighty Update.  This is recommended so that your players have a greater understanding of how to interact with the Ribbon when it is displayed.
-6. Add the Mighty Delegate to your view controller: ``@interface HomeViewController : UIViewController <MightyDelegate>``
-7. In your ViewController add ``[Mighty sharedInstance].mightyDelegate = self;`` to -(void)viewDidLoad;
-8. Add the Mighty callback function to your ViewController ``- (void)mightyDidRecordSuccessfulTransaction:(SKPaymentTransaction*)transaction;``
-9. Inside the didRecordSuccessfulTransaction function place the code to unlock your item.
-
-
-Detailed Installation
 -----
 
 1. Before installing the MightIO into your iOS Game head over to http://themighty.io, signup, and create a promotion if you haven't already.
