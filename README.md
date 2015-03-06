@@ -25,7 +25,10 @@ The MightyIO-iOS-Pod will provide you with the methods you need to easily interf
 5. Place ribbon using the method ``[[Mighty sharedInstance] makeRibbonWithCenter:CGPointMake(260, 45) inViewController:self withIntroModalOnFirstLaunch:YES];`` **or** ``[[Mighty sharedInstance] makeRibbonWithIBOutlet:smRibbonOutlet inViewController:self withIntroModalOnFirstLaunch:YES];``
 6. In some cases you may want to show or hide the ribbon based on where your player is inside of your game.  This can be done very simply using the ``[[Mighty sharedInstance] makeRibbonHidden:NO withAnimation:YES];``  method.
 7. Lastly make sure to add the Mighty delegate to your interface file.
-8. The Mighty Delegate contains methods that will allow you to respond to a Mighty Purchase by unlocking the Mighty Item. 
+8. Add the Mighty Delegate to your view controller: ``@interface HomeViewController : UIViewController <MightyDelegate>``
+9. In your ViewController add ``[Mighty sharedInstance].mightyDelegate = self;`` to -(void)viewDidLoad;
+10. Add the Mighty callback function to your ViewController ``- (void)mightyDidRecordSuccessfulTransaction:(SKPaymentTransaction*)transaction;``
+11. Inside the didRecordSuccessfulTransaction function place the code to unlock your item.
 
 
 Methods
