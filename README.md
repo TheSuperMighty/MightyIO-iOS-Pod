@@ -4,7 +4,7 @@ MightyIO - iOS
 [![License](https://img.shields.io/cocoapods/l/MightyIO-iOS-Pod.svg?style=flat)](http://cocoadocs.org/docsets/MightyIO-iOS-Pod)
 [![Platform](https://img.shields.io/cocoapods/p/MightyIO-iOS-Pod.svg?style=flat)](http://cocoadocs.org/docsets/MightyIO-iOS-Pod)
 
-The MightyIO will provide you with the methods you need to easily interface with the MightyIO.  It contains methods to log in, place the SuperMighty Ribbon, show/hide the ribbon, and unlock items/features when a SuperMighty purchase is complete.
+The MightyIO-iOS-Pod will provide you with the methods you need to easily interface with the MightyIO.  It contains methods to log in, place the SuperMighty Ribbon, show/hide the ribbon, and unlock items/features when a SuperMighty purchase is complete.
 
 ## Quick Start Guide
 1. Add 'MightyIO-iOS-Pod' to your Podfile http://cocoapods.org/?q=mighty: 
