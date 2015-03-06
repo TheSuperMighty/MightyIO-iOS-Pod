@@ -113,6 +113,23 @@ This method allows you to manually place the SuperMighty ribbon asset in your vi
 ```
 ___
 
+**- (void)makeRibbonHidden:(BOOL)hidden withAnimation:(BOOL)animate;**
+Allows you to show or hide the ribbon based on where your player is inside of your game. 
+
+**params:**
+
+* (BOOL)hidden - Should the ribbon be hidden or not.
+* (BOOL)animate - Should the ribbon transition be animated.
+
+**example:**
+```objective-c
+    - (IBAction)showRibbon:(id)sender
+{
+    [[Mighty sharedInstance] makeRibbonHidden:NO withAnimation:YES];
+}
+```
+___
+
 
 ###Mighty Delegate Functions
 The Mighty Delegate provides the methods allow you to react to MightyIO actions inside your code such as: loading /opening/closing the pop-up shop and completing a purchase.
