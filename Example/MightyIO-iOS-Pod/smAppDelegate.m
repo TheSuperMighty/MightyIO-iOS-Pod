@@ -9,13 +9,12 @@
 #import "smAppDelegate.h"
 #import <MightyIO-iOS-Pod/Mighty.h>
 
-
 @implementation smAppDelegate
 
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
 
-    [Mighty initWithAuthToken:@"ZJ50D7H1XZVMZHW5LKZ2"];
+    [Mighty initWithAuthToken:@"0e6f04cd221351a7cef40d8b75689877"];
 
     return YES;
 }

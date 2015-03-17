@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
@@ -140,8 +140,8 @@
                                     <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MIO_graphic-sm-brackets-small.png" translatesAutoresizingMaskIntoConstraints="NO" id="bjL-Ly-rKf">
-                                    <rect key="frame" x="257" y="469" width="69" height="45"/>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MIO_graphic-smWatermark.png" translatesAutoresizingMaskIntoConstraints="NO" id="bjL-Ly-rKf">
+                                    <rect key="frame" x="268" y="481" width="48" height="45"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="45" id="Ebm-Qy-hLE"/>
                                     </constraints>
@@ -150,18 +150,19 @@
                             <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstItem="ZvR-01-hQZ" firstAttribute="top" secondItem="qSS-E1-iAz" secondAttribute="bottom" constant="1" id="0eL-2b-5I7"/>
+                                <constraint firstAttribute="centerX" secondItem="bjL-Ly-rKf" secondAttribute="centerX" constant="-8" id="2Ad-pg-n0g"/>
                                 <constraint firstItem="YEG-el-Bff" firstAttribute="top" secondItem="VP7-Ok-HXy" secondAttribute="bottom" constant="8" symbolic="YES" id="5sm-no-sSh"/>
                                 <constraint firstItem="VP7-Ok-HXy" firstAttribute="top" secondItem="Q9i-AG-dOQ" secondAttribute="top" constant="50" id="997-d9-Ja4"/>
                                 <constraint firstItem="ZvR-01-hQZ" firstAttribute="top" secondItem="sUN-fP-uGK" secondAttribute="bottom" constant="86" id="B14-Af-izM"/>
                                 <constraint firstAttribute="centerX" secondItem="VP7-Ok-HXy" secondAttribute="centerX" constant="0.5" id="BXl-ch-iLx"/>
                                 <constraint firstItem="sUN-fP-uGK" firstAttribute="top" secondItem="VP7-Ok-HXy" secondAttribute="bottom" constant="52" id="BsU-J4-osS"/>
                                 <constraint firstAttribute="centerX" secondItem="nur-uf-y7l" secondAttribute="centerX" constant="1" id="Bul-vz-Ofn"/>
-                                <constraint firstItem="bjL-Ly-rKf" firstAttribute="top" secondItem="sq4-Ns-jaK" secondAttribute="bottom" constant="17" id="F4k-ki-Wp4"/>
-                                <constraint firstItem="nur-uf-y7l" firstAttribute="top" secondItem="bjL-Ly-rKf" secondAttribute="bottom" constant="20" id="G6Z-8b-Kgj"/>
+                                <constraint firstItem="nur-uf-y7l" firstAttribute="top" secondItem="bjL-Ly-rKf" secondAttribute="bottom" constant="8" id="DxO-yn-1rV"/>
                                 <constraint firstItem="qSS-E1-iAz" firstAttribute="top" secondItem="YEG-el-Bff" secondAttribute="bottom" constant="32" id="IbS-WF-Ydv"/>
                                 <constraint firstItem="boo-ec-dEj" firstAttribute="trailing" secondItem="C5q-7N-Mud" secondAttribute="trailing" id="LvP-BR-nFo"/>
                                 <constraint firstAttribute="centerX" secondItem="YEG-el-Bff" secondAttribute="centerX" constant="0.5" id="UEE-jc-c7P"/>
                                 <constraint firstAttribute="centerX" secondItem="qSS-E1-iAz" secondAttribute="centerX" constant="-1" id="Xxv-Fm-JO0"/>
+                                <constraint firstItem="bjL-Ly-rKf" firstAttribute="top" secondItem="sq4-Ns-jaK" secondAttribute="bottom" constant="29" id="Y3X-0f-fUb"/>
                                 <constraint firstItem="C5q-7N-Mud" firstAttribute="leading" secondItem="boo-ec-dEj" secondAttribute="leading" id="bHz-HW-Ktk"/>
                                 <constraint firstAttribute="centerX" secondItem="boo-ec-dEj" secondAttribute="centerX" constant="1" id="dD9-hH-VhR"/>
                                 <constraint firstItem="sq4-Ns-jaK" firstAttribute="top" secondItem="C5q-7N-Mud" secondAttribute="bottom" constant="8" symbolic="YES" id="dk4-ms-utt"/>
@@ -170,7 +171,6 @@
                                 <constraint firstAttribute="height" constant="568" id="lbS-0H-B9a"/>
                                 <constraint firstAttribute="bottom" secondItem="nur-uf-y7l" secondAttribute="bottom" constant="14" id="pWM-Il-eO4"/>
                                 <constraint firstItem="boo-ec-dEj" firstAttribute="top" secondItem="ZvR-01-hQZ" secondAttribute="bottom" constant="15" id="rnn-nj-Gfe"/>
-                                <constraint firstItem="bjL-Ly-rKf" firstAttribute="leading" secondItem="sq4-Ns-jaK" secondAttribute="leading" constant="114" id="uew-m3-OCx"/>
                                 <constraint firstAttribute="centerX" secondItem="sUN-fP-uGK" secondAttribute="centerX" constant="-1" id="vLA-25-ZwT"/>
                                 <constraint firstItem="C5q-7N-Mud" firstAttribute="top" secondItem="boo-ec-dEj" secondAttribute="bottom" constant="8" symbolic="YES" id="yWH-if-7P5"/>
                                 <constraint firstItem="sq4-Ns-jaK" firstAttribute="trailing" secondItem="C5q-7N-Mud" secondAttribute="trailing" id="ycE-oN-XHv"/>
@@ -197,11 +197,11 @@
             </constraints>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-            <point key="canvasLocation" x="696" y="327"/>
+            <point key="canvasLocation" x="676" y="330"/>
         </view>
     </objects>
     <resources>
-        <image name="MIO_graphic-sm-brackets-small.png" width="69" height="45"/>
+        <image name="MIO_graphic-smWatermark.png" width="48" height="37"/>
         <image name="MIO_icon-new-window-grey.png" width="17" height="15"/>
         <image name="MIO_tmio-mark-flat-full-color.png" width="89" height="84"/>
     </resources>

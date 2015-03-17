@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
@@ -7,19 +7,28 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GiveViewController">
             <connections>
-                <outlet property="btnInfo" destination="JMq-Ez-aqL" id="M00-er-kfa"/>
                 <outlet property="btnPurchase" destination="HgW-JG-pu2" id="WTU-Pn-eiQ"/>
                 <outlet property="contentView" destination="6WJ-f4-2M4" id="yjt-hV-1CN"/>
+                <outlet property="imgSponsorLogo" destination="wE8-Jb-PwR" id="2Z8-rJ-8bT"/>
                 <outlet property="itemThumbnail" destination="XDO-xl-EOh" id="n5m-Kk-JcF"/>
-                <outlet property="lblGiveCallToAction" destination="wFQ-sR-uiX" id="nzN-St-q9r"/>
+                <outlet property="lblBuyLegalStatement" destination="Vr1-rF-AA3" id="jpb-Af-3cs"/>
+                <outlet property="lblCauseDescription" destination="EVT-W9-cuR" id="4vl-84-D2D"/>
+                <outlet property="lblCauseHdr" destination="Nao-pG-NFC" id="dLX-6t-tf2"/>
+                <outlet property="lblChallengeDaysLeft" destination="I5o-HN-h4t" id="VJE-SC-nsY"/>
+                <outlet property="lblChallengeDescription" destination="zBR-Vo-K3J" id="0QZ-vu-fIP"/>
+                <outlet property="lblChallengeHdr" destination="FeN-2I-6qI" id="DdE-XT-Khf"/>
+                <outlet property="lblChallengeProgressGoal" destination="LGt-ft-jfE" id="MIY-Ir-Uhi"/>
+                <outlet property="lblChallengeSubHdr" destination="Hcm-az-p3o" id="8tH-d2-Nhb"/>
+                <outlet property="lblChallengeUnitsGiven" destination="wpW-Rn-D5G" id="AQ7-Gx-vY8"/>
+                <outlet property="lblItemDescription" destination="EvE-Mb-GNE" id="PuE-MX-QU0"/>
                 <outlet property="lblItemName" destination="4eF-47-31S" id="bo2-dh-uiS"/>
-                <outlet property="lblItemPrice" destination="LNN-FW-JLL" id="se4-nC-Lvi"/>
-                <outlet property="lblLegalStatement" destination="nZR-CR-szJ" id="5dT-te-yL9"/>
-                <outlet property="lblMealsGiven" destination="wpW-Rn-D5G" id="JPk-by-Wch"/>
+                <outlet property="progressChallengeUnitsUnlocked" destination="4Ok-PO-ysk" id="Env-EH-N0l"/>
                 <outlet property="scrollView" destination="qNU-9V-Bzs" id="ZG3-Me-oJU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewChallenge" destination="gkS-jr-SAm" id="G8x-AC-8ad"/>
+                <outlet property="viewChallengeHeightConstraint" destination="8Lr-wl-Oig" id="6Gb-A1-r2j"/>
                 <outlet property="viewItem" destination="1Qc-NU-ahe" id="kIV-Qh-dan"/>
-                <outlet property="viewPlate" destination="6bF-tD-GxW" id="umr-cg-4sG"/>
+                <outlet property="viewSponsorLogo" destination="isV-3p-c3q" id="zGX-bG-1hy"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -27,135 +36,58 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="qNU-9V-Bzs">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qNU-9V-Bzs">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <view contentMode="scaleToFill" id="6WJ-f4-2M4" userLabel="contentView">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="900"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6WJ-f4-2M4" userLabel="contentView">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="1119"/>
                             <subviews>
-                                <view contentMode="scaleToFill" id="FqW-Nw-vt9" userLabel="Header">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="238"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AcJ-5N-sU4"/>
+                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Qc-NU-ahe" userLabel="Item">
+                                    <rect key="frame" x="110" y="65" width="100" height="100"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MIO_graphic-charity-banner-w-lock.png" id="ehu-sT-9lD">
-                                            <rect key="frame" x="97" y="47" width="127" height="150"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                    </subviews>
-                                    <color key="backgroundColor" red="0.92549019607843142" green="0.92941176470588238" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </view>
-                                <view contentMode="scaleToFill" id="6bF-tD-GxW" userLabel="Plate">
-                                    <rect key="frame" x="48" y="192" width="100" height="100"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MIO_graphic-plate-grey.png" id="pft-6S-9vb">
-                                            <rect key="frame" x="16" y="20" width="68" height="59"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                    </subviews>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </view>
-                                <view contentMode="scaleToFill" id="1Qc-NU-ahe" userLabel="Item">
-                                    <rect key="frame" x="174" y="192" width="100" height="100"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MIO_placeholdersquare.png" id="XDO-xl-EOh">
-                                            <rect key="frame" x="8" y="4" width="85" height="92"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ykD-A9-0Qw">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MIO_placeholdersquare.png" translatesAutoresizingMaskIntoConstraints="NO" id="XDO-xl-EOh">
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="buyMightyItem:" destination="-1" eventType="touchUpInside" id="o38-f0-Ylf"/>
-                                            </connections>
-                                        </button>
+                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="XDO-xl-EOh" secondAttribute="trailing" id="Qfq-YX-Vl4"/>
+                                        <constraint firstAttribute="bottom" secondItem="XDO-xl-EOh" secondAttribute="bottom" id="ZLg-mJ-y4b"/>
+                                        <constraint firstAttribute="height" constant="100" id="m3I-mQ-ADX"/>
+                                        <constraint firstAttribute="width" constant="100" id="mfq-rT-l6j"/>
+                                        <constraint firstItem="XDO-xl-EOh" firstAttribute="leading" secondItem="1Qc-NU-ahe" secondAttribute="leading" id="rRY-b2-rGe"/>
+                                        <constraint firstItem="XDO-xl-EOh" firstAttribute="top" secondItem="1Qc-NU-ahe" secondAttribute="top" id="yA2-La-iKt"/>
+                                    </constraints>
                                 </view>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meals" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eFW-rw-Tft">
-                                    <rect key="frame" x="75" y="304" width="46" height="21"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <color key="textColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="The Mushroom Bun gives your stacks extra swagger.  Boots Speed +10." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="9" preferredMaxLayoutWidth="264" translatesAutoresizingMaskIntoConstraints="NO" id="EvE-Mb-GNE">
+                                    <rect key="frame" x="28" y="198" width="264" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="M6N-6Z-ehQ"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                    <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MIO_graphic-circle-stats.png" id="C81-qy-hAV">
-                                    <rect key="frame" x="31" y="521" width="258" height="161"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                </imageView>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Meals Given" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" id="LGt-ft-jfE">
-                                    <rect key="frame" x="113" y="609" width="95" height="23"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <color key="textColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wpW-Rn-D5G" userLabel="Meal Count">
-                                    <rect key="frame" x="108" y="567" width="104" height="48"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                    <color key="textColor" red="1" green="0.090196078430000007" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="747" text="Your purchase gives meals to hungry kids." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="15" id="wFQ-sR-uiX">
-                                    <rect key="frame" x="26" y="360" width="269" height="80"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                    <color key="textColor" red="0.46666666666666667" green="0.46666666666666667" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MIO_icon-astrik.png" id="LJB-b5-Ki0">
-                                    <rect key="frame" x="20" y="771" width="11" height="11"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="9" id="nZR-CR-szJ">
-                                    <rect key="frame" x="35" y="766" width="250" height="63"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <string key="text">For each purchase SuperMighty will donate ($1.79) to the Silicon Valley Community Foundation towards their efforts in fighting childhood hunger.</string>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="9" preferredMaxLayoutWidth="264" translatesAutoresizingMaskIntoConstraints="NO" id="EVT-W9-cuR">
+                                    <rect key="frame" x="28" y="355" width="264" height="82"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="82" id="aAh-PK-8qp"/>
+                                    </constraints>
+                                    <string key="text">Tomorrow morning 16million children in the U.S. will wake up without the promise of breakfast. Your purchase of the "Mushroom Burger" unlocks meals that help feed these hungry kids.</string>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                     <color key="textColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JMq-Ez-aqL">
-                                    <rect key="frame" x="111" y="852" width="98" height="30"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" red="0.92549019607843142" green="0.92941176470588238" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                    <state key="normal" title="View Details">
-                                        <color key="titleColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="openPurchaseBreakDown:" destination="-1" eventType="touchUpInside" id="7Rn-A0-Y0a"/>
-                                    </connections>
-                                </button>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="AcJ-5N-sU4">
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                </imageView>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$3.99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="LNN-FW-JLL">
-                                    <rect key="frame" x="131" y="335" width="59" height="23"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="246" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HgW-JG-pu2" userLabel="Buy Button">
+                                    <rect key="frame" x="28" y="256" width="254" height="57"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                    <color key="textColor" red="1" green="0.090196078430000007" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MIO_graphic-sm-brackets-small.png" id="LMJ-24-oOs">
-                                    <rect key="frame" x="126" y="713" width="69" height="45"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                </imageView>
-                                <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="246" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="HgW-JG-pu2" userLabel="Buy Button">
-                                    <rect key="frame" x="20" y="443" width="280" height="48"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <accessibility key="accessibilityConfiguration" label="Give and Unlock"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                    <state key="normal" title="Give &amp; Unlock">
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="57" id="4Tz-Qa-bX1"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                    <state key="normal" title="Buy Now ($3.99)">
                                         <color key="titleColor" red="1" green="0.090196078430000007" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
@@ -166,32 +98,246 @@
                                         <action selector="buyMightyItem:" destination="-1" eventType="touchUpInside" id="Fcu-DM-m2A"/>
                                     </connections>
                                 </button>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monster Truck" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="7" id="4eF-47-31S">
-                                    <rect key="frame" x="169" y="296" width="110" height="37"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <color key="textColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gkS-jr-SAm" userLabel="ChallengeView">
+                                    <rect key="frame" x="0.0" y="447" width="320" height="528"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="of 10,000 meal goal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" preferredMaxLayoutWidth="121" translatesAutoresizingMaskIntoConstraints="NO" id="LGt-ft-jfE">
+                                            <rect key="frame" x="100" y="461" width="121" height="23"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="23" id="OS1-jT-Tlg"/>
+                                                <constraint firstAttribute="width" constant="121" id="gk9-R0-HL8"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="104" translatesAutoresizingMaskIntoConstraints="NO" id="wpW-Rn-D5G" userLabel="Meal Count">
+                                            <rect key="frame" x="108" y="401" width="104" height="48"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="48" id="Ncl-2G-RVq"/>
+                                                <constraint firstAttribute="width" constant="104" id="dZF-6x-LvY"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                            <color key="textColor" red="1" green="0.090196078430000007" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Prw-dy-7dX" userLabel="hr">
+                                            <rect key="frame" x="10" y="17" width="300" height="1"/>
+                                            <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="1" id="wxa-zg-hN3"/>
+                                            </constraints>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Challenge" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" preferredMaxLayoutWidth="130" translatesAutoresizingMaskIntoConstraints="NO" id="AMh-k8-fyd">
+                                            <rect key="frame" x="95" y="8" width="130" height="17"/>
+                                            <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="130" id="ICA-yJ-Mp1"/>
+                                                <constraint firstAttribute="height" constant="17" id="kUT-Dw-M7t"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="isV-3p-c3q" userLabel="Item">
+                                            <rect key="frame" x="110" y="42" width="100" height="100"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MIO_graphic-plate-grey.png" translatesAutoresizingMaskIntoConstraints="NO" id="wE8-Jb-PwR">
+                                                    <rect key="frame" x="8" y="23" width="85" height="54"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="100" id="3hT-gn-9kF"/>
+                                                <constraint firstAttribute="bottom" secondItem="wE8-Jb-PwR" secondAttribute="bottom" constant="23" id="G0T-7c-ckp"/>
+                                                <constraint firstItem="wE8-Jb-PwR" firstAttribute="top" secondItem="isV-3p-c3q" secondAttribute="top" constant="23" id="diA-FI-j2h"/>
+                                                <constraint firstAttribute="trailing" secondItem="wE8-Jb-PwR" secondAttribute="trailing" constant="7" id="mB5-Nd-cGo"/>
+                                                <constraint firstItem="wE8-Jb-PwR" firstAttribute="leading" secondItem="isV-3p-c3q" secondAttribute="leading" constant="8" id="mbO-10-u6q"/>
+                                                <constraint firstAttribute="height" constant="100" id="xF9-pe-Qm4"/>
+                                            </constraints>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10,000 Meal Challenge" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" preferredMaxLayoutWidth="244" translatesAutoresizingMaskIntoConstraints="NO" id="FeN-2I-6qI">
+                                            <rect key="frame" x="38" y="150" width="244" height="57"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="57" id="7rN-2V-heL"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                            <color key="textColor" red="1" green="0.090196078430000007" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4Ok-PO-ysk">
+                                            <rect key="frame" x="85" y="497" width="150" height="2"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="150" id="Ol8-T4-BBF"/>
+                                                <constraint firstAttribute="height" constant="2" id="s7t-TE-4tF"/>
+                                            </constraints>
+                                        </progressView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="days left" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" preferredMaxLayoutWidth="68" translatesAutoresizingMaskIntoConstraints="NO" id="w36-Dh-ph8">
+                                            <rect key="frame" x="126" y="358" width="68" height="19"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="19" id="Q64-Gp-lbn"/>
+                                                <constraint firstAttribute="width" constant="68" id="aLH-b8-bsL"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="104" translatesAutoresizingMaskIntoConstraints="NO" id="I5o-HN-h4t" userLabel="Days Left">
+                                            <rect key="frame" x="108" y="311" width="104" height="48"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="48" id="HKC-65-KsS"/>
+                                                <constraint firstAttribute="width" constant="104" id="xPU-dR-J8V"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                            <color key="textColor" red="1" green="0.090196078430000007" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="9" preferredMaxLayoutWidth="264" translatesAutoresizingMaskIntoConstraints="NO" id="zBR-Vo-K3J">
+                                            <rect key="frame" x="28" y="226" width="264" height="82"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="82" id="ref-M5-Uq4"/>
+                                            </constraints>
+                                            <string key="text">Tomorrow morning 16million children in the U.S. will wake up without the promise of breakfast. Your purchase of the "Mushroom Burger" unlocks meals that help feed these hungry kids.</string>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                            <color key="textColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="La Colombe Torrefaction" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" preferredMaxLayoutWidth="244" translatesAutoresizingMaskIntoConstraints="NO" id="Hcm-az-p3o">
+                                            <rect key="frame" x="38" y="205" width="244" height="20"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="1" green="0.090196078430000007" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="zBR-Vo-K3J" firstAttribute="top" secondItem="Hcm-az-p3o" secondAttribute="bottom" constant="1" id="0AH-cm-Ej3"/>
+                                        <constraint firstItem="isV-3p-c3q" firstAttribute="top" secondItem="AMh-k8-fyd" secondAttribute="bottom" constant="17" id="3Wk-g4-Fqp"/>
+                                        <constraint firstAttribute="trailing" secondItem="FeN-2I-6qI" secondAttribute="trailing" constant="38" id="6e4-hq-JiQ"/>
+                                        <constraint firstAttribute="height" constant="528" id="8Lr-wl-Oig"/>
+                                        <constraint firstItem="4Ok-PO-ysk" firstAttribute="top" secondItem="LGt-ft-jfE" secondAttribute="bottom" constant="13" id="8ef-WT-4Vj"/>
+                                        <constraint firstAttribute="trailing" secondItem="Prw-dy-7dX" secondAttribute="trailing" constant="10" id="8lZ-PJ-Zq2"/>
+                                        <constraint firstAttribute="centerX" secondItem="isV-3p-c3q" secondAttribute="centerX" id="9Zt-hF-Yfk"/>
+                                        <constraint firstItem="Hcm-az-p3o" firstAttribute="leading" secondItem="gkS-jr-SAm" secondAttribute="leading" constant="38" id="CFB-Jd-nZR"/>
+                                        <constraint firstAttribute="trailing" secondItem="Hcm-az-p3o" secondAttribute="trailing" constant="38" id="DfZ-fH-XUa"/>
+                                        <constraint firstItem="zBR-Vo-K3J" firstAttribute="leading" secondItem="gkS-jr-SAm" secondAttribute="leading" constant="28" id="H6x-NK-Y8y"/>
+                                        <constraint firstAttribute="centerX" secondItem="wpW-Rn-D5G" secondAttribute="centerX" id="Ivq-hH-iRe"/>
+                                        <constraint firstItem="FeN-2I-6qI" firstAttribute="top" secondItem="isV-3p-c3q" secondAttribute="bottom" constant="8" id="K6n-FK-MWt"/>
+                                        <constraint firstAttribute="centerX" secondItem="4Ok-PO-ysk" secondAttribute="centerX" id="LNw-W8-kha"/>
+                                        <constraint firstItem="wpW-Rn-D5G" firstAttribute="top" secondItem="w36-Dh-ph8" secondAttribute="bottom" constant="24" id="Mgg-H9-XQH"/>
+                                        <constraint firstItem="w36-Dh-ph8" firstAttribute="top" secondItem="zBR-Vo-K3J" secondAttribute="bottom" constant="50" id="Pte-g4-rV0"/>
+                                        <constraint firstItem="Hcm-az-p3o" firstAttribute="top" secondItem="isV-3p-c3q" secondAttribute="bottom" constant="63" id="ShX-xO-Hzw"/>
+                                        <constraint firstItem="AMh-k8-fyd" firstAttribute="centerY" secondItem="Prw-dy-7dX" secondAttribute="centerY" constant="-1" id="WND-2K-Q1N"/>
+                                        <constraint firstItem="AMh-k8-fyd" firstAttribute="top" secondItem="gkS-jr-SAm" secondAttribute="top" constant="8" id="X1s-iW-Vlp"/>
+                                        <constraint firstItem="wpW-Rn-D5G" firstAttribute="top" secondItem="w36-Dh-ph8" secondAttribute="bottom" constant="24" id="Zg6-QF-tLP"/>
+                                        <constraint firstItem="wpW-Rn-D5G" firstAttribute="centerX" secondItem="LGt-ft-jfE" secondAttribute="centerX" constant="-0.5" id="Zll-KS-Vsk"/>
+                                        <constraint firstItem="Prw-dy-7dX" firstAttribute="leading" secondItem="gkS-jr-SAm" secondAttribute="leading" constant="10" id="Zp8-KS-84P"/>
+                                        <constraint firstItem="FeN-2I-6qI" firstAttribute="leading" secondItem="gkS-jr-SAm" secondAttribute="leading" constant="38" id="aFS-ar-yy8"/>
+                                        <constraint firstAttribute="centerX" secondItem="I5o-HN-h4t" secondAttribute="centerX" id="bke-KH-dln"/>
+                                        <constraint firstAttribute="centerX" secondItem="AMh-k8-fyd" secondAttribute="centerX" id="ig7-gt-awy"/>
+                                        <constraint firstAttribute="trailing" secondItem="zBR-Vo-K3J" secondAttribute="trailing" constant="28" id="mxx-65-NsT"/>
+                                        <constraint firstItem="w36-Dh-ph8" firstAttribute="centerX" secondItem="I5o-HN-h4t" secondAttribute="centerX" id="n1W-kD-MnA"/>
+                                        <constraint firstItem="I5o-HN-h4t" firstAttribute="top" secondItem="zBR-Vo-K3J" secondAttribute="bottom" constant="3" id="sS5-ka-YDR"/>
+                                        <constraint firstAttribute="bottom" secondItem="4Ok-PO-ysk" secondAttribute="bottom" constant="29" id="wUs-fT-fap"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monster Truck" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="7" preferredMaxLayoutWidth="221" translatesAutoresizingMaskIntoConstraints="NO" id="4eF-47-31S">
+                                    <rect key="frame" x="50" y="172" width="221" height="31"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="221" id="Ois-XG-ya8"/>
+                                        <constraint firstAttribute="height" constant="31" id="n0r-Gr-Ktw"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <color key="textColor" red="1" green="0.090196078430000007" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Childhood Hunger is real." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="7" preferredMaxLayoutWidth="254" translatesAutoresizingMaskIntoConstraints="NO" id="Nao-pG-NFC">
+                                    <rect key="frame" x="28" y="325" width="254" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="wlQ-ie-NfF"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <color key="textColor" red="1" green="0.090196078430000007" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="25" baselineAdjustment="alignBaselines" minimumFontSize="6" adjustsLetterSpacingToFitWidth="YES" preferredMaxLayoutWidth="293" translatesAutoresizingMaskIntoConstraints="NO" id="Vr1-rF-AA3" userLabel="Legal">
+                                    <rect key="frame" x="14" y="993" width="293" height="118"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="118" id="tH5-5k-Qwk"/>
+                                    </constraints>
+                                    <string key="text">For each purchase SuperMighty will donate ($1.79) to the Silicon Valley Community Foundation towards their efforts in fighting childhood hunger.</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
                             <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="1Qc-NU-ahe" firstAttribute="top" secondItem="6WJ-f4-2M4" secondAttribute="top" constant="65" id="1Ne-20-UtW"/>
+                                <constraint firstItem="gkS-jr-SAm" firstAttribute="top" secondItem="EVT-W9-cuR" secondAttribute="bottom" constant="10" id="2RF-g8-LpI"/>
+                                <constraint firstItem="EVT-W9-cuR" firstAttribute="leading" secondItem="6WJ-f4-2M4" secondAttribute="leading" constant="28" id="47U-jX-GXF"/>
+                                <constraint firstAttribute="trailing" secondItem="Vr1-rF-AA3" secondAttribute="trailing" constant="13" id="4cO-9U-MSG"/>
+                                <constraint firstAttribute="centerX" secondItem="Nao-pG-NFC" secondAttribute="centerX" constant="5" id="6Lc-IB-5vk"/>
+                                <constraint firstAttribute="centerX" secondItem="4eF-47-31S" secondAttribute="centerX" constant="-0.5" id="9aC-WS-F9y"/>
+                                <constraint firstItem="Nao-pG-NFC" firstAttribute="top" secondItem="HgW-JG-pu2" secondAttribute="bottom" constant="12" id="C3q-mz-HOD"/>
+                                <constraint firstAttribute="trailing" secondItem="EvE-Mb-GNE" secondAttribute="trailing" constant="28" id="DsC-zY-5Ey"/>
+                                <constraint firstAttribute="trailing" secondItem="gkS-jr-SAm" secondAttribute="trailing" id="HFr-H9-mGd"/>
+                                <constraint firstItem="HgW-JG-pu2" firstAttribute="top" secondItem="EvE-Mb-GNE" secondAttribute="bottom" constant="8" id="I8t-rZ-iRa"/>
+                                <constraint firstItem="HgW-JG-pu2" firstAttribute="leading" secondItem="6WJ-f4-2M4" secondAttribute="leading" constant="28" id="Knq-0z-Xru"/>
+                                <constraint firstItem="Vr1-rF-AA3" firstAttribute="top" secondItem="gkS-jr-SAm" secondAttribute="bottom" constant="18" id="MEh-Cm-acO"/>
+                                <constraint firstAttribute="centerX" secondItem="EvE-Mb-GNE" secondAttribute="centerX" id="MXo-yh-gy8"/>
+                                <constraint firstAttribute="trailing" secondItem="HgW-JG-pu2" secondAttribute="trailing" constant="38" id="OWs-vt-srb"/>
+                                <constraint firstItem="EVT-W9-cuR" firstAttribute="top" secondItem="Nao-pG-NFC" secondAttribute="bottom" id="SMk-z0-nUe"/>
+                                <constraint firstItem="Nao-pG-NFC" firstAttribute="leading" secondItem="6WJ-f4-2M4" secondAttribute="leading" constant="28" id="Tko-zH-EV1"/>
+                                <constraint firstAttribute="centerX" secondItem="1Qc-NU-ahe" secondAttribute="centerX" id="Ysx-58-yd4"/>
+                                <constraint firstItem="Vr1-rF-AA3" firstAttribute="leading" secondItem="6WJ-f4-2M4" secondAttribute="leading" constant="14" id="aUn-qE-7wd"/>
+                                <constraint firstItem="gkS-jr-SAm" firstAttribute="leading" secondItem="6WJ-f4-2M4" secondAttribute="leading" id="hGy-Vn-fDf"/>
+                                <constraint firstItem="EvE-Mb-GNE" firstAttribute="top" secondItem="4eF-47-31S" secondAttribute="bottom" constant="-5" id="hKx-6Y-lFV"/>
+                                <constraint firstItem="4eF-47-31S" firstAttribute="top" secondItem="1Qc-NU-ahe" secondAttribute="bottom" constant="7" id="izo-Sq-mYg"/>
+                                <constraint firstAttribute="centerX" secondItem="HgW-JG-pu2" secondAttribute="centerX" constant="5" id="jTG-3l-5un"/>
+                                <constraint firstAttribute="trailing" secondItem="EVT-W9-cuR" secondAttribute="trailing" constant="28" id="txd-sy-1ae"/>
+                                <constraint firstAttribute="trailing" secondItem="Nao-pG-NFC" secondAttribute="trailing" constant="38" id="wIZ-82-afp"/>
+                                <constraint firstItem="EvE-Mb-GNE" firstAttribute="leading" secondItem="6WJ-f4-2M4" secondAttribute="leading" constant="28" id="yIi-fA-EZU"/>
+                                <constraint firstAttribute="bottom" secondItem="Vr1-rF-AA3" secondAttribute="bottom" constant="8" id="ygc-Ac-BbH"/>
+                            </constraints>
                         </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="25" baselineAdjustment="alignBaselines" minimumFontSize="6" adjustsLetterSpacingToFitWidth="YES" preferredMaxLayoutWidth="293" translatesAutoresizingMaskIntoConstraints="NO" id="oW4-uW-ZrP" userLabel="Legal">
+                            <rect key="frame" x="10" y="-590" width="293" height="100"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="iNC-Lf-4N2"/>
+                            </constraints>
+                            <string key="text">For each purchase SuperMighty will donate ($1.79) to the Silicon Valley Community Foundation towards their efforts in fighting childhood hunger.</string>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="6WJ-f4-2M4" secondAttribute="bottom" constant="-553" id="C7N-Zy-SDf"/>
+                        <constraint firstAttribute="trailing" secondItem="6WJ-f4-2M4" secondAttribute="trailing" id="Raz-JW-ItB"/>
+                        <constraint firstItem="6WJ-f4-2M4" firstAttribute="leading" secondItem="qNU-9V-Bzs" secondAttribute="leading" id="aoN-eW-qVD"/>
+                        <constraint firstItem="oW4-uW-ZrP" firstAttribute="leading" secondItem="qNU-9V-Bzs" secondAttribute="leading" constant="10" id="gbu-ok-eUk"/>
+                        <constraint firstItem="6WJ-f4-2M4" firstAttribute="top" secondItem="qNU-9V-Bzs" secondAttribute="top" id="lMW-qb-WZF"/>
+                        <constraint firstItem="oW4-uW-ZrP" firstAttribute="top" secondItem="qNU-9V-Bzs" secondAttribute="top" constant="-590" id="ox9-Xt-TbE"/>
+                        <constraint firstItem="6WJ-f4-2M4" firstAttribute="centerX" secondItem="qNU-9V-Bzs" secondAttribute="centerX" id="rOn-Q6-Xve"/>
+                    </constraints>
                 </scrollView>
             </subviews>
             <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <accessibility key="accessibilityConfiguration" label="Give"/>
+            <constraints>
+                <constraint firstItem="qNU-9V-Bzs" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Scf-Lx-Prl"/>
+                <constraint firstItem="qNU-9V-Bzs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Wnp-Gy-bDW"/>
+                <constraint firstAttribute="bottom" secondItem="qNU-9V-Bzs" secondAttribute="bottom" id="lxh-hR-01k"/>
+                <constraint firstAttribute="trailing" secondItem="qNU-9V-Bzs" secondAttribute="trailing" id="ttB-Ek-BLB"/>
+            </constraints>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-            <point key="canvasLocation" x="72" y="1026"/>
+            <point key="canvasLocation" x="-72" y="1326"/>
         </view>
     </objects>
     <resources>
-        <image name="MIO_graphic-charity-banner-w-lock.png" width="155" height="170"/>
-        <image name="MIO_graphic-circle-stats.png" width="258" height="161"/>
         <image name="MIO_graphic-plate-grey.png" width="85" height="54"/>
-        <image name="MIO_graphic-sm-brackets-small.png" width="69" height="45"/>
-        <image name="MIO_icon-astrik.png" width="11" height="11"/>
         <image name="MIO_placeholdersquare.png" width="600" height="600"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -42,7 +42,7 @@
 		30C47DAA99C31422800DBDEE /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
 		42493A222B27B38D644A70AC /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		48194C77C4CDEB368F6E0B80 /* Pods-MightyIO-iOS-Pod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MightyIO-iOS-Pod.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MightyIO-iOS-Pod/Pods-MightyIO-iOS-Pod.debug.xcconfig"; sourceTree = "<group>"; };
-		6003F58A195388D20070C39A /* MightyIO-iOS-Pod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MightyIO-iOS-Pod.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F58A195388D20070C39A /* MightyIO-Pod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MightyIO-Pod.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -113,7 +113,7 @@
 		6003F58B195388D20070C39A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6003F58A195388D20070C39A /* MightyIO-iOS-Pod.app */,
+				6003F58A195388D20070C39A /* MightyIO-Pod.app */,
 				6003F5AE195388D20070C39A /* Tests.xctest */,
 			);
 			name = Products;
@@ -216,7 +216,7 @@
 			);
 			name = "MightyIO-iOS-Pod";
 			productName = "MightyIO-iOS-Pod";
-			productReference = 6003F58A195388D20070C39A /* MightyIO-iOS-Pod.app */;
+			productReference = 6003F58A195388D20070C39A /* MightyIO-Pod.app */;
 			productType = "com.apple.product-type.application";
 		};
 		6003F5AD195388D20070C39A /* Tests */ = {
@@ -508,7 +508,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MightyIO-iOS-Pod/MightyIO-iOS-Pod-Prefix.pch";
 				INFOPLIST_FILE = "MightyIO-iOS-Pod/MightyIO-iOS-Pod-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "MightyIO-Pod";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -523,7 +523,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MightyIO-iOS-Pod/MightyIO-iOS-Pod-Prefix.pch";
 				INFOPLIST_FILE = "MightyIO-iOS-Pod/MightyIO-iOS-Pod-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "MightyIO-Pod";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

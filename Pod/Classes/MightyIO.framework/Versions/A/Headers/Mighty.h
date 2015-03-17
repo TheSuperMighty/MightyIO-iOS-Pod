@@ -12,12 +12,16 @@
 #import <Social/Social.h>
 #import <Security/Security.h>
 #import "Parse.h"
+//#import "MightyIO_iOS_Private.h"
 
 @class PFObject;
 @class Mighty;
 @class SVProgressHUD;
 @class SMUser;
-@class SMGame;
+@class SMItem;
+@class SMPromotion;
+@class SMPurchase;
+@class CustomAlertViewController;
 
 @protocol MightyDelegate <NSObject>
 @optional
@@ -37,7 +41,8 @@
     __weak id<MightyDelegate> mightyDelegate;
 }
 
-@property (strong, nonatomic) SMGame* smGame;
+@property (strong, nonatomic) SMPromotion* smPromotion;
+@property (strong, nonatomic) SMPurchase* purchase;
 @property (nonatomic, weak) id<MightyDelegate> mightyDelegate;
 @property (strong, nonatomic) NSString* authToken;
 @property (strong, nonatomic) NSString* versionNumber;
@@ -45,17 +50,14 @@
 @property (strong, nonatomic) SKPaymentTransaction* lastTransaction;
 @property (strong, nonatomic) UIViewController* presentingViewController;
 @property (strong, nonatomic) UIButton* smRibbon;
-@property (strong, nonatomic) NSNumber* testing;
-@property (strong, nonatomic) NSNumber* tweeted;
-@property (strong, nonatomic) NSNumber* shared;
+
+@property (nonatomic, strong) CustomAlertViewController* customAlert;
 
 @property BOOL debug;
 @property BOOL authenticating;
 @property BOOL isCampaignActive;
 @property BOOL simulator;
 @property BOOL disableIAP;
-
-@property SVProgressHUD* loader;
 
 // Init Functions
 
@@ -83,7 +85,7 @@
  Returns positive if the app does not have deployment provisioning
  @return Testing
  */
-- (NSNumber*)isTesting;
+- (BOOL)isSandbox;
 
 // Dev Helpers
 /**
@@ -96,13 +98,13 @@
  Helper function to create a ribbon on the viewcontroller supplied
  @return void
  */
-- (void)makeRibbonWithCenter:(CGPoint)center inViewController:(UIViewController*)viewController;
+- (void)makeRibbonWithFrame:(CGRect)frame inViewController:(UIViewController*)viewController withIntroModalOnFirstLaunch:(BOOL)modal;
 
 /**
  Helper function to link Button outlet in presenting controller to SM ribbon
  @return void
  */
-- (void)makeRibbonWithIBOutlet:(UIButton*)button inViewController:(UIViewController*)viewController;
+- (void)makeRibbonWithIBOutlet:(UIButton*)button inViewController:(UIViewController*)viewController withIntroModalOnFirstLaunch:(BOOL)modal;
 
 /**
  Helper function to launch SuperMighty from custom event
@@ -116,10 +118,19 @@
  */
 - (void)setRibbonVisibility;
 
+- (void)makeRibbonHidden:(BOOL)hidden withAnimation:(BOOL)animate;
+
 /**
 Show loader over overview until item is confirmed with Apple
  @return void
  */
-- (void)loadOverViewInWindow:(UIWindow*)window;
+- (void)
+    loadOverViewInWindow:(UIWindow*)window;
+
+/**
+ Creates Mighty Navigation controller and launches pop up shop inside
+ @return void
+ */
+- (void)launchMightyPopUpShop;
 
 @end

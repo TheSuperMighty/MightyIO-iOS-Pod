@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "MightyIO-iOS-Pod"
-  s.version          = "0.15.1"
+  s.version          = "1.0.0"
   s.summary          = "The MightyIO SDK, by SuperMighty"
   s.homepage         = "https://github.com/TheSuperMighty/MightyIO-iOS-Pod"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
@@ -25,5 +25,5 @@ Pod::Spec.new do |s|
   s.public_header_files = 'Pod/Classes/MightyIO.framework/**/*.h'
   s.vendored_frameworks = 'Pod/Classes/MightyIO.framework'
   s.frameworks = 'UIKit', 'MapKit','Social', 'StoreKit', 'CoreText', 'CoreData', 'SystemConfiguration'
-  s.dependency 'Parse', '~> 1.4'
+  s.dependency 'Parse', '~> 1.5'
 end
