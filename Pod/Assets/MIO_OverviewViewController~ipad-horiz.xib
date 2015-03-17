@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OverviewViewController">
             <connections>
-                <outlet property="clockDayLabel" destination="KCu-kW-IDO" id="C1q-Z8-iQY"/>
                 <outlet property="contentView" destination="HLM-CP-oKW" id="uZA-Z7-lKY"/>
                 <outlet property="imgImpact" destination="B22-Zs-LaE" id="XmG-ch-Yos"/>
                 <outlet property="itemThumbnail" destination="vKX-gb-Ae3" id="P8j-Tc-bpb"/>
+                <outlet property="lblChallengeDaysLeft" destination="KCu-kW-IDO" id="nTn-Yk-HNa"/>
                 <outlet property="lblImpact" destination="7UN-eb-I5A" id="9CK-R4-hrI"/>
-                <outlet property="lblMealsGiven" destination="QDe-E0-qAe" id="HA4-iR-hQp"/>
                 <outlet property="lblOverviewHdr" destination="IiH-hY-ckw" id="tX1-fc-hX2"/>
+                <outlet property="lblUnitsGiven" destination="QDe-E0-qAe" id="TWq-1Z-rkt"/>
                 <outlet property="numberSoldLabel" destination="FdY-vP-5yL" id="5OL-OG-dPm"/>
                 <outlet property="scrollView" destination="lEI-9a-JZ5" id="6Ya-cg-hvT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

@@ -1,35 +1,17 @@
 MightyIO - iOS
 =====================
-
-[![CI Status](http://img.shields.io/travis/Gavin Potts/MightyIO-iOS-Pod.svg?style=flat)](https://travis-ci.org/Gavin Potts/MightyIO-iOS-Pod)
 [![Version](https://img.shields.io/cocoapods/v/MightyIO-iOS-Pod.svg?style=flat)](http://cocoadocs.org/docsets/MightyIO-iOS-Pod)
 [![License](https://img.shields.io/cocoapods/l/MightyIO-iOS-Pod.svg?style=flat)](http://cocoadocs.org/docsets/MightyIO-iOS-Pod)
 [![Platform](https://img.shields.io/cocoapods/p/MightyIO-iOS-Pod.svg?style=flat)](http://cocoadocs.org/docsets/MightyIO-iOS-Pod)
- 
 
-The MightyIO-iOS-Pod will provide you with the methods you need to easily interface with the SuperMighty API.  It contains methods to log in, place the SuperMighty Ribbon, and unlock items/features when a SuperMighty purchase is complete.
+The MightyIO-iOS-Pod will provide you with the methods you need to easily interface with the MightyIO.  It contains methods to log in, place the Mighty Ribbon, show/hide the ribbon, and unlock items/features when a Mighty purchase is complete.
 
 ## Quick Start Guide
-1. Add 'MightyIO-iOS-Pod' to your Podfile http://cocoapods.org/?q=mighty: 
-``pod 'MightyIO-iOS-Pod', :head``
-2. Run Pod install (Refer to CocoaPod’s [Getting Started Guide](http://cocoapods.org/#getstarted) for detailed instructions.)
-3. Import Mighty.h in your AppDelegate ``#import <MightyIO-iOS-Pod/Mighty.h>``
-4. Add ``[Mighty initWithAuthToken:@"authtoken"];`` to - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions;
-5. Place the Super Mighty Ribbon on your home screen using the code ``[[Mighty sharedInstance] makeRibbonWithCenter:CGPointMake(260, 45) inViewController:self];`` or place the ribbon asset in your home screen as an UIButton and pass it to SuperMighty using ``[[Mighty sharedInstance] makeRibbonWithIBOutlet:smRibbonOutlet inViewController:self];``.
-6. Add the Mighty Delegate to your view controller: ``@interface HomeViewController : UIViewController <MightyDelegate>``
-7. In your ViewController add ``[Mighty sharedInstance].mightyDelegate = self;`` to -(void)viewDidLoad;
-8. Add the SuperMighty callback function to your ViewController ``- (void)mightyDidRecordSuccessfulTransaction:(SKPaymentTransaction*)transaction;``
-9. Inside the didRecordSuccessfulTransaction function place the code to unlock your item.
-
-
-Installation
 -----
-1. Install the Mighty to your project from cocopods at: http://cocoapods.org/?q=mighty
-2. Import the Mighty to your project: `#import <MightyIO-iOS-Pod/Mighty.h>`
-3. Before instantiating Mighty you must first register at http://themighty.io
-* Create an account.
-* Add a game
-* Add an item to your game and set it to be the test item.
+
+1. Before installing the MightIO into your iOS Game head over to http://themighty.io, signup, and create a promotion if you haven't already.
+2. Install the Mighty to your project from cocopods at: http://cocoapods.org/?q=mighty
+3. Import the Mighty to your project: `#import <MightyIO-iOS-Pod/Mighty.h>`
 4. In your AppDelegate in the didFinishLaunchingWithOptions method instantiate the Mighty:
     
     ```objective-c
@@ -40,10 +22,14 @@ Installation
         return YES;
     }
     ```
+5. Place ribbon using the method ``[[Mighty sharedInstance] makeRibbonWithCenter:CGPointMake(260, 45) inViewController:self withIntroModalOnFirstLaunch:YES];`` **or** ``[[Mighty sharedInstance] makeRibbonWithIBOutlet:smRibbonOutlet inViewController:self withIntroModalOnFirstLaunch:YES];``
+6. In some cases you may want to show or hide the ribbon based on where your player is inside of your game.  This can be done very simply using the ``[[Mighty sharedInstance] makeRibbonHidden:NO withAnimation:YES];``  method.
+7. Lastly make sure to add the Mighty delegate to your interface file.
+8. Add the Mighty Delegate to your view controller: ``@interface HomeViewController : UIViewController <MightyDelegate>``
+9. In your ViewController add ``[Mighty sharedInstance].mightyDelegate = self;`` to -(void)viewDidLoad;
+10. Add the Mighty callback function to your ViewController ``- (void)mightyDidRecordSuccessfulTransaction:(SKPaymentTransaction*)transaction;``
+11. Inside the didRecordSuccessfulTransaction function place the code to unlock your item.
 
-5. To verify that SuperMighty is running, run your app and a series of messages should log to the console indicating successful login and retrieval a Mighty Item for that game.
-6. Place ribbon using the method ``[[Mighty sharedInstance] makeRibbonWithCenter:CGPointMake(260, 45) inViewController:self];`` or ``[[Mighty sharedInstance] makeRibbonWithIBOutlet:smRibbonOutlet inViewController:self];``
-7. Start testing.
 
 Methods
 -----
@@ -80,38 +66,57 @@ An class method logs into the MightyIO. On login this method will return your ga
 ```
 ___
 
-**- (void)makeRibbonWithCenter:(CGPoint)center inViewController:(UIViewController*)viewController;**
+**- (void)makeRibbonWithFrame:(CGRect)frame inViewController:(UIViewController*)viewController withIntroModalOnFirstLaunch:(BOOL)modal;**
 A method that will place the SuperMighty Ribbon at a specified center point.  Ribbon will only appear when a valid game and item has been created in your SuperMighty Account.  This method will also handle showing/hiding the ribbon based on campaign active state  when deployed to the app store.  While item is in development ribbon should always display when a valid item/game exists.
 
 **params:**
 
 * (CGPoint)center - The center point for placing the ribbon in the view.
 * (UIViewController*)viewController - The ViewController presenting the ribbon.
+* (BOOL)modal - Show the Mighty Info modal on first launch.  (This is recommended for best results)
 
 **example:**
 ```objective-c
     - (void)viewDidLoad
     {
-        [[Mighty sharedInstance] makeRibbonWithCenter:CGPointMake(260, 45) inViewController:self];
+        [[Mighty sharedInstance] makeRibbonWithCenter:CGPointMake(260, 45) inViewController:self withIntroModalOnFirstLaunch:YES];
     }
 ```
 
 ___
 
-**- (void)makeRibbonWithIBOutlet:(UIButton*)button inViewController:(UIViewController*)viewController;**
-This method allows you to manually place the SuperMighty ribbon asset in your view and then pass it to SuperMighty as an UIButton.  SuperMighty will then add a target to it which will launch SuperMighty on control event  UIControlEventTouchUpInside.  This method will also handle showing/hiding the ribbon based on campaign active state  when deployed to the app store.  While item is in development ribbon should always display when a valid item/game exists.
+**- (void)makeRibbonWithIBOutlet:(UIButton*)button inViewController:(UIViewController*)viewController withIntroModalOnFirstLaunch:(BOOL)modal;**
+This method allows you to manually place the SuperMighty ribbon asset in your view and then pass it to SuperMighty as an UIButton.  SuperMighty will then add a target to it which will launch SuperMighty on control event  UIControlEventTouchUpInside.  This method will also handle showing/hiding the ribbon based on campaign active state  when deployed to the app store.  While item is in development ribbon should always display when a valid item/game exists. It should be noted that this method will override the image property of your IBOutlet with the most current MightyIO branding
 
 **params:**
 
 * (UIButton*)button - The instance of the button you would like to launch SuperMighty
 * (UIViewController*)viewController - The ViewController presenting the ribbon.
+* (BOOL)modal - Show the Mighty Info modal on first launch.  (This is recommended for best results)
 
 **example:**
 ```objective-c
     - (void)viewDidLoad
     {
-        [[Mighty sharedInstance] makeRibbonWithIBOutlet:smRibbonOutlet inViewController:self];
+        [[Mighty sharedInstance] makeRibbonWithIBOutlet:smRibbonOutlet inViewController:self withIntroModalOnFirstLaunch:YES];
     }
+```
+___
+
+**- (void)makeRibbonHidden:(BOOL)hidden withAnimation:(BOOL)animate;**
+Allows you to show or hide the ribbon based on where your player is inside of your game. 
+
+**params:**
+
+* (BOOL)hidden - Should the ribbon be hidden or not.
+* (BOOL)animate - Should the ribbon transition be animated.
+
+**example:**
+```objective-c
+    - (IBAction)showRibbon:(id)sender
+{
+    [[Mighty sharedInstance] makeRibbonHidden:NO withAnimation:YES];
+}
 ```
 ___
 
@@ -189,3 +194,6 @@ This delegate method is triggered when a player closes the Mighty Pop-up Shop.
 ```
 
 ___
+
+
+> Written with [StackEdit](https://stackedit.io/).
