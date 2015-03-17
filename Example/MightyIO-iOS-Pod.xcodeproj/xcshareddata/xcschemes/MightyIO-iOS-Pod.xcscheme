@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6003F589195388D20070C39A"
-               BuildableName = "MightyIO-iOS-Pod.app"
+               BuildableName = "MightyIO-Pod.app"
                BlueprintName = "MightyIO-iOS-Pod"
                ReferencedContainer = "container:MightyIO-iOS-Pod.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6003F589195388D20070C39A"
-            BuildableName = "MightyIO-iOS-Pod.app"
+            BuildableName = "MightyIO-Pod.app"
             BlueprintName = "MightyIO-iOS-Pod"
             ReferencedContainer = "container:MightyIO-iOS-Pod.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6003F589195388D20070C39A"
-            BuildableName = "MightyIO-iOS-Pod.app"
+            BuildableName = "MightyIO-Pod.app"
             BlueprintName = "MightyIO-iOS-Pod"
             ReferencedContainer = "container:MightyIO-iOS-Pod.xcodeproj">
          </BuildableReference>
@@ -85,7 +85,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6003F589195388D20070C39A"
-            BuildableName = "MightyIO-iOS-Pod.app"
+            BuildableName = "MightyIO-Pod.app"
             BlueprintName = "MightyIO-iOS-Pod"
             ReferencedContainer = "container:MightyIO-iOS-Pod.xcodeproj">
          </BuildableReference>
